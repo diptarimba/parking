@@ -13,11 +13,13 @@
     <!--navigation-->
     <ul class="metismenu" id="menu">
         <x-sidebar.menu-label title="Menu"/>
-        <x-sidebar.single icon="bx bx-home-circle" link="{{route('/')}}" name="Dashboard" />
+        <x-sidebar.single icon="bx bx-home-circle" link="{{url('/')}}" name="Dashboard" />
+        <x-sidebar.menu-label title="Statistic"/>
+
         <x-sidebar.menu-label title="Users"/>
-        <x-sidebar.single icon="bx bx-game" link="{{route('/')}}" name="Admin" />
-        <x-sidebar.single icon="bx bx-user-voice" link="{{route('/')}}" name="User Role" />
-        <x-sidebar.single icon="bx bx-user-circle" link="{{route('/')}}" name="User" />
+        <x-sidebar.single icon="bx bx-game" link="{{url('/')}}" name="Admin" />
+        <x-sidebar.single icon="bx bx-user-voice" link="{{url('/')}}" name="User Role" />
+        <x-sidebar.single icon="bx bx-user-circle" link="{{url('/')}}" name="User" />
     </ul>
     <!--end navigation-->
 </div>

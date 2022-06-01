@@ -33,30 +33,20 @@
                                 <div class="border p-4 rounded">
                                     <div class="text-center">
                                         <h3 class="">Sign in</h3>
-                                        <p>Don't have an account yet? <a href="{{ url('authentication-signup') }}">Sign
+                                        {{-- <p>Don't have an account yet? <a href="{{ url('authentication-signup') }}">Sign
                                                 up here</a>
-                                        </p>
+                                        </p> --}}
                                     </div>
-                                    <div class="d-grid">
-                                        <a class="btn my-4 shadow-sm btn-white" href="javascript:;"> <span
-                                                class="d-flex justify-content-center align-items-center">
-                                                <img class="me-2" src="{{asset('assets/images/icons/search.svg')}}" width="16"
-                                                    alt="Image Description">
-                                                <span>Sign in with Google</span>
-                                            </span>
-                                        </a> <a href="javascript:;" class="btn btn-facebook"><i
-                                                class="bx bxl-facebook"></i>Sign in with Facebook</a>
-                                    </div>
-                                    <div class="login-separater text-center mb-4"> <span>OR SIGN IN WITH EMAIL</span>
+                                    {{-- <div class="login-separater text-center mb-4"> <span>OR SIGN IN WITH EMAIL</span>
                                         <hr />
-                                    </div>
+                                    </div> --}}
                                     <div class="form-body" >
                                         <form class="row g-3" action="{{route('admin.login')}}" method="POST">
                                             @csrf
                                             <div class="col-12">
-                                                <label for="inputEmailAddress" class="form-label">Email Address</label>
-                                                <input type="email" name="email" class="form-control"
-                                                    id="inputEmailAddress" placeholder="Email Address">
+                                                <label for="inputEmailAddress" class="form-label">Enter Username</label>
+                                                <input type="text" name="username" class="form-control"
+                                                    id="inputEmailAddress" placeholder="Username">
                                             </div>
                                             <div class="col-12">
                                                 <label for="inputChoosePassword" class="form-label">Enter

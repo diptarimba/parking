@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\AdminLoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/login', [AdminLoginController::class, 'index'])->name('admin.login.index');
+Route::post('/post', [AdminLoginController::class, 'login'])->name('admin.login');
+Route::get('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
+
+Route::get('/', function(){
+    return redirect(route('admin.login.index'));
+});
+
+Route::group(['middleware'=>'auth:admin'], function() {
+    Route::get('/', [HomeController::class, 'index'])->name('dashboard');
 });
