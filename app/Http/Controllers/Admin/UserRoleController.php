@@ -15,7 +15,8 @@ class UserRoleController extends Controller
      */
     public function index()
     {
-        //
+        $userRoles = UserRole::get();
+        return view('userRoles.index', compact('userRoles'));
     }
 
     /**
@@ -25,7 +26,7 @@ class UserRoleController extends Controller
      */
     public function create()
     {
-        //
+        return view('userRoles.create-edit');
     }
 
     /**
@@ -36,7 +37,13 @@ class UserRoleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required'
+        ]);
+
+        $userRole = UserRole::create($request->all());
+
+        return redirect()->route('roles.index')->with('status', 'Success Create User Role');
     }
 
     /**
@@ -58,7 +65,7 @@ class UserRoleController extends Controller
      */
     public function edit(UserRole $userRole)
     {
-        //
+        return view('userRoles.create-edit', compact('userRole'));
     }
 
     /**
@@ -70,7 +77,13 @@ class UserRoleController extends Controller
      */
     public function update(Request $request, UserRole $userRole)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required'
+        ]);
+
+        $userRole->update($request->all());
+
+        return redirect()->route('roles.index')->with('status', 'Success Update User Role');
     }
 
     /**
@@ -81,6 +94,8 @@ class UserRoleController extends Controller
      */
     public function destroy(UserRole $userRole)
     {
-        //
+        $userRole->delete();
+
+        return redirect()->route('roles.index')->with('status', 'Success Delete User Role');
     }
 }

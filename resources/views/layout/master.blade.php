@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="{{ asset( 'assets/css/dark-theme.css' ) }}" />
     <link rel="stylesheet" href="{{ asset( 'assets/css/semi-dark.css' ) }}" />
     <link rel="stylesheet" href="{{ asset( 'assets/css/header-colors.css' ) }}" />
-    <title>@yield('title') | Lumeshop</title>
+    <title>@yield('title') | Parking</title>
 </head>
 
 <body>

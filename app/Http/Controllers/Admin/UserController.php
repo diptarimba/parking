@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\UserRole;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -15,7 +16,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::all();
+        return view('users.index', compact('users'));
     }
 
     /**
@@ -25,7 +27,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $userRole = UserRole::get()->pluck('id', 'name');
+        return view('users.create-edit', compact('userRole'));
     }
 
     /**
@@ -36,7 +39,22 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'email' => 'required',
+            'name' => 'required',
+            'avatar' => 'required|mimes:png,jpg,jpeg|max:1024',
+            'password' => 'required',
+            'phone' => 'required',
+            'phone' => 'required',
+            'user_role_id' => 'required|exists:user_roles,id'
+        ]);
+
+        $user = User::create(array_merge($request->all(), [
+            'avatar' => $request->file('avatar')->storePublicly('avatar'),
+            'password' => bcrypt($request->password)
+        ]));
+
+        return redirect()->route('user.index')->with('status', 'Success create user');
     }
 
     /**
@@ -58,7 +76,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        $userRole = UserRole::pluck('id', 'name');
+        return view('users.create-edit', compact('user', 'userRole'));
     }
 
     /**
@@ -70,7 +89,23 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $this->validate($request, [
+            'email' => 'required',
+            'name' => 'required',
+            'avatar' => 'sometimes|mimes:png,jpg,jpeg|max:1024',
+            'password' => 'sometimes',
+            'phone' => 'required',
+            'phone' => 'required',
+            'user_role_id' => 'required|exists:user_roles,id'
+        ]);
+
+        $user->update(array_merge($request->all(), [
+            'password' => $request->password ? bcrypt($request->password) : $user->password,
+            'avatar' => $request->file('avatar') ? $request->file('avatar')->storePublicly('avatar') : $user->avatar
+        ]));
+
+        return redirect()->route('user.index')->with('status', 'Success Update User Profile');
+
     }
 
     /**
@@ -81,6 +116,8 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->delete();
+
+        return redirect()->route('user.index')->with('status', 'Success Delete User');
     }
 }

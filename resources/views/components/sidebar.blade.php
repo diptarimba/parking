@@ -17,9 +17,9 @@
         <x-sidebar.menu-label title="Statistic"/>
 
         <x-sidebar.menu-label title="Users"/>
-        <x-sidebar.single icon="bx bx-game" link="{{url('/')}}" name="Admin" />
-        <x-sidebar.single icon="bx bx-user-voice" link="{{url('/')}}" name="User Role" />
-        <x-sidebar.single icon="bx bx-user-circle" link="{{url('/')}}" name="User" />
+        <x-sidebar.single icon="bx bx-game" link="{{route('admin.index')}}" name="Admin" />
+        <x-sidebar.single icon="bx bx-user-voice" link="{{route('roles.index')}}" name="User Role" />
+        <x-sidebar.single icon="bx bx-user-circle" link="{{route('user.index')}}" name="User" />
     </ul>
     <!--end navigation-->
 </div>

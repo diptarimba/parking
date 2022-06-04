@@ -13,6 +13,7 @@
                 </nav>
             </div>
         </div>
+        @include('components.flash')
         <!--end breadcrumb-->
         <div class="card">
             <div class="card-body">

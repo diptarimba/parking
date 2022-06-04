@@ -16,7 +16,7 @@
                         <div class="d-flex align-items-center">
                             <div>
                                 <p class="mb-0 text-secondary">Transaksi Hari Ini</p>
-                                <h4 class="my-1 text-info">{{number_format($parkingHistory, 0, ',', '.')}}</h4>
+                                <h4 class="my-1 text-info">{{number_format($parkingHistoryTransaction, 0, ',', '.')}}</h4>
                                 <p class="mb-0 font-13">+2.5% from last week</p>
                             </div>
                             <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto"><i class='bx bxs-cart'></i>
@@ -31,7 +31,7 @@
                         <div class="d-flex align-items-center">
                             <div>
                                 <p class="mb-0 text-secondary">Total Pendapatan Hari ini</p>
-                                <h4 class="my-1 text-danger">{{number_format($parkingLocation, 0, ',', '.')}}</h4>
+                                <h4 class="my-1 text-danger">Rp. {{number_format($parkingHistoryRevenue, 0, ',', '.')}}</h4>
                                 <p class="mb-0 font-13">+5.4% from last week</p>
                             </div>
                             <div class="widgets-icons-2 rounded-circle bg-gradient-bloody text-white ms-auto"><i class='bx bxs-wallet'></i>
