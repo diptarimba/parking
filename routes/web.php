@@ -2,9 +2,12 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\ParkingHistoryController;
+use App\Http\Controllers\Admin\ParkingLocationController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\UserRoleController;
 use App\Http\Controllers\AdminLoginController;
+use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,13 +25,13 @@ Route::get('/login', [AdminLoginController::class, 'index'])->name('admin.login.
 Route::post('/post', [AdminLoginController::class, 'login'])->name('admin.login');
 Route::get('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 
-Route::get('/', function(){
-    return redirect(route('admin.login.index'));
-});
+Route::get('/', [LandingController::class, 'index']);
 
 Route::group(['middleware'=>'auth:admin'], function() {
-    Route::get('/', [HomeController::class, 'index'])->name('dashboard');
+    Route::get('/home', [HomeController::class, 'index'])->name('dashboard');
     Route::resource('/user/roles', UserRoleController::class)->parameter('roles','userRole');
     Route::resource('/admin', AdminController::class);
     Route::resource('/user', UserController::class);
+    Route::resource('/parking/location', ParkingLocationController::class)->parameter('location', 'parkingLocation');
+    Route::resource('/parking/histories', ParkingHistoryController::class)->parameter('histories', 'parkingHistories');
 });

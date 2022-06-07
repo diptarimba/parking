@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('parking_locations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description')->nullable();
+            $table->longText('description')->nullable();
             $table->string('latitude');
             $table->string('longitude');
             $table->timestamps();

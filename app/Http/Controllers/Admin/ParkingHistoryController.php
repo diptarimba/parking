@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\ParkingHistory;
 use Illuminate\Http\Request;
+use Yajra\DataTables\Facades\DataTables;
 
 class ParkingHistoryController extends Controller
 {
@@ -13,9 +14,19 @@ class ParkingHistoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if($request->ajax()){
+            $parkingHistory = ParkingHistory::with('parking_location')->get();
+            return DataTables::of($parkingHistory)
+            ->addIndexColumn()
+            ->addColumn('action', function($eachRow){
+                return $this->getActionColumn($eachRow);
+            })
+            ->rawColumns(['action'])
+            ->make(true);
+        }
+        return view('parkingHistories.index');
     }
 
     /**
@@ -82,5 +93,19 @@ class ParkingHistoryController extends Controller
     public function destroy(ParkingHistory $parkingHistory)
     {
         //
+    }
+
+    public function getActionColumn($data)
+    {
+        $editBtn = route('histories.edit', $data->id);
+        $deleteBtn = route('histories.destroy', $data->id);
+        $ident = substr(md5(now()), 0, 10);
+        return
+        '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
+        . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
+        <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
+        <input type="hidden" name="_token" value="'.csrf_token().'" />
+        <input type="hidden" name="_method" value="DELETE">
+        </form>';
     }
 }

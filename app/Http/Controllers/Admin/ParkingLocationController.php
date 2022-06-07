@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\ParkingLocation;
 use Illuminate\Http\Request;
+use Yajra\DataTables\Facades\DataTables;
 
 class ParkingLocationController extends Controller
 {
@@ -13,9 +14,20 @@ class ParkingLocationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if($request->ajax())
+        {
+            $parkingLocations = ParkingLocation::get();
+            return DataTables::of($parkingLocations)
+            ->addIndexColumn()
+            ->addColumn('action', function($query){
+                return $this->getActionColumn($query);
+            })
+            ->rawColumns(['action'])
+            ->make(true);
+        }
+        return view('parkingLocations.index');
     }
 
     /**
@@ -25,7 +37,7 @@ class ParkingLocationController extends Controller
      */
     public function create()
     {
-        //
+        return view('parkingLocations.create-edit');
     }
 
     /**
@@ -36,7 +48,16 @@ class ParkingLocationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'description' => 'required',
+            'latitude' => 'required',
+            'longitude' => 'required'
+        ]);
+
+        $parkingLocation = ParkingLocation::create($request->all());
+
+        return redirect()->route('location.index')->with('status', 'Success Create Parking Location');
     }
 
     /**
@@ -58,7 +79,7 @@ class ParkingLocationController extends Controller
      */
     public function edit(ParkingLocation $parkingLocation)
     {
-        //
+        return view('parkingLocations.create-edit', compact('parkingLocation'));
     }
 
     /**
@@ -70,7 +91,16 @@ class ParkingLocationController extends Controller
      */
     public function update(Request $request, ParkingLocation $parkingLocation)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'description' => 'required',
+            'latitude' => 'required',
+            'longitude' => 'required'
+        ]);
+
+        $parkingLocation->update($request->all());
+
+        return redirect()->route('location.index')->with('status', 'Success Update Parking Location');
     }
 
     /**
@@ -81,6 +111,20 @@ class ParkingLocationController extends Controller
      */
     public function destroy(ParkingLocation $parkingLocation)
     {
-        //
+        $parkingLocation->delete();
+    }
+
+    public function getActionColumn($data)
+    {
+        $editBtn = route('location.edit', $data->id);
+        $deleteBtn = route('location.destroy', $data->id);
+        $ident = substr(md5(now()), 0, 10);
+        return
+        '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
+        . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
+        <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
+        <input type="hidden" name="_token" value="'.csrf_token().'" />
+        <input type="hidden" name="_method" value="DELETE">
+        </form>';
     }
 }

@@ -1,4 +1,4 @@
-@push('style')
+@push('header-add')
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
@@ -21,7 +21,7 @@
     </div>
 </div>
 
-@push('script')
+@push('footer-add')
 <script>
     var map{{ $identifier }} = L.map('map').setView([{{ $lat }}, {{ $lng }}], 15).on('click', onClick{{ $identifier }}Maps).on('moveend', onMove{{ $identifier }}Maps)
     var marker{{ $identifier }} = L.marker([{{ $lat }}, {{ $lng }}]).addTo(map{{ $identifier }});

@@ -18,7 +18,7 @@
             enctype="multipart/form-data">
             @csrf
             @isset($user->avatar)
-                <x-forms.view-image src="{{asset('storage/' . $user->avatar)}}" />
+                <x-forms.view-image label="Avatar" src="{{asset('storage/' . $user->avatar)}}" />
             @endisset
             <x-forms.file label="Pilih Photo Profil" name="avatar" id="gallery-photo-add"/>
             <div class="gallery row row-cols-4 justify-content-center" id="isi-gallery"></div>

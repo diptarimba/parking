@@ -17,6 +17,7 @@
             class="theme-form mega-form" method="post"
             enctype="multipart/form-data">
             @csrf
+            <x-forms.put-method />
             <x-forms.input label="Name" name="name" :value="@$userRole->name"/>
         </form>
         <button form="form" class="btn btn-primary btn-pill">Submit</button>

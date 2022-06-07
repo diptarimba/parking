@@ -13,27 +13,16 @@
     </x-slot>
 
     <x-slot name="body">
-        <table class="table table-striped">
+        <table class="table datatables-target-exec table-striped">
             <thead>
                 <th>No</th>
-                <th>Avatar</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Phone</th>
                 <th>Action</th>
             </thead>
             <tbody>
-                @foreach ($users as $each)
-                    <tr>
-                        <td>{{$loop->iteration}}</td>
-                        <th><img src="{{ $each->avatar ? asset('storage/' . $each->avatar ) : asset('assets/images/placeholder/avatar/default-profile.png') }}" class="img-rounded shadow" style="max-width: 100px" alt=""></th>
-                        <td>{{$each->name}}</td>
-                        <td>{{$each->email}}</td>
-                        <td>
-                            <x-action.edit action="{{route('user.edit', $each->id)}}" />
-                            <x-action.delete :ident="$each->id" action="{{route('user.destroy', $each->id)}}" />
-                        </td>
-                    </tr>
-                @endforeach
+
             </tbody>
         </table>
     </x-slot>
@@ -41,5 +30,28 @@
 @endsection
 
 @section('footer-content')
-
+<script src="{{asset('assets/plugins/datatable/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/plugins/datatable/js/dataTables.bootstrap5.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+<script>
+    $(document).ready(() => {
+        var table = $('.datatables-target-exec').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: "{{ route('user.index') }}",
+        columns: [
+            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+            {data: 'name', name: 'name'},
+            {data: 'email', name: 'email'},
+            {data: 'phone', name: 'phone'},
+            {
+                data: 'action',
+                name: 'action',
+                orderable: false,
+                searchable: false
+            },
+        ]
+    });
+    })
+</script>
 @endsection
