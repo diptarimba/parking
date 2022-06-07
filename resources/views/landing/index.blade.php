@@ -257,7 +257,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sec-title">
-                        <h2>App Screenshort</h2>
+                        <h2>Location</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                             been the industry's standard dummy text</p>
                     </div>
@@ -585,11 +585,11 @@
                 <div class="col-lg-6">
                     <div class="footer-content">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#faq">FAQ</a></li>
                             <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#contact">Contact</a></li>
                             <li><a href="#">Team</a></li>
                         </ul>
                     </div>
