@@ -50,14 +50,14 @@
                     <div class="mainmenu">
                         <ul id="primary-menu">
                             <li><a class="nav-link active" href="#home">Home</a></li>
-                            <li><a class="nav-link" href="#about">About</a></li>
+                            <li><a class="nav-link" href="#{{$optionalContent[0]['target']}}">{{$optionalContent[0]['menu']}}</a></li>
                             <li><a class="nav-link" href="#feature">Feature</a></li>
                             <li><a class="nav-link" href="#overview">Overview</a></li>
-                            <li><a class="nav-link" href="#activity">Activity</a></li>
-                            <li><a class="nav-link" href="#screenshot">Screenshot</a></li>
-                            <li><a class="nav-link" href="#feedback">Feedback</a></li>
-                            <li><a class="nav-link" href="#contact">Contact</a></li>
-                            <li><a class="nav-link" href="#faq">FAQ</a></li>
+                            <li><a class="nav-link" href="#{{$optionalContent[1]['target']}}">{{$optionalContent[1]['menu']}}</a></li>
+                            <li><a class="nav-link" href="#{{$optionalContent[2]['target']}}">{{$optionalContent[2]['menu']}}</a></li>
+                            <li><a class="nav-link" href="#{{$optionalContent[3]['target']}}">{{$optionalContent[3]['menu']}}</a></li>
+                            <li><a class="nav-link" href="#{{$optionalContent[4]['target']}}">{{$optionalContent[4]['menu']}}</a></li>
+                            <li><a class="nav-link" href="#{{$optionalContent[5]['target']}}">{{$optionalContent[5]['menu']}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -87,14 +87,13 @@
         </div>
     </section><!-- banner section end -->
     <!-- about section start -->
-    <section class="about-area ptb-80" id="about">
+    <section class="about-area ptb-80" id="{{$optionalContent[0]['target']}}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sec-title">
-                        <h2>About Application</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text</p>
+                        <h2>{{$optionalContent[0]['title']}}</h2>
+                        <p>{{$optionalContent[0]['description']}}</p>
                     </div>
                 </div>
             </div>
@@ -180,14 +179,13 @@
         </div>
     </section><!-- feature section end -->
     <!-- activity section start -->
-    <section class="activity-area ptb-80" id="activity">
+    <section class="activity-area ptb-80" id="{{$optionalContent[1]['target']}}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sec-title">
-                        <h2>Users Activity</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text</p>
+                        <h2>{{$optionalContent[1]['title']}}</h2>
+                        <p>{{$optionalContent[1]['description']}}</p>
                     </div>
                 </div>
             </div>
@@ -195,45 +193,23 @@
                 @foreach ($activity as $each)
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-activity-box">
-                        <i class="zmdi zmdi-cloud-download"></i>
-                        <h2>90K</h2>
-                        <h5>Total Download</h5>
+                        <i class="{{$each->icon->code}}"></i>
+                        <h2>{{$each->title}}</h2>
+                        <h5>{{$each->description}}</h5>
                     </div>
                 </div>
                 @endforeach
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-activity-box">
-                        <i class="zmdi zmdi-account-box-mail"></i>
-                        <h2>90K</h2>
-                        <h5>Total Download</h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-activity-box">
-                        <i class="icofont icofont-chart-histogram"></i>
-                        <h2>90K</h2>
-                        <h5>Total Download</h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-activity-box">
-                        <i class="icofont icofont-star"></i>
-                        <h2>90K</h2>
-                        <h5>Total Download</h5>
-                    </div>
-                </div>
             </div>
         </div>
     </section><!-- activity section end -->
     <!-- screenshots section start -->
-    <section class="screenshots-area ptb-80" id="screenshot">
+    <section class="screenshots-area ptb-80" id="{{$optionalContent[2]['target']}}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sec-title">
-                        <h2>Location</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text</p>
+                        <h2>{{$optionalContent[2]['title']}}</h2>
+                        <p>{{$optionalContent[2]['description']}}</p>
                     </div>
                 </div>
             </div>
@@ -310,14 +286,13 @@
         </div>
     </section><!-- screenshots section end -->
     <!-- feedback section start -->
-    <section class="feedback-area ptb-80" id="feedback">
+    <section class="feedback-area ptb-80" id="{{$optionalContent[3]['target']}}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sec-title">
-                        <h2>Feedback</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text</p>
+                        <h2>{{$optionalContent[3]['title']}}</h2>
+                        <p>{{$optionalContent[3]['description']}}</p>
                     </div>
                 </div>
             </div>
@@ -344,14 +319,13 @@
         </div>
     </section><!-- feedback section end -->
     <!-- contact section start -->
-    <section class="contact-area ptb-80" id="contact">
+    <section class="contact-area ptb-80" id="{{$optionalContent[4]['target']}}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sec-title">
-                        <h2>Contact Us</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text</p>
+                        <h2>{{$optionalContent[4]['title']}}</h2>
+                        <p>{{$optionalContent[4]['description']}}</p>
                     </div>
                 </div>
             </div>
@@ -393,13 +367,13 @@
         </div>
     </section><!-- contact section end -->
     <!-- faq section start -->
-    <section class="ptb-80" id="faq">
+    <section class="ptb-80" id="{{$optionalContent[5]['target']}}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sec-title">
-                        <h2>FAQ</h2>
-                        <p>Question About Skype ? Answers are here...</p>
+                        <h2>{{$optionalContent[5]['title']}}</h2>
+                        <p>{{$optionalContent[5]['description']}}</p>
                     </div>
                 </div>
             </div>
