@@ -18,10 +18,12 @@ class DatabaseSeeder extends Seeder
         $this->call(ParkingLocationSeeder::class);
         $this->call(ParkingHistorySeeder::class);
         $this->call(IconSeeder::class);
+        $this->call(ZmdiSeeder::class);
         $this->call(AboutSeeder::class);
         $this->call(ContactSeeder::class);
         $this->call(FaqSeeder::class);
         $this->call(FeatureSeeder::class);
         $this->call(FeedbackSeeder::class);
+        $this->call(ActivitySeeder::class);
     }
 }

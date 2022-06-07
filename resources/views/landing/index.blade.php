@@ -99,30 +99,15 @@
                 </div>
             </div>
             <div class="row">
+                @foreach ($about as $each)
                 <div class="col-lg-4">
                     <div class="single-about-box">
-                        <i class="icofont icofont-file-document"></i>
-                        <h4>Responsive Design</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text</p>
+                        <i class="icofont {{$each->icon->code}}"></i>
+                        <h4>{{$each->title}}</h4>
+                        <p>{{$each->description}}</p>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="single-about-box">
-                        <i class="icofont icofont-rocket"></i>
-                        <h4>Fast Performance</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-about-box">
-                        <i class="icofont icofont-tools-alt-2"></i>
-                        <h4>Cross Platfrom</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section><!-- about section end -->
@@ -132,8 +117,9 @@
             <div class="row flexbox-center">
                 <div class="col-lg-6">
                     <div class="single-feature-box">
-                        <h2>Introduce with amazing & Smart features</h2>
-                        <ul>
+                        <h2>{{$feature->{0}['title']}}</h2>
+                        {{$feature->{0}['description']}}
+                        {{-- <ul>
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
                             <li>Tempor incididunt ut labore et dolore magna aliqua.</li>
                             <li>Minim veniam quis nostrud exercitation.</li>
@@ -142,14 +128,14 @@
                             <li>Velitesse cillum dolore eu fugiat nulla pariatur.</li>
                             <li>Excepteur sint occaecat cupidatat non proident sunt.</li>
                             <li>Culpa qui officia deserunt mollit anim id est laborum.</li>
-                        </ul>
-                        <a href="#" class="appbox-btn">Download</a>
-                        <a href="#" class="appbox-btn appbox-btn2">Learn more</a>
+                        </ul> --}}
+                        {{-- <a href="#" class="appbox-btn">Download</a>
+                        <a href="#" class="appbox-btn appbox-btn2">Learn more</a> --}}
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="single-feature-box text-center">
-                        <img src="{{ asset('assets/landing/img/appbox-img-1/feature.png') }}" alt="feature" />
+                        <img style="max-width: 500px" src="{{ asset($feature->{0}['image']) }}" alt="feature" />
                     </div>
                 </div>
             </div>
@@ -161,21 +147,14 @@
             <div class="row flexbox-center">
                 <div class="col-lg-6">
                     <div class="single-overview-box text-lg-left text-center">
-                        <img src="{{ asset('assets/landing/img/appbox-img-2/overview.png') }}" alt="feature" />
+                        <img style="max-width: 487px;" src="{{ asset($feature->{1}['image']) }}" alt="feature" />
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="single-overview-box">
-                        <h2>Amazing Features</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries</p>
-                        <p>But also the leap into electronic typesetting, remaining essentially unchanged. It was
-                            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                            passages, and more recently with desktop publishing software like Aldus PageMaker including
-                            versions of Lorem Ipsum.</p>
-                        <a href="#" class="appbox-btn appbox-btn3">Learn more</a>
+                        <h2>{{$feature->{1}['title']}}</h2>
+                        {{$feature->{1}['description']}}
+                        {{-- <a href="#" class="appbox-btn appbox-btn3">Learn more</a> --}}
                     </div>
                 </div>
             </div>
@@ -187,21 +166,14 @@
             <div class="row flexbox-center">
                 <div class="col-lg-6">
                     <div class="single-feature-box">
-                        <h2>Instant Support</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries</p>
-                        <p>But also the leap into electronic typesetting, remaining essentially unchanged. It was
-                            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                            passages, and more recently with desktop publishing software like Aldus PageMaker including
-                            versions of Lorem Ipsum.</p>
-                        <a href="#" class="appbox-btn appbox-btn2">Learn more</a>
+                        <h2>{{$feature->{2}['title']}}</h2>
+                        {{$feature->{2}['description']}}
+                        {{-- <a href="#" class="appbox-btn appbox-btn2">Learn more</a> --}}
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="single-feature-box text-lg-right text-center">
-                        <img src="{{ asset('assets/landing/img/appbox-img-2/feature.png') }}" alt="feature" />
+                        <img style="max-width: 399px;"src="{{ asset($feature->{2}['image']) }}" alt="feature" />
                     </div>
                 </div>
             </div>
@@ -220,6 +192,7 @@
                 </div>
             </div>
             <div class="row">
+                @foreach ($activity as $each)
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-activity-box">
                         <i class="zmdi zmdi-cloud-download"></i>
@@ -227,6 +200,7 @@
                         <h5>Total Download</h5>
                     </div>
                 </div>
+                @endforeach
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-activity-box">
                         <i class="zmdi zmdi-account-box-mail"></i>
@@ -350,66 +324,20 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="author-feedback">
+                        @foreach ($feedback as $each)
                         <div class="author-single-slide">
                             <div class="author-img">
-                                <img src="{{ asset('assets/landing/img/appbox-img-2/author-1.png') }}" alt="author" />
+                                <img src="{{ asset($each->avatar) }}" alt="author" />
                             </div>
-                            <h4>Albert Janny</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the indus- try's standard dummy text ever.</p>
+                            <h4>{{$each->name}}</h4>
+                            <p>{{$each->feedback}}</p>
                             <div class="author-rating">
+                                @for ($x = 0; $x < $each->star_count; $x++)
                                 <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
+                                @endfor
                             </div>
                         </div>
-                        <div class="author-single-slide">
-                            <div class="author-img">
-                                <img src="{{ asset('assets/landing/img/appbox-img-2/author-2.png') }}" alt="author" />
-                            </div>
-                            <h4>Albert Janny</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the indus- try's standard dummy text ever.</p>
-                            <div class="author-rating">
-                                <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
-                            </div>
-                        </div>
-                        <div class="author-single-slide">
-                            <div class="author-img">
-                                <img src="{{ asset('assets/landing/img/appbox-img-2/author-1.png') }}" alt="author" />
-                            </div>
-                            <h4>Albert Janny</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the indus- try's standard dummy text ever.</p>
-                            <div class="author-rating">
-                                <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
-                            </div>
-                        </div>
-                        <div class="author-single-slide">
-                            <div class="author-img">
-                                <img src="{{ asset('assets/landing/img/appbox-img-2/author-2.png') }}" alt="author" />
-                            </div>
-                            <h4>Albert Janny</h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the indus- try's standard dummy text ever.</p>
-                            <div class="author-rating">
-                                <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
-                                <i class="icofont icofont-star"></i>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -427,30 +355,35 @@
                     </div>
                 </div>
             </div>
+            @if(session('status'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{session('status')}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+            @endif
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="contact-form-7">
-                        <form action="#">
+                        <form action="{{ route('landing.contact.store') }}" method="post">
+                            @csrf
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="contact-container">
-                                        <input type="text" placeholder="Full Name">
+                                        <input type="text" name="name" placeholder="Full Name">
                                         <i class="icofont icofont-ui-user"></i>
                                     </div>
                                     <div class="contact-container">
-                                        <input type="email" placeholder="Email Address">
+                                        <input type="email" name="email" placeholder="Email Address">
                                         <i class="icofont icofont-envelope"></i>
                                     </div>
-                                    <textarea placeholder="Your Messege"></textarea>
+                                    <textarea name="content" max="255" placeholder="Your Messege"></textarea>
                                 </div>
                             </div>
                             <div class="row flexbox-center">
-                                <div class="col-sm-8 text-sm-left text-center">
-                                    <input type="checkbox">
-                                    <p>Also subscribe newsletter</p>
-                                </div>
                                 <div class="col-sm-4 text-sm-right text-center">
-                                    <button class="appbox-btn">SEND</button>
+                                    <button type="submit" class="appbox-btn">SEND</button>
                                 </div>
                             </div>
                         </form>
@@ -474,98 +407,22 @@
                 <div class="col-lg-12">
                     <div class="faq-area">
                         <div class="pannel-group" id="general-question">
+                            @foreach ($faq as $each)
                             <div class="card">
                                 <div class="card-header">
-                                    <a href="#question1" data-toggle="collapse" data-parent="#general-question"
+                                    <a href="#question{{$loop->iteration}}" data-toggle="collapse" data-parent="#general-question"
                                         class="collapsed" aria-expanded="false">
-                                        What is skype ?
+                                        {{$each->question}}
                                     </a>
                                 </div>
-                                <div id="question1" class="panel-collapse collapse" aria-expanded="false" role="banner"
+                                <div id="question{{$loop->iteration}}" class="panel-collapse collapse" aria-expanded="false" role="banner"
                                     style="">
                                     <div class="card-body">
-                                        <p>It has survived not only five centuries, but unknown printer a galley of type
-                                            and scrambled also the leap into electronic typesetting, remaining
-                                            essentially unchanged.</p>
+                                        <p>{{$each->answer}}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <a href="#question2" data-toggle="collapse" data-parent="#general-question"
-                                        class="collapsed" aria-expanded="false">
-                                        Is Skype for communication and Business ?
-                                    </a>
-                                </div>
-                                <div id="question2" class="panel-collapse collapse" aria-expanded="false" role="banner">
-                                    <div class="card-body">
-                                        <p>Unknown printer a galley of type and scrambled also the leap into electronic
-                                            typesetting, remaining essentially unchanged. printer a galley of type and
-                                            scrambled also the leap into electronic typesetting, remaining essentially
-                                            unchanged.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <a href="#question3" data-toggle="collapse" data-parent="#general-question"
-                                        class="collapsed" aria-expanded="false">
-                                        How do I keep my Skype for Business conversation window visible?
-                                    </a>
-                                </div>
-                                <div id="question3" class="panel-collapse collapse" aria-expanded="false" role="banner">
-                                    <div class="card-body">
-                                        <p>It to make a type specimen book. It has survived not only five centuries, but
-                                            unknown printer a galley of type and scrambled also the leap into electronic
-                                            typesetting, remaining essentially unchanged.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <a href="#question4" data-toggle="collapse" data-parent="#general-question"
-                                        class="collapsed" aria-expanded="false">
-                                        Why am I having audio problems?
-                                    </a>
-                                </div>
-                                <div id="question4" class="panel-collapse collapse" aria-expanded="false" role="banner">
-                                    <div class="card-body">
-                                        <p>It to make a type specimen book. It has survived not only five centuries, but
-                                            unknown printer a galley of type and scrambled also the leap into electronic
-                                            typesetting, remaining essentially unchanged.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <a href="#question5" data-toggle="collapse" data-parent="#general-question"
-                                        class="collapsed" aria-expanded="false">
-                                        What does the red star or asterisk next to a contact’s status mean?
-                                    </a>
-                                </div>
-                                <div id="question5" class="panel-collapse collapse" aria-expanded="false" role="banner">
-                                    <div class="card-body">
-                                        <p>It has survived not only five centuries, but unknown printer a galley of type
-                                            and scrambled also the leap into electronic typesetting, remaining
-                                            essentially unchanged.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <a href="#question6" data-toggle="collapse" data-parent="#general-question"
-                                        class="collapsed" aria-expanded="false">
-                                        How do I add an internal contact to my Contacts list?
-                                    </a>
-                                </div>
-                                <div id="question6" class="panel-collapse collapse" aria-expanded="false" role="banner">
-                                    <div class="card-body">
-                                        <p>It to make a type specimen book. It has survived not only five centuries, but
-                                            unknown printer a galley of type and scrambled also the leap into electronic
-                                            typesetting, remaining essentially unchanged.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -578,8 +435,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="footer-content">
-                        <p>Copyright <a href="https://themeforest.net/user/envalab/portfolio?ref=envalab">Envalab</a> -
-                            All Right Reserved</p>
+                        <p>Copyright <a href="/">Smart Parking</a> - All Right Reserved</p>
                     </div>
                 </div>
                 <div class="col-lg-6">

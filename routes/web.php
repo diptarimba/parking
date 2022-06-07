@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\ParkingHistoryController;
 use App\Http\Controllers\Admin\ParkingLocationController;
@@ -26,6 +27,7 @@ Route::post('/post', [AdminLoginController::class, 'login'])->name('admin.login'
 Route::get('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 
 Route::get('/', [LandingController::class, 'index']);
+Route::post('/contact/store', [ContactController::class, 'store'])->name('landing.contact.store');
 
 Route::group(['middleware'=>'auth:admin'], function() {
     Route::get('/home', [HomeController::class, 'index'])->name('dashboard');
