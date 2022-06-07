@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\ParkingHistory;
-use App\Models\ParkingLocation;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -19,5 +17,11 @@ class DatabaseSeeder extends Seeder
         $this->call(AdminSeeder::class);
         $this->call(ParkingLocationSeeder::class);
         $this->call(ParkingHistorySeeder::class);
+        $this->call(IconSeeder::class);
+        $this->call(AboutSeeder::class);
+        $this->call(ContactSeeder::class);
+        $this->call(FaqSeeder::class);
+        $this->call(FeatureSeeder::class);
+        $this->call(FeedbackSeeder::class);
     }
 }
