@@ -17,7 +17,7 @@ class FeedbackFactory extends Factory
     public function definition()
     {
         return [
-            'avatar' => 'assets/images/placeholder/avatar/default-profile.png',
+            'avatar' => 'storage/placeholder/avatar/default-profile.png',
             'name' => $this->faker->name(),
             'feedback' => $this->faker->words(3, true),
             'star_count' => rand(3,4)

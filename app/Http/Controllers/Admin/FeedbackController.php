@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Feedback;
 use Illuminate\Http\Request;
+use Yajra\DataTables\Facades\DataTables;
 
 class FeedbackController extends Controller
 {
@@ -13,9 +14,20 @@ class FeedbackController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if($request->ajax())
+        {
+            $feedback = Feedback::get();
+            return DataTables::of($feedback)
+            ->addIndexColumn()
+            ->addColumn('action', function ($q){
+                return $this->getActionColumn($q);
+            })
+            ->make(true);
+        }
+
+        return view('landing.feedbacks.index');
     }
 
     /**
@@ -25,7 +37,7 @@ class FeedbackController extends Controller
      */
     public function create()
     {
-        //
+        return view('landing.feedbacks.create-edit');
     }
 
     /**
@@ -36,7 +48,18 @@ class FeedbackController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'avatar' => 'required|mimes:jpg,jpeg,png',
+            'name' => 'required',
+            'feedback' => 'required',
+            'star_count' => 'integer|max:5|min:1'
+        ]);
+
+        Feedback::create(array_merge($request->all(), [
+            'avatar' => $request->hasFile('avatar') ? 'storage/'. $request->file('avatar')->storePublicly('avatar') : '',
+        ]));
+
+        return redirect()->route('feedback.index')->with('status', 'Feedback was created');
     }
 
     /**
@@ -58,7 +81,7 @@ class FeedbackController extends Controller
      */
     public function edit(Feedback $feedback)
     {
-        //
+        return view('landing.feedbacks.create-edit', compact('feedback'));
     }
 
     /**
@@ -70,7 +93,18 @@ class FeedbackController extends Controller
      */
     public function update(Request $request, Feedback $feedback)
     {
-        //
+        $this->validate($request, [
+            'avatar' => 'sometimes|mimes:jpg,jpeg,png',
+            'name' => 'required',
+            'feedback' => 'required',
+            'star_count' => 'integer|max:5|min:1'
+        ]);
+
+        $feedback->update(array_merge($request->all(), [
+            'avatar' => $request->hasFile('avatar') ? 'storage/'. $request->file('avatar')->storePublicly('avatar') : '',
+        ]));
+
+        return redirect()->route('feedback.index')->with('status', 'Feedback was updated');
     }
 
     /**
@@ -81,6 +115,27 @@ class FeedbackController extends Controller
      */
     public function destroy(Feedback $feedback)
     {
-        //
+        $validation = Feedback::count();
+        if($validation == 2){
+            return redirect()->route('feedback.index')->with('error', 'Harus menyisakan 2 feedback');
+        }
+
+        $feedback->delete();
+
+        return redirect()->route('feedback.index')->with('status', 'Feedback Deleted');
+    }
+
+    public function getActionColumn($data)
+    {
+        $editBtn = route('feedback.edit', $data->id);
+        $deleteBtn = route('feedback.destroy', $data->id);
+        $ident = substr(md5(now()), 0, 10);
+        return
+        '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
+        . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
+        <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
+        <input type="hidden" name="_token" value="'.csrf_token().'" />
+        <input type="hidden" name="_method" value="DELETE">
+        </form>';
     }
 }

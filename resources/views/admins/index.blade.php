@@ -25,7 +25,7 @@
                 @foreach ($admin as $each)
                     <tr>
                         <td>{{$loop->iteration}}</td>
-                        <th><img src="{{ $each->avatar ? asset('storage/' . $each->avatar ) : asset('assets/images/placeholder/avatar/default-profile.png') }}" class="img-rounded shadow" style="max-width: 100px" alt=""></th>
+                        <th><img src="{{ $each->avatar ? asset( $each->avatar ) : asset('storage/placeholder/avatar/default-profile.png') }}" class="img-rounded shadow" style="max-width: 100px" alt=""></th>
                         <td>{{$each->name}}</td>
                         <td>{{$each->email}}</td>
                         <td>

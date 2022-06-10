@@ -61,7 +61,7 @@ class UserController extends Controller
         ]);
 
         $user = User::create(array_merge($request->all(), [
-            'avatar' => $request->file('avatar')->storePublicly('avatar'),
+            'avatar' => 'storage/'. $request->file('avatar')->storePublicly('avatar'),
             'password' => bcrypt($request->password)
         ]));
 
@@ -112,7 +112,7 @@ class UserController extends Controller
 
         $user->update(array_merge($request->all(), [
             'password' => $request->password ? bcrypt($request->password) : $user->password,
-            'avatar' => $request->file('avatar') ? $request->file('avatar')->storePublicly('avatar') : $user->avatar
+            'avatar' => $request->file('avatar') ? 'storage/'. $request->file('avatar')->storePublicly('avatar') : $user->avatar
         ]));
 
         return redirect()->route('user.index')->with('status', 'Success Update User Profile');

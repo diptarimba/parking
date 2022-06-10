@@ -19,7 +19,7 @@ class AdminFactory extends Factory
         return [
             'username' => 'admin',
             'password' => bcrypt('12345678'),
-            'avatar' => 'assets/images/placeholder/avatar/default-profile.png',
+            'avatar' => 'storage/placeholder/avatar/default-profile.png',
             'name' => $this->faker->words(3, true),
             'email' => $this->faker->unique()->email(),
             'phone' => $this->faker->unique()->phoneNumber()

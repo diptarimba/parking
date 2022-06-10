@@ -46,7 +46,7 @@ class AdminController extends Controller
         ]);
 
         $admin = Admin::create(array_merge($request->all(), [
-            'avatar' => $request->hasFile('avatar') ? $request->file('avatar')->storePublicly('avatar') : null,
+            'avatar' => $request->hasFile('avatar') ? 'storage/'. $request->file('avatar')->storePublicly('avatar') : null,
             'password' => bcrypt($request->password)
         ]));
     }
@@ -91,7 +91,7 @@ class AdminController extends Controller
 
         $admin->update(array_merge($request->all(), [
             'password' => $request->password ? bcrypt($request->password) : $admin->password,
-            'avatar' => $request->hasFile('avatar') ? $request->file('avatar')->storePublicly('avatar') : $admin->avatar,
+            'avatar' => $request->hasFile('avatar') ? 'storage/'. $request->file('avatar')->storePublicly('avatar') : $admin->avatar,
         ]));
 
         return redirect()->route('admin.index')->with('status', 'Admin Update Successfully');
