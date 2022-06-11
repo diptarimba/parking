@@ -17,7 +17,7 @@ class ParkingHistoryController extends Controller
     public function index(Request $request)
     {
         if($request->ajax()){
-            $parkingHistory = ParkingHistory::with('parking_location')->get();
+            $parkingHistory = ParkingHistory::with('parking_location');
             return DataTables::of($parkingHistory)
             ->addIndexColumn()
             ->addColumn('action', function($eachRow){

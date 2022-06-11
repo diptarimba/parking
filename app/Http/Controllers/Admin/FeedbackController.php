@@ -18,12 +18,13 @@ class FeedbackController extends Controller
     {
         if($request->ajax())
         {
-            $feedback = Feedback::get();
+            $feedback = Feedback::select();
             return DataTables::of($feedback)
             ->addIndexColumn()
             ->addColumn('action', function ($q){
                 return $this->getActionColumn($q);
             })
+            ->rawColumns(['action'])
             ->make(true);
         }
 

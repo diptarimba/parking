@@ -18,7 +18,7 @@ class ParkingLocationController extends Controller
     {
         if($request->ajax())
         {
-            $parkingLocations = ParkingLocation::get();
+            $parkingLocations = ParkingLocation::select();
             return DataTables::of($parkingLocations)
             ->addIndexColumn()
             ->addColumn('action', function($query){

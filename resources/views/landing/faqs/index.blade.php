@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'Faq Management')
+@section('title', 'Admin Management')
 
 @section('header-content')
 
@@ -9,26 +9,18 @@
 @section('page-content')
 <x-card.layout >
     <x-slot name="header">
-        <x-card.h-buat url="{{route('faq.create')}}" title="Faq Management"/>
+        <x-card.h-buat url="{{route('admin.create')}}" title="Admin Management"/>
     </x-slot>
 
     <x-slot name="body">
-        <table class="table table-striped">
+        <table class="table table-striped datatables-target-exec">
             <thead>
                 <th>No</th>
-                <th>Name</th>
+                <th>Title</th>
+                <th>Email</th>
                 <th>Action</th>
             </thead>
             <tbody>
-                @foreach ($userRoles as $each)
-                    <tr>
-                        <td>{{$loop->iteration}}</td>
-                        <td>
-                            <x-action.edit action="{{route('faq.edit', $each->id)}}" />
-                            <x-action.delete :ident="$each->id" action="{{route('faq.destroy', $each->id)}}" />
-                        </td>
-                    </tr>
-                @endforeach
             </tbody>
         </table>
     </x-slot>
@@ -36,5 +28,30 @@
 @endsection
 
 @section('footer-content')
-
+<script src="{{asset('assets/plugins/datatable/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/plugins/datatable/js/dataTables.bootstrap5.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+<script>
+    $(document).ready(() => {
+        var table = $('.datatables-target-exec').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: "{{ route('faq.index') }}",
+        columns: [
+            {data: 'DT_RowIndex', name: 'DT_RowIndex',
+                sortable: false,
+                orderable: false,
+                searchable: false},
+            {data: 'question', name: 'question'},
+            {data: 'answer', name: 'answer'},
+            {
+                data: 'action',
+                name: 'action',
+                orderable: false,
+                searchable: false
+            },
+        ]
+    });
+    })
+</script>
 @endsection

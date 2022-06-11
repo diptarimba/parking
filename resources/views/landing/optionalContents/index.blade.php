@@ -17,7 +17,7 @@
             <thead>
                 <th>No</th>
                 <th>Title</th>
-                <th>Description</th>
+                <th>Email</th>
                 <th>Action</th>
             </thead>
             <tbody>
@@ -36,7 +36,7 @@
         var table = $('.datatables-target-exec').DataTable({
         processing: true,
         serverSide: true,
-        ajax: "{{ route('about.index') }}",
+        ajax: "{{ route('optional.content.index') }}",
         columns: [
             {data: 'DT_RowIndex', name: 'DT_RowIndex',
                 sortable: false,
@@ -44,6 +44,10 @@
                 searchable: false},
             {data: 'title', name: 'title'},
             {data: 'description', name: 'description'},
+            {data: 'target', name: 'target'},
+            {data: 'menu', name: 'menu'},
+            {data: 'menu', name: 'menu'},
+            {data: 'default', name: 'default'},
             {
                 data: 'action',
                 name: 'action',

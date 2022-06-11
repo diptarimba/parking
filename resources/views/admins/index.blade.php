@@ -13,16 +13,15 @@
     </x-slot>
 
     <x-slot name="body">
-        <table class="table table-striped">
+        <table class="table table-striped datatables-target-exec">
             <thead>
                 <th>No</th>
-                <th>Avatar</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Action</th>
             </thead>
             <tbody>
-                @foreach ($admin as $each)
+                {{-- @foreach ($admin as $each)
                     <tr>
                         <td>{{$loop->iteration}}</td>
                         <th><img src="{{ $each->avatar ? asset( $each->avatar ) : asset('storage/placeholder/avatar/default-profile.png') }}" class="img-rounded shadow" style="max-width: 100px" alt=""></th>
@@ -33,7 +32,7 @@
                             <x-action.delete :ident="$each->id" action="{{route('admin.destroy', $each->id)}}" />
                         </td>
                     </tr>
-                @endforeach
+                @endforeach --}}
             </tbody>
         </table>
     </x-slot>
@@ -41,5 +40,30 @@
 @endsection
 
 @section('footer-content')
-
+<script src="{{asset('assets/plugins/datatable/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/plugins/datatable/js/dataTables.bootstrap5.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+<script>
+    $(document).ready(() => {
+        var table = $('.datatables-target-exec').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: "{{ route('admin.index') }}",
+        columns: [
+            {data: 'DT_RowIndex', name: 'DT_RowIndex',
+                sortable: false,
+                orderable: false,
+                searchable: false},
+            {data: 'name', name: 'name'},
+            {data: 'email', name: 'email'},
+            {
+                data: 'action',
+                name: 'action',
+                orderable: false,
+                searchable: false
+            },
+        ]
+    });
+    })
+</script>
 @endsection

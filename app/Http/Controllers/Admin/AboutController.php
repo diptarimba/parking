@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\About;
 use Illuminate\Http\Request;
+use Yajra\DataTables\Facades\DataTables;
 
 class AboutController extends Controller
 {
@@ -13,9 +14,21 @@ class AboutController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if($request->ajax())
+        {
+            $about = About::select();
+            return DataTables::of($about)
+            ->addIndexColumn()
+            ->addColumn('action', function ($query) {
+                return $this->getActionColumn($query);
+            })
+            ->rawColumns(['action'])
+            ->make(true);
+        }
+
+        return view('landing.abouts.index');
     }
 
     /**
@@ -82,5 +95,19 @@ class AboutController extends Controller
     public function destroy(About $about)
     {
         //
+    }
+
+    public function getActionColumn($data)
+    {
+        $editBtn = route('about.edit', $data->id);
+        $deleteBtn = route('about.destroy', $data->id);
+        $ident = substr(md5(now()), 0, 10);
+        return
+        '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
+        . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
+        <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
+        <input type="hidden" name="_token" value="'.csrf_token().'" />
+        <input type="hidden" name="_method" value="DELETE">
+        </form>';
     }
 }
