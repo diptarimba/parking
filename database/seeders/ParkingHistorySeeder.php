@@ -18,6 +18,20 @@ class ParkingHistorySeeder extends Seeder
     public function run()
     {
         $dataLocation = ParkingLocation::get()->pluck('id')->random(5);
-        ParkingHistory::factory()->count(500)->state(new Sequence(['parking_location_id' => $dataLocation[rand(4,0)]]))->create();
+        ParkingHistory::factory()->count(500)
+            ->state(
+                new Sequence(
+                    ['parking_location_id' => 1],
+                    ['parking_location_id' => 2],
+                    ['parking_location_id' => 3],
+                    ['parking_location_id' => 4],
+                    ['parking_location_id' => 5],
+                    ['parking_location_id' => 6],
+                    ['parking_location_id' => 7],
+                    ['parking_location_id' => 8],
+                    ['parking_location_id' => 9],
+                    ['parking_location_id' => 10],
+                )
+            )->create();
     }
 }
