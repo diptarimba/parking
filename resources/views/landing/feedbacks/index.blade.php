@@ -39,7 +39,11 @@
         serverSide: true,
         ajax: "{{ route('feedback.index') }}",
         columns: [
-            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+            {data: 'DT_RowIndex', name: 'DT_RowIndex',
+                orderable: false,
+                searchable: false,
+                sortable: false
+            },
             {data: 'avatar', name: 'avatar'},
             {data: 'name', name: 'name'},
             {data: 'feedback', name: 'feedback'},

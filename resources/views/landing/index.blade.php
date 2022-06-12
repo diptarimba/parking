@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>eApp 2 - App Landing HTML5 Template</title>
+    <title>Smart Parking</title>
     <!-- Website meta description and keywords -->
     <meta name="description" content="Add your app description here">
     <meta name="keywords" content="Add your app keywords here">
@@ -70,17 +70,15 @@
             <div class="row flexbox-center">
                 <div class="col-lg-5">
                     <div class="single-banner text-lg-left text-center">
-                        <img src="{{ asset('assets/landing/img/appbox-img-2/banner.png') }}" alt="banner" />
+                        <img src="{{ asset($feature->{0}['image']) }}" alt="banner" />
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="single-banner">
-                        <h1>Get Amazing App Landing Page HTML Template</h1>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book.</p>
-                        <a href="#" class="appbox-btn">Download</a>
-                        <a href="#" class="appbox-btn appbox-btn2">Learn more</a>
+                        <h1>{{$feature->{0}['title']}}</h1>
+                        {!!$feature->{0}['description']!!}
+                        {{-- <a href="#" class="appbox-btn">Download</a>
+                        <a href="#" class="appbox-btn appbox-btn2">Learn more</a> --}}
                     </div>
                 </div>
             </div>
@@ -116,25 +114,15 @@
             <div class="row flexbox-center">
                 <div class="col-lg-6">
                     <div class="single-feature-box">
-                        <h2>{{$feature->{0}['title']}}</h2>
-                        {{$feature->{0}['description']}}
-                        {{-- <ul>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                            <li>Tempor incididunt ut labore et dolore magna aliqua.</li>
-                            <li>Minim veniam quis nostrud exercitation.</li>
-                            <li>Commodo consequat.</li>
-                            <li>Duis aute irure dolor in reprehenderit in voluptate.</li>
-                            <li>Velitesse cillum dolore eu fugiat nulla pariatur.</li>
-                            <li>Excepteur sint occaecat cupidatat non proident sunt.</li>
-                            <li>Culpa qui officia deserunt mollit anim id est laborum.</li>
-                        </ul> --}}
+                        <h2>{{$feature->{1}['title']}}</h2>
+                        {!!$feature->{1}['description']!!}
                         {{-- <a href="#" class="appbox-btn">Download</a>
                         <a href="#" class="appbox-btn appbox-btn2">Learn more</a> --}}
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="single-feature-box text-center">
-                        <img style="max-width: 500px" src="{{ asset($feature->{0}['image']) }}" alt="feature" />
+                        <img style="max-width: 500px" src="{{ asset($feature->{1}['image']) }}" alt="feature" />
                     </div>
                 </div>
             </div>
@@ -146,13 +134,13 @@
             <div class="row flexbox-center">
                 <div class="col-lg-6">
                     <div class="single-overview-box text-lg-left text-center">
-                        <img style="max-width: 487px;" src="{{ asset($feature->{1}['image']) }}" alt="feature" />
+                        <img style="max-width: 487px;" src="{{ asset($feature->{2}['image']) }}" alt="feature" />
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="single-overview-box">
-                        <h2>{{$feature->{1}['title']}}</h2>
-                        {{$feature->{1}['description']}}
+                        <h2>{{$feature->{2}['title']}}</h2>
+                        {!!$feature->{2}['description']!!}
                         {{-- <a href="#" class="appbox-btn appbox-btn3">Learn more</a> --}}
                     </div>
                 </div>
@@ -165,14 +153,14 @@
             <div class="row flexbox-center">
                 <div class="col-lg-6">
                     <div class="single-feature-box">
-                        <h2>{{$feature->{2}['title']}}</h2>
-                        {{$feature->{2}['description']}}
+                        <h2>{{$feature->{3}['title']}}</h2>
+                        {!!$feature->{3}['description']!!}
                         {{-- <a href="#" class="appbox-btn appbox-btn2">Learn more</a> --}}
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="single-feature-box text-lg-right text-center">
-                        <img style="max-width: 399px;"src="{{ asset($feature->{2}['image']) }}" alt="feature" />
+                        <img style="max-width: 399px;"src="{{ asset($feature->{3}['image']) }}" alt="feature" />
                     </div>
                 </div>
             </div>

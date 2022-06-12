@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class OptionalContent extends Model
+class SidebarMenuSingle extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'description',
-        'target',
-        'menu',
+        'name',
+        'route',
+        'code',
+        'sidebar_menu_label_id'
     ];
 }

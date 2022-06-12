@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\OptionalContent;
 use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class OptionalContentSeeder extends Seeder
 {
@@ -56,6 +56,6 @@ class OptionalContentSeeder extends Seeder
             ],
         ];
 
-        OptionalContent::insert($data);
+        DB::table('optional_contents')->insert($data);
     }
 }

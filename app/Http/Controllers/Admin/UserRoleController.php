@@ -27,7 +27,7 @@ class UserRoleController extends Controller
             ->rawColumns(['action'])
             ->make(true);
         }
-        return view('userRoles.index', compact('userRoles'));
+        return view('userRoles.index');
     }
 
     /**

@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -20,7 +19,8 @@ class ParkingHistoryFactory extends Factory
         return [
             'parking_location_id' => 1,
             'ref_id' => $this->faker->regexify('[A-Za-z0-9]{15}'),
-            'pay_amount' => rand(1000,4000)
+            'pay_amount' => rand(1000,4000),
+            'created_at' => $this->faker->dateTimeBetween('-30 days', 'now')->format('Y-m-d H:i:s')
         ];
     }
 }

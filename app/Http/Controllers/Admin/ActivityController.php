@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Activity;
+use App\Models\Zmdi;
 use Illuminate\Http\Request;
+use Illuminate\Notifications\Action;
 use Yajra\DataTables\Facades\DataTables;
 
 class ActivityController extends Controller
@@ -38,7 +40,8 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        //
+        $zmdi = Zmdi::get();
+        return view('landing.activities.create-edit', compact('zmdi'));
     }
 
     /**
@@ -49,7 +52,15 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'zmdi_id' => 'required',
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        $activity = Activity::create($request->all());
+
+        return redirect()->route('activity.index')->with('status', 'Success Create Activity');
     }
 
     /**
@@ -71,7 +82,8 @@ class ActivityController extends Controller
      */
     public function edit(Activity $activity)
     {
-        //
+        $zmdi = Zmdi::get();
+        return view('landing.activities.create-edit', compact('zmdi', 'activity'));
     }
 
     /**
@@ -83,7 +95,15 @@ class ActivityController extends Controller
      */
     public function update(Request $request, Activity $activity)
     {
-        //
+        $this->validate($request, [
+            'zmdi_id' => 'required',
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        $activity->update($request->all());
+
+        return redirect()->route('activity.index')->with('status', 'Success Update Activity');
     }
 
     /**
@@ -94,7 +114,9 @@ class ActivityController extends Controller
      */
     public function destroy(Activity $activity)
     {
-        //
+        $activity->delete();
+
+        return redirect()->route('activity.index')->with('status', 'Success Delete Activity');
     }
 
     public function getActionColumn($data)

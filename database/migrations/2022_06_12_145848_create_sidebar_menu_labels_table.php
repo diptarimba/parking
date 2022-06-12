@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('features', function (Blueprint $table) {
+        Schema::create('sidebar_menu_labels', function (Blueprint $table) {
             $table->id();
-            $table->string('image')->nullable();
-            $table->string('title');
-            $table->longText('description');
-            $table->string('recommendation');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('features');
+        Schema::dropIfExists('sidebar_menu_labels');
     }
 };

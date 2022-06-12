@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'Admin Management')
+@section('title', 'Optional Content Management')
 
 @section('header-content')
 
@@ -9,7 +9,7 @@
 @section('page-content')
 <x-card.layout >
     <x-slot name="header">
-        <x-card.h-buat url="{{route('admin.create')}}" title="Admin Management"/>
+        <h3 class="text-900 mb-0" data-anchor>Optional Content Management</h3>
     </x-slot>
 
     <x-slot name="body">
@@ -17,7 +17,10 @@
             <thead>
                 <th>No</th>
                 <th>Title</th>
-                <th>Email</th>
+                <th>Description</th>
+                <th>Target</th>
+                <th>Menu</th>
+                <th>Default Value</th>
                 <th>Action</th>
             </thead>
             <tbody>
@@ -45,7 +48,6 @@
             {data: 'title', name: 'title'},
             {data: 'description', name: 'description'},
             {data: 'target', name: 'target'},
-            {data: 'menu', name: 'menu'},
             {data: 'menu', name: 'menu'},
             {data: 'default', name: 'default'},
             {

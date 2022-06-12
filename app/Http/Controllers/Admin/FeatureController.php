@@ -38,7 +38,7 @@ class FeatureController extends Controller
      */
     public function create()
     {
-        //
+        return view('landing.features.create-edit');
     }
 
     /**
@@ -49,7 +49,17 @@ class FeatureController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'image' => 'required|mimes::jpeg,jpg,png|max:1024',
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        $feature = Feature::create(array_merge($request->all(),[
+            'image' => $request->hasFile('image') ? $request->file('image')->storePublicly('feature') : null
+        ]));
+
+        return redirect()->route('feature.index')->with('status', 'Success Create Feature');
     }
 
     /**
@@ -71,7 +81,7 @@ class FeatureController extends Controller
      */
     public function edit(Feature $feature)
     {
-        //
+        return view('landing.features.create-edit', compact('feature'));
     }
 
     /**
@@ -83,7 +93,17 @@ class FeatureController extends Controller
      */
     public function update(Request $request, Feature $feature)
     {
-        //
+        $this->validate($request, [
+            'image' => 'sometimes|mimes::jpeg,jpg,png|max:1024',
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        $feature->update(array_merge($request->all(), [
+            'image' => $request->hasFile('image') ? $request->file('image')->storePublicly('feature') : $feature->image
+        ]));
+
+        return redirect()->route('feature.index')->with('status', 'Success update feature');
     }
 
     /**

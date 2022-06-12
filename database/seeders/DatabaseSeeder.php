@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\SidebarMenuLabel;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call(SidebarMenuLabel::class);
+        $this->call(SidebarMenuSingleSeeder::class);
         $this->call(AdminSeeder::class);
         $this->call(ParkingLocationSeeder::class);
         $this->call(ParkingHistorySeeder::class);

@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('features', function (Blueprint $table) {
+        Schema::create('pivot_sidebar_menus', function (Blueprint $table) {
             $table->id();
-            $table->string('image')->nullable();
-            $table->string('title');
-            $table->longText('description');
-            $table->string('recommendation');
+            $table->unsignedBigInteger('user_role_id');
+            $table->unsignedBigInteger('sidebar_menu_single_id');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('features');
+        Schema::dropIfExists('pivot_sidebar_menus');
     }
 };

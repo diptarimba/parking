@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Activity;
 use App\Models\Faq;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
@@ -37,7 +38,7 @@ class FaqController extends Controller
      */
     public function create()
     {
-        //
+        return view('landing.faqs.create-edit');
     }
 
     /**
@@ -48,7 +49,14 @@ class FaqController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'question' => 'required',
+            'answer' => 'required'
+        ]);
+
+        $activity = Activity::create($request->all());
+
+        return redirect()->route('faq.index')->with('status', 'Success Create Faq');
     }
 
     /**
@@ -70,7 +78,7 @@ class FaqController extends Controller
      */
     public function edit(Faq $faq)
     {
-        //
+        return view('landing.faqs.create-edit', compact('faq'));
     }
 
     /**
@@ -82,7 +90,14 @@ class FaqController extends Controller
      */
     public function update(Request $request, Faq $faq)
     {
-        //
+        $this->validate($request, [
+            'question' => 'required',
+            'answer' => 'required'
+        ]);
+
+        $faq->update($request->all());
+
+        return redirect()->route('faq.index')->with('status', 'Success update FAQ');
     }
 
     /**
@@ -93,7 +108,9 @@ class FaqController extends Controller
      */
     public function destroy(Faq $faq)
     {
-        //
+        $faq->delete();
+
+        return redirect()->route('faq.index')->with('status', 'Success Delete Faq');
     }
 
     public function getActionColumn($data)

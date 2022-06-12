@@ -38,7 +38,7 @@ class OptionalContentController extends Controller
      */
     public function create()
     {
-        //
+        return redirect()->route('optional.content.index');
     }
 
     /**
@@ -49,7 +49,7 @@ class OptionalContentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -71,7 +71,7 @@ class OptionalContentController extends Controller
      */
     public function edit(OptionalContent $optionalContent)
     {
-        //
+        return view('landing.optionalContents.create-edit', compact('optionalContent'));
     }
 
     /**
@@ -83,7 +83,16 @@ class OptionalContentController extends Controller
      */
     public function update(Request $request, OptionalContent $optionalContent)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required',
+            'target' => 'required',
+            'menu' => 'required',
+        ]);
+
+        $optionalContent->update($request->all());
+
+        return redirect()->route('optional.content.index')->with('status', 'Success update Optional Content');
     }
 
     /**
@@ -103,11 +112,11 @@ class OptionalContentController extends Controller
         $deleteBtn = route('optional.content.destroy', $data->id);
         $ident = substr(md5(now()), 0, 10);
         return
-        '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
-        . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
-        <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
-        <input type="hidden" name="_token" value="'.csrf_token().'" />
-        <input type="hidden" name="_method" value="DELETE">
-        </form>';
+        '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>';
+        // . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
+        // <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
+        // <input type="hidden" name="_token" value="'.csrf_token().'" />
+        // <input type="hidden" name="_method" value="DELETE">
+        // </form>';
     }
 }

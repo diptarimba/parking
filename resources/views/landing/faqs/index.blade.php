@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'Admin Management')
+@section('title', 'Faq Management')
 
 @section('header-content')
 
@@ -9,15 +9,15 @@
 @section('page-content')
 <x-card.layout >
     <x-slot name="header">
-        <x-card.h-buat url="{{route('admin.create')}}" title="Admin Management"/>
+        <x-card.h-buat url="{{route('faq.create')}}" title="Faq Management"/>
     </x-slot>
 
     <x-slot name="body">
         <table class="table table-striped datatables-target-exec">
             <thead>
                 <th>No</th>
-                <th>Title</th>
-                <th>Email</th>
+                <th>Question</th>
+                <th>Answer</th>
                 <th>Action</th>
             </thead>
             <tbody>

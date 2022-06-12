@@ -32,7 +32,6 @@ Route::get('/login', [AdminLoginController::class, 'index'])->name('admin.login.
 Route::post('/post', [AdminLoginController::class, 'login'])->name('admin.login');
 Route::get('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 
-Route::get('/', [LandingController::class, 'index']);
 Route::post('/contact/store', [ContactController::class, 'store'])->name('landing.contact.store');
 
 Route::group(['middleware'=>'auth:admin'], function() {
@@ -46,7 +45,31 @@ Route::group(['middleware'=>'auth:admin'], function() {
     Route::resource('/faq', FaqController::class);
     Route::resource('/contact', ContactController::class);
     Route::resource('/activity', ActivityController::class);
-    Route::resource('/optional/content', OptionalContentController::class, ['as' => 'optional']);
+    Route::resource('/optional/content', OptionalContentController::class, ['as' => 'optional'])->parameter('content', 'optionalContent');
     Route::resource('/parking/location', ParkingLocationController::class)->parameter('location', 'parkingLocation');
     Route::resource('/parking/histories', ParkingHistoryController::class)->parameter('histories', 'parkingHistories');
 });
+
+Route::get('/', [LandingController::class, 'index']);
+
+Route::get('/route', function () {
+    $routeCollection = Route::getRoutes();
+
+    echo "<table style='width:100%'>";
+    echo "<tr>";
+    echo "<td width='10%'><h4>HTTP Method</h4></td>";
+    echo "<td width='10%'><h4>Route</h4></td>";
+    echo "<td width='10%'><h4>Name</h4></td>";
+    echo "<td width='70%'><h4>Corresponding Action</h4></td>";
+    echo "</tr>";
+    foreach ($routeCollection as $value) {
+        echo "<tr>";
+        echo "<td>" . $value->methods()[0] . "</td>";
+        echo "<td>" . $value->uri() . "</td>";
+        echo "<td>" . $value->getName() . "</td>";
+        echo "<td>" . $value->getActionName() . "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+});
+

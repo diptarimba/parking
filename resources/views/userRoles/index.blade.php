@@ -13,23 +13,13 @@
     </x-slot>
 
     <x-slot name="body">
-        <table class="table table-striped">
+        <table class="table table-striped datatables-target-exec">
             <thead>
                 <th>No</th>
                 <th>Name</th>
                 <th>Action</th>
             </thead>
             <tbody>
-                @foreach ($userRoles as $each)
-                    <tr>
-                        <td>{{$loop->iteration}}</td>
-                        <td>{{$each->name}}</td>
-                        <td>
-                            <x-action.edit action="{{route('roles.edit', $each->id)}}" />
-                            <x-action.delete :ident="$each->id" action="{{route('roles.destroy', $each->id)}}" />
-                        </td>
-                    </tr>
-                @endforeach
             </tbody>
         </table>
     </x-slot>
@@ -37,5 +27,29 @@
 @endsection
 
 @section('footer-content')
-
+<script src="{{asset('assets/plugins/datatable/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/plugins/datatable/js/dataTables.bootstrap5.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+<script>
+    $(document).ready(() => {
+        var table = $('.datatables-target-exec').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: "{{ route('roles.index') }}",
+        columns: [
+            {data: 'DT_RowIndex', name: 'DT_RowIndex',
+                sortable: false,
+                orderable: false,
+                searchable: false},
+            {data: 'name', name: 'name'},
+            {
+                data: 'action',
+                name: 'action',
+                orderable: false,
+                searchable: false
+            },
+        ]
+    });
+    })
+</script>
 @endsection

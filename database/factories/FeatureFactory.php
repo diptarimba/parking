@@ -19,7 +19,8 @@ class FeatureFactory extends Factory
         return [
             'image' => 'storage/placeholder/avatar/default-profile.png',
             'title' => $this->faker->words(3, true),
-            'description' => $this->faker->words(5, true)
+            'description' => $this->faker->words(5, true),
+            'recommendation' => 1
         ];
     }
 }

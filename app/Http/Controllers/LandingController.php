@@ -17,7 +17,7 @@ class LandingController extends Controller
         $feedback = Feedback::take(10)->get();
         $faq = Faq::take(5)->get();
         $about = About::take(3)->get();
-        $feature = (Object) Feature::take(3)->get()->toArray();
+        $feature = (Object) Feature::take(4)->get()->toArray();
         $optionalContent = OptionalContent::get();
         $activity = Activity::take(4)->get();
         return view('landing.index', compact('feedback', 'faq', 'about', 'feature', 'optionalContent', 'activity'));

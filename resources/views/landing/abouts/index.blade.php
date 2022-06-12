@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'Admin Management')
+@section('title', 'About Management')
 
 @section('header-content')
 
@@ -9,7 +9,7 @@
 @section('page-content')
 <x-card.layout >
     <x-slot name="header">
-        <x-card.h-buat url="{{route('admin.create')}}" title="Admin Management"/>
+        <x-card.h-buat url="{{route('about.create')}}" title="About Management"/>
     </x-slot>
 
     <x-slot name="body">

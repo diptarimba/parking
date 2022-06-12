@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\About;
+use App\Models\Icon;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -38,7 +39,8 @@ class AboutController extends Controller
      */
     public function create()
     {
-        //
+        $icon = Icon::get();
+        return view('landing.abouts.create-edit', compact('icon'));
     }
 
     /**
@@ -49,7 +51,15 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'icon_id' => 'required',
+            'description' => 'required'
+        ]);
+
+        $about = About::create($request->all());
+
+        return redirect()->route('about.index')->with('status', 'Success Create About');
     }
 
     /**
@@ -71,7 +81,8 @@ class AboutController extends Controller
      */
     public function edit(About $about)
     {
-        //
+        $icon = Icon::get();
+        return view('landing.abouts.create-edit', compact('about', 'icon'));
     }
 
     /**
@@ -83,7 +94,15 @@ class AboutController extends Controller
      */
     public function update(Request $request, About $about)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'icon_id' => 'required',
+            'description' => 'required'
+        ]);
+
+        $about->update($request->all());
+
+        return redirect()->route('about.index')->with('status', 'Success update About');
     }
 
     /**
@@ -94,7 +113,14 @@ class AboutController extends Controller
      */
     public function destroy(About $about)
     {
-        //
+        $validate = About::count();
+        if($validate == 3 || $validate < 3){
+            return redirect()->route('about.index')->with('status', 'Failed delete about');
+        }
+
+        $about->delete();
+
+        return redirect()->route('about.index')->with('status', 'Success delete about');
     }
 
     public function getActionColumn($data)
