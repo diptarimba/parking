@@ -13,7 +13,7 @@
     <!--navigation-->
     <ul class="metismenu" id="menu">
         <x-sidebar.menu-label title="Home"/>
-        <x-sidebar.single icon="bx bx-home-circle" link="{{url('/')}}" name="Dashboard" />
+        <x-sidebar.single icon="bx bx-home-circle" link="{{route('dashboard')}}" name="Dashboard" />
         <x-sidebar.menu-label title="Parking"/>
         <x-sidebar.single icon="bx bx-current-location" link="{{route('location.index')}}" name="Location" />
         <x-sidebar.single icon="bx bx-history" link="{{route('histories.index')}}" name="History" />

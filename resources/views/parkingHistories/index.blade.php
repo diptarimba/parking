@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'User Management')
+@section('title', 'Parking History Management')
 
 @section('header-content')
 
@@ -9,7 +9,7 @@
 @section('page-content')
 <x-card.layout >
     <x-slot name="header">
-        <x-card.h-buat url="{{route('user.create')}}" title="User Management"/>
+        <x-card.h-buat url="{{route('histories.create')}}" title="Parking History Management"/>
     </x-slot>
 
     <x-slot name="body">
@@ -38,7 +38,8 @@
         serverSide: true,
         ajax: "{{ route('histories.index') }}",
         columns: [
-            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+            {data: 'DT_RowIndex', name: 'DT_RowIndex', sortable: false, orderable: false,
+                searchable: false},
             {data: 'parking_location.name', name: 'parking_location.name'},
             {data: 'pay_amount', name: 'pay_amount'},
             {data: 'start_time', name: 'start_time'},

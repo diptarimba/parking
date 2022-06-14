@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\UserRoleController;
 use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\Permission\RoleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,6 +52,8 @@ Route::group(['middleware'=>'auth:admin'], function() {
 });
 
 Route::get('/', [LandingController::class, 'index']);
+
+Route::get('/role', [RoleController::class, 'edit']);
 
 Route::get('/route', function () {
     $routeCollection = Route::getRoutes();

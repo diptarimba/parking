@@ -47,7 +47,10 @@
         serverSide: true,
         ajax: "{{ route('location.index') }}",
         columns: [
-            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+            {data: 'DT_RowIndex', name: 'DT_RowIndex',
+                orderable: false,
+                searchable: false,
+                sortable: false},
             {data: 'name', name: 'name'},
             {
                 data: 'action',

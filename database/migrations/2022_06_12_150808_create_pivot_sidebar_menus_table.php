@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_role_id');
             $table->unsignedBigInteger('sidebar_menu_single_id');
+            $table->boolean('is_active')->default(0);
             $table->timestamps();
         });
     }

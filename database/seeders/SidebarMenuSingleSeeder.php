@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\SidebarMenuLabel;
 use App\Models\SidebarMenuSingle;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
