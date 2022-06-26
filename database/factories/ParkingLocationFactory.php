@@ -20,7 +20,8 @@ class ParkingLocationFactory extends Factory
             'name' => $this->faker->words(3, true),
             'description' => $this->faker->paragraph(1, true),
             'latitude' => $this->faker->latitude(),
-            'longitude' => $this->faker->longitude()
+            'longitude' => $this->faker->longitude(),
+            'image' => 'kosong',
         ];
     }
 }

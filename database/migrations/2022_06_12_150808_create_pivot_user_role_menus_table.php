@@ -13,13 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('parking_locations', function (Blueprint $table) {
+        Schema::create('pivot_user_role_menus', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->longText('description')->nullable();
-            $table->string('latitude');
-            $table->string('longitude');
-            $table->string('image');
+            $table->unsignedBigInteger('user_role_id');
+            $table->unsignedBigInteger('route_limiter_id');
+            $table->boolean('is_menu')->default(0);
+            $table->boolean('is_active')->default(0);
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parking_locations');
+        Schema::dropIfExists('pivot_sidebar_menus');
     }
 };

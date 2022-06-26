@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SidebarMenuSingle extends Model
+class RouteLimiter extends Model
 {
     use HasFactory;
 
@@ -13,6 +13,7 @@ class SidebarMenuSingle extends Model
         'name',
         'route',
         'code',
-        'sidebar_menu_label_id'
+        'sidebar_menu_label_id',
+        'limiter'
     ];
 }

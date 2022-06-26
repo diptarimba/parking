@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sidebar_menu_singles', function (Blueprint $table) {
+        Schema::create('route_limiters', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('route');
-            $table->string('code');
-            $table->unsignedBigInteger('sidebar_menu_label_id');
+            $table->string('code')->nullable();
+            $table->unsignedBigInteger('sidebar_menu_label_id')->nullable();
+            $table->string('limiter')->nullable();
             $table->timestamps();
         });
     }

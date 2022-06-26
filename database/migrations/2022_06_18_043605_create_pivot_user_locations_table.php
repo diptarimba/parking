@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('pivot_sidebar_menus', function (Blueprint $table) {
+        Schema::create('pivot_user_locations', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_role_id');
-            $table->unsignedBigInteger('sidebar_menu_single_id');
-            $table->boolean('is_active')->default(0);
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('parking_location_id');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pivot_sidebar_menus');
+        Schema::dropIfExists('pivot_user_locations');
     }
 };

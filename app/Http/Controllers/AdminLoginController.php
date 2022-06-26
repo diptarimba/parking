@@ -10,7 +10,7 @@ class AdminLoginController extends Controller
     public function index()
     {
         if(Auth::guard('admin')->check()){
-            return redirect(route('dashboard'));
+            return redirect(route('home.index'));
         }
         return view('auth.signin');
     }
@@ -26,7 +26,7 @@ class AdminLoginController extends Controller
 
         if($auth){
             return redirect()
-				->intended(route('dashboard'))
+				->intended(route('home.index'))
 				->with('status','Sukses Login Sebagai Admin!');
         }else{
             return back()->withErrors('username / password anda salah!');

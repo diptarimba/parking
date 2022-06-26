@@ -8,6 +8,7 @@ use App\Models\Faq;
 use App\Models\Feature;
 use App\Models\Feedback;
 use App\Models\OptionalContent;
+use App\Models\ParkingLocation;
 use Illuminate\Http\Request;
 
 class LandingController extends Controller
@@ -20,6 +21,7 @@ class LandingController extends Controller
         $feature = (Object) Feature::take(4)->get()->toArray();
         $optionalContent = OptionalContent::get();
         $activity = Activity::take(4)->get();
-        return view('landing.index', compact('feedback', 'faq', 'about', 'feature', 'optionalContent', 'activity'));
+        $parkingLocation = ParkingLocation::get();
+        return view('landing.index', compact('feedback', 'faq', 'about', 'feature', 'optionalContent', 'activity', 'parkingLocation'));
     }
 }

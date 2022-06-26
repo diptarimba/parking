@@ -70,7 +70,7 @@
             <div class="row flexbox-center">
                 <div class="col-lg-5">
                     <div class="single-banner text-lg-left text-center">
-                        <img src="{{ asset($feature->{0}['image']) }}" alt="banner" />
+                        <img class="img-rounded" style="max-width: 416px;" src="{{ asset($feature->{0}['image']) }}" alt="banner" />
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -122,7 +122,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="single-feature-box text-center">
-                        <img style="max-width: 500px" src="{{ asset($feature->{1}['image']) }}" alt="feature" />
+                        <img style="max-width: 514px" src="{{ asset($feature->{1}['image']) }}" alt="feature" />
                     </div>
                 </div>
             </div>
@@ -141,7 +141,6 @@
                     <div class="single-overview-box">
                         <h2>{{$feature->{2}['title']}}</h2>
                         {!!$feature->{2}['description']!!}
-                        {{-- <a href="#" class="appbox-btn appbox-btn3">Learn more</a> --}}
                     </div>
                 </div>
             </div>
@@ -155,7 +154,6 @@
                     <div class="single-feature-box">
                         <h2>{{$feature->{3}['title']}}</h2>
                         {!!$feature->{3}['description']!!}
-                        {{-- <a href="#" class="appbox-btn appbox-btn2">Learn more</a> --}}
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -204,70 +202,16 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="screenshot-area-slider">
+                        @foreach ($parkingLocation as $each)
                         <div class="screenshot-single-slide">
-                            <img src="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot1.png') }}" alt="screenshot" />
+                            <img src="{{ asset($each->image) }}" alt="screenshot" />
                             <div class="screenshot-overlay">
                                 <a class="icofont icofont-ui-search example-image-link"
-                                    href="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot1.png') }}"
+                                    href="{{ asset($each->image) }}"
                                     data-lightbox="example-set" data-title=""></a>
                             </div>
                         </div>
-                        <div class="screenshot-single-slide">
-                            <img src="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot2.png') }}" alt="screenshot" />
-                            <div class="screenshot-overlay">
-                                <a class="icofont icofont-ui-search example-image-link"
-                                    href="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot2.png') }}"
-                                    data-lightbox="example-set" data-title=""></a>
-                            </div>
-                        </div>
-                        <div class="screenshot-single-slide">
-                            <img src="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot3.png') }}" alt="screenshot" />
-                            <div class="screenshot-overlay">
-                                <a class="icofont icofont-ui-search example-image-link"
-                                    href="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot3.png') }}"
-                                    data-lightbox="example-set" data-title=""></a>
-                            </div>
-                        </div>
-                        <div class="screenshot-single-slide">
-                            <img src="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot4.png') }}" alt="screenshot" />
-                            <div class="screenshot-overlay">
-                                <a class="icofont icofont-ui-search example-image-link"
-                                    href="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot4.png') }}"
-                                    data-lightbox="example-set" data-title=""></a>
-                            </div>
-                        </div>
-                        <div class="screenshot-single-slide">
-                            <img src="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot1.png') }}" alt="screenshot" />
-                            <div class="screenshot-overlay">
-                                <a class="icofont icofont-ui-search example-image-link"
-                                    href="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot1.png') }}"
-                                    data-lightbox="example-set" data-title=""></a>
-                            </div>
-                        </div>
-                        <div class="screenshot-single-slide">
-                            <img src="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot2.png') }}" alt="screenshot" />
-                            <div class="screenshot-overlay">
-                                <a class="icofont icofont-ui-search example-image-link"
-                                    href="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot2.png') }}"
-                                    data-lightbox="example-set" data-title=""></a>
-                            </div>
-                        </div>
-                        <div class="screenshot-single-slide">
-                            <img src="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot3.png') }}" alt="screenshot" />
-                            <div class="screenshot-overlay">
-                                <a class="icofont icofont-ui-search example-image-link"
-                                    href="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot3.png') }}"
-                                    data-lightbox="example-set" data-title=""></a>
-                            </div>
-                        </div>
-                        <div class="screenshot-single-slide">
-                            <img src="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot4.png') }}" alt="screenshot" />
-                            <div class="screenshot-overlay">
-                                <a class="icofont icofont-ui-search example-image-link"
-                                    href="{{ asset('assets/landing/img/appbox-img-1/screenshot/screenshot4.png') }}"
-                                    data-lightbox="example-set" data-title=""></a>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

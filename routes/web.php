@@ -31,12 +31,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/login', [AdminLoginController::class, 'index'])->name('admin.login.index');
 Route::post('/post', [AdminLoginController::class, 'login'])->name('admin.login');
-Route::get('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 
 Route::post('/contact/store', [ContactController::class, 'store'])->name('landing.contact.store');
 
 Route::group(['middleware'=>'auth:admin'], function() {
-    Route::get('/home', [HomeController::class, 'index'])->name('dashboard');
+    Route::get('/home', [HomeController::class, 'index'])->name('home.index');
+    Route::get('/user/roles/permission/{role}/edit', [RoleController::class, 'edit'])->name('roles.permission.edit');
+    Route::put('/user/roles/permission/{role}', [RoleController::class, 'update'])->name('roles.permission.update');
     Route::resource('/user/roles', UserRoleController::class)->parameter('roles','userRole');
     Route::resource('/admin', AdminController::class);
     Route::resource('/user', UserController::class);
@@ -49,30 +50,7 @@ Route::group(['middleware'=>'auth:admin'], function() {
     Route::resource('/optional/content', OptionalContentController::class, ['as' => 'optional'])->parameter('content', 'optionalContent');
     Route::resource('/parking/location', ParkingLocationController::class)->parameter('location', 'parkingLocation');
     Route::resource('/parking/histories', ParkingHistoryController::class)->parameter('histories', 'parkingHistories');
+    Route::get('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 });
 
 Route::get('/', [LandingController::class, 'index']);
-
-Route::get('/role', [RoleController::class, 'edit']);
-
-Route::get('/route', function () {
-    $routeCollection = Route::getRoutes();
-
-    echo "<table style='width:100%'>";
-    echo "<tr>";
-    echo "<td width='10%'><h4>HTTP Method</h4></td>";
-    echo "<td width='10%'><h4>Route</h4></td>";
-    echo "<td width='10%'><h4>Name</h4></td>";
-    echo "<td width='70%'><h4>Corresponding Action</h4></td>";
-    echo "</tr>";
-    foreach ($routeCollection as $value) {
-        echo "<tr>";
-        echo "<td>" . $value->methods()[0] . "</td>";
-        echo "<td>" . $value->uri() . "</td>";
-        echo "<td>" . $value->getName() . "</td>";
-        echo "<td>" . $value->getActionName() . "</td>";
-        echo "</tr>";
-    }
-    echo "</table>";
-});
-

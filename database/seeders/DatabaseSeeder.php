@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(SidebarMenuLabelSeeder::class);
-        $this->call(SidebarMenuSingleSeeder::class);
+        $this->call(RouteLimiterSeeder::class);
         $this->call(AdminSeeder::class);
         $this->call(ParkingLocationSeeder::class);
         $this->call(ParkingHistorySeeder::class);
@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AboutSeeder::class);
         $this->call(ContactSeeder::class);
         $this->call(FaqSeeder::class);
+        $this->call(UserRoleSeeder::class);
         $this->call(FeatureSeeder::class);
         $this->call(FeedbackSeeder::class);
         $this->call(ActivitySeeder::class);

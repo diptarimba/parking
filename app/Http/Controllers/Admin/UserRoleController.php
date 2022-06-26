@@ -114,9 +114,11 @@ class UserRoleController extends Controller
     {
         $editBtn = route('admin.edit', $data->id);
         $deleteBtn = route('admin.destroy', $data->id);
+        $roleBtn = route('roles.permission.edit', $data->id);
         $ident = substr(md5(now()), 0, 10);
         return
-        '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
+        '<a href="'.$roleBtn.'" class="btn mx-1 my-1 btn-sm btn-warning">Role Permission</a>'
+        . '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
         . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
         <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
         <input type="hidden" name="_token" value="'.csrf_token().'" />

@@ -2,12 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\SidebarMenuSingle;
+use App\Models\RouteLimiter;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Route;
 
-class SidebarMenuSingleSeeder extends Seeder
+class RouteLimiterSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -40,6 +40,16 @@ class SidebarMenuSingleSeeder extends Seeder
         ];
         $routeCollection = Route::getRoutes();
         $data = [];
+
+        $crudLimiter = [
+            'create' => 'create',
+            'store' => 'create',
+            'index' => 'read',
+            'update' => 'update',
+            'edit' => 'update',
+            'destroy'=> 'delete'
+        ];
+
         foreach($routeCollection as $each){
             if(str_contains($each->getActionName(), 'App\\Http\\Controllers\\Admin\\')){
                 //Foreach as each key
@@ -48,11 +58,14 @@ class SidebarMenuSingleSeeder extends Seeder
                     foreach($eachController as $lineController){
                         $dataEach = str_replace('App\\Http\\Controllers\\Admin\\', '', $each->getActionName());
                         if(str_contains($dataEach, $lineController)){
+                            $route = $each->getName();
+                            $splitRoute = explode('.', $route)[1];
                             $data[] = [
-                                'route' => $each->getName(),
+                                'route' => $route,
                                 'code' => 'bx-home',
                                 'name' => explode('@', $dataEach)[0],
-                                'sidebar_menu_label_id' => $key
+                                'sidebar_menu_label_id' => $key,
+                                'limiter' => $crudLimiter[$splitRoute] ?? null
                             ];
                         }
                     }
@@ -60,6 +73,6 @@ class SidebarMenuSingleSeeder extends Seeder
             }
         }
 
-        SidebarMenuSingle::insert($data);
+        RouteLimiter::insert($data);
     }
 }

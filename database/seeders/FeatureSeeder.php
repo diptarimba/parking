@@ -19,10 +19,10 @@ class FeatureSeeder extends Seeder
         Feature::factory()
             ->count(4)
             ->state(new Sequence(
-                ['recommendation' => '416 x 629'],
-                ['recommendation' => '514 x 711'],
-                ['recommendation' => '487 x 596'],
-                ['recommendation' => '399 x 604'],
+                ['recommendation' => '416 x 629', 'image' => '/storage/placeholder/landing/feature1.jpg'],
+                ['recommendation' => '514 x 711', 'image' => '/storage/placeholder/landing/feature2.jpg'],
+                ['recommendation' => '487 x 596', 'image' => '/storage/placeholder/landing/feature3.jpg'],
+                ['recommendation' => '399 x 604', 'image' => '/storage/placeholder/landing/feature4.jpg'],
             ))
             ->create();
     }
