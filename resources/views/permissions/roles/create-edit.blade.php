@@ -19,13 +19,15 @@
             enctype="multipart/form-data">
             @csrf
             <x-forms.put-method />
+            {{-- Per controller --}}
             @foreach ($allowController as $key => $each)
                 <label class="form-label">{{$key}}</label>
+                {{-- Per Limiter --}}
                 @foreach ($each as $keyEach => $valueEach)
                 <div class="form-check">
-                    <input class="form-check-input" name="role[{{$key}}][{{$valueEach}}]" type="checkbox" id="{{$key.$valueEach}}">
-                    <label class="form-check-label" for="{{$key.$valueEach}}">
-                        {{$valueEach}}
+                    <input class="form-check-input" name="{{ "role[$key][$keyEach]" }}" value="{{$valueEach->implode(',')}}" type="checkbox" id="{{$key.$keyEach}}">
+                    <label class="form-check-label" for="{{$key.$keyEach}}">
+                        {{strtoupper($keyEach)}}
                     </label>
                 </div>
                 @endforeach
