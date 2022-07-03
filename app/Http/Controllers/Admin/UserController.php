@@ -18,7 +18,7 @@ class UserController extends Controller
     public function index(Request $request)
     {
         if($request->ajax()){
-            $users = User::select();
+            $users = User::with('user_role')->select();
             return DataTables::of($users)
                 ->addIndexColumn()
                 ->addColumn('action', function($eachRow){
@@ -135,10 +135,12 @@ class UserController extends Controller
     public function getActionColumn($data)
     {
         $editBtn = route('user.edit', $data->id);
+        $locationBtn = route('user.location.edit', $data->id);
         $deleteBtn = route('user.destroy', $data->id);
         $ident = substr(md5(now()), 0, 10);
         return
-        '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
+        '<a href="'.$locationBtn.'" class="btn mx-1 my-1 btn-sm btn-warning">Location</a>'
+        .'<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
         . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
         <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
         <input type="hidden" name="_token" value="'.csrf_token().'" />

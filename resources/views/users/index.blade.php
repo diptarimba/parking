@@ -19,6 +19,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
+                <th>Role</th>
                 <th>Action</th>
             </thead>
             <tbody>
@@ -40,10 +41,11 @@
         serverSide: true,
         ajax: "{{ route('user.index') }}",
         columns: [
-            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+            {data: 'DT_RowIndex', name: 'DT_RowIndex', sortable: false, orderable:false, searchable:false},
             {data: 'name', name: 'name'},
             {data: 'email', name: 'email'},
             {data: 'phone', name: 'phone'},
+            {data: 'user_role.name', name: 'user_role.name'},
             {
                 data: 'action',
                 name: 'action',

@@ -16,4 +16,5 @@ class RouteLimiter extends Model
         'sidebar_menu_label_id',
         'limiter'
     ];
+
 }

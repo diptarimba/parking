@@ -12,4 +12,9 @@ class ParkingLocation extends Model
     protected $fillable = [
         'name', 'description', 'latitude', 'longitude'
     ];
+
+    public function user()
+    {
+        return $this->belongsToMany(User::class, 'pivot_user_locations',);
+    }
 }

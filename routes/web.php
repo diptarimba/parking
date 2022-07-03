@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\UserRoleController;
 use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\Permission\LocationController;
 use App\Http\Controllers\Permission\RoleController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,8 +37,12 @@ Route::post('/contact/store', [ContactController::class, 'store'])->name('landin
 
 Route::group(['middleware'=>'auth:admin'], function() {
     Route::get('/home', [HomeController::class, 'index'])->name('home.index');
-    Route::get('/user/roles/permission/{role}/edit', [RoleController::class, 'edit'])->name('roles.permission.edit');
-    Route::put('/user/roles/permission/{role}', [RoleController::class, 'update'])->name('roles.permission.update');
+    Route::get('/user/roles/authority/{role}/edit', [RoleController::class, 'edit'])->name('roles.permission.edit');
+    Route::put('/user/roles/authority/{role}', [RoleController::class, 'update'])->name('roles.permission.update');
+    Route::get('/user/location/{user}/edit', [LocationController::class, 'edit'])->name('user.location.edit');
+    Route::put('/user/location/{user}', [LocationController::class, 'update'])->name('user.location.update');
+    Route::delete('/user/location/{location}', [LocationController::class, 'destroy'])->name('user.location.destroy');
+
     Route::resource('/user/roles', UserRoleController::class)->parameter('roles','userRole');
     Route::resource('/admin', AdminController::class);
     Route::resource('/user', UserController::class);
