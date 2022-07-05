@@ -13,7 +13,6 @@ class RouteLimiter extends Model
         'name',
         'route',
         'code',
-        'sidebar_menu_label_id',
         'limiter'
     ];
 
@@ -21,10 +20,4 @@ class RouteLimiter extends Model
     {
         return $this->belongsToMany(UserRole::class, 'pivot_user_role_menus');
     }
-
-    public function sidebar_menu_label()
-    {
-        return $this->belongsTo(SidebarMenuLabel::class, 'sidebar_menu_label_id');
-    }
-
 }

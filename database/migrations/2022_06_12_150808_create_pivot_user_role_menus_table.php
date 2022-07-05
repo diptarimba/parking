@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('pivot_user_role_menus', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_role_id');
-            $table->unsignedBigInteger('route_limiter_id');
+            $table->unsignedBigInteger('user_role_id')->references('id')->on('user_roles');
+            $table->unsignedBigInteger('route_limiter_id')->references('id')->on('route_limiters');
             $table->boolean('is_menu')->default(0);
             $table->boolean('is_active')->default(0);
             $table->timestamps();

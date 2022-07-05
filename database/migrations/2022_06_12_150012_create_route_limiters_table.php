@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('route');
             $table->string('code')->nullable();
-            $table->unsignedBigInteger('sidebar_menu_label_id')->nullable();
             $table->string('limiter')->nullable();
             $table->timestamps();
         });

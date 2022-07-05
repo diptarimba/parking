@@ -14,7 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(SidebarMenuLabelSeeder::class);
         $this->call(RouteLimiterSeeder::class);
         $this->call(AdminSeeder::class);
         $this->call(ParkingLocationSeeder::class);

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('parking_histories', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('parking_location_id');
+            $table->unsignedBigInteger('parking_location_id')->references('id')->on('parking_locations');
             $table->string('ref_id');
             $table->bigInteger('pay_amount');
             $table->timestamp('start_time')->useCurrent();

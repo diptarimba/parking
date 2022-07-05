@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('pivot_user_locations', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('parking_location_id');
+            $table->unsignedBigInteger('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('parking_location_id')->references('id')->on('parking_locations');
             $table->timestamps();
         });
     }

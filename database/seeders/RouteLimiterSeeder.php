@@ -64,7 +64,6 @@ class RouteLimiterSeeder extends Seeder
                                 'route' => $route,
                                 'code' => 'bx-home',
                                 'name' => explode('@', $dataEach)[0],
-                                'sidebar_menu_label_id' => $key,
                                 'limiter' => $crudLimiter[$splitRoute] ?? null
                             ];
                         }
