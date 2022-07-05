@@ -1,15 +1,15 @@
 $(function() {
     "use strict";
 
-	
+
 // chart 1
 
   var ctx = document.getElementById("chart1").getContext('2d');
-   
+
   var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
-      gradientStroke1.addColorStop(0, '#6078ea');  
-      gradientStroke1.addColorStop(1, '#17c5ea'); 
-   
+      gradientStroke1.addColorStop(0, '#6078ea');
+      gradientStroke1.addColorStop(1, '#17c5ea');
+
   var gradientStroke2 = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStroke2.addColorStop(0, '#ff8359');
       gradientStroke2.addColorStop(1, '#ffdf40');
@@ -38,7 +38,7 @@ $(function() {
             borderWidth: 0
           }]
         },
-		
+
 		options:{
 		  maintainAspectRatio: false,
 		  legend: {
@@ -50,7 +50,7 @@ $(function() {
             },
 			tooltips: {
 			  displayColors:false,
-			},	
+			},
 		  scales: {
 			  xAxes: [{
 				barPercentage: .5
@@ -58,8 +58,8 @@ $(function() {
 		     }
 		}
       });
-	  
-	 
+
+
 // chart 2
 
  var ctx = document.getElementById("chart2").getContext('2d');
@@ -76,7 +76,7 @@ $(function() {
   var gradientStroke3 = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStroke3.addColorStop(0, '#ee0979');
       gradientStroke3.addColorStop(1, '#ff6a00');
-	  
+
 	var gradientStroke4 = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStroke4.addColorStop(0, '#42e695');
       gradientStroke4.addColorStop(1, '#3bb2b8');
@@ -118,7 +118,7 @@ $(function() {
         }
       });
 
-   
+
 
 // worl map
 
@@ -151,7 +151,7 @@ jQuery('#geographic-map-2').vectorMap(
     markers : [{
         latLng : [21.00, 78.00],
         name : 'Lorem Ipsum Dollar'
-      
+
       }],
     hoverOpacity: null,
     normalizeFunction: 'linear',
@@ -191,7 +191,7 @@ jQuery('#geographic-map-2').vectorMap(
               display:false
             },
             tooltips: {
-			  displayColors:false,	
+			  displayColors:false,
               mode: 'nearest',
               intersect: false,
               position: 'nearest',
@@ -211,7 +211,7 @@ var ctx = document.getElementById("chart4").getContext('2d');
   var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStroke1.addColorStop(0, '#ee0979');
       gradientStroke1.addColorStop(1, '#ff6a00');
-    
+
   var gradientStroke2 = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStroke2.addColorStop(0, '#283c86');
       gradientStroke2.addColorStop(1, '#39bd3c');
@@ -257,11 +257,11 @@ var ctx = document.getElementById("chart4").getContext('2d');
         }
       });
 
-	  
+
   // chart 5
 
     var ctx = document.getElementById("chart5").getContext('2d');
-   
+
       var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStroke1.addColorStop(0, '#f54ea2');
       gradientStroke1.addColorStop(1, '#ff7676');
@@ -302,7 +302,7 @@ var ctx = document.getElementById("chart4").getContext('2d');
 			  labels: {
                 boxWidth:8
               }
-            },	
+            },
 		  scales: {
 			  xAxes: [{
 				barPercentage: .5
@@ -317,5 +317,4 @@ var ctx = document.getElementById("chart4").getContext('2d');
 
 
 
-   });	 
-   
+   });

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class UserRole extends Model
 {
@@ -12,4 +13,9 @@ class UserRole extends Model
     protected $fillable = [
         'name'
     ];
+
+    public function route_limiter()
+    {
+        return $this->belongsToMany(RouteLimiter::class, 'pivot_user_role_menus');
+    }
 }

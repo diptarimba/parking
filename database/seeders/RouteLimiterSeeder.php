@@ -26,7 +26,7 @@ class RouteLimiterSeeder extends Seeder
             ],
             3 => [
                 'AdminController',
-                'UserRoleController',
+                // 'UserRoleController',
                 'UserController',
             ],
             4 => [

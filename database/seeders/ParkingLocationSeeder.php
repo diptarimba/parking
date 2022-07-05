@@ -16,7 +16,7 @@ class ParkingLocationSeeder extends Seeder
      */
     public function run()
     {
-        ParkingLocation::factory()->count(10)->state(
+        ParkingLocation::factory()->count(4)->state(
             new Sequence(
                 ['image' => '/storage/placeholder/landing/tsmMajapahit.jpg', 'name' => 'Transmart Majapahit'],
                 ['image' => '/storage/placeholder/landing/paragon.jpg', 'name' => 'Paragon Mall'],

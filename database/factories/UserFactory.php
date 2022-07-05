@@ -19,6 +19,7 @@ class UserFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
+            'username' => $this->faker->userName(),
             'avatar' => 'storage/avatar/74kYHPaOSJFDsxfrVw3mEpFq8ai0II7byjRAyiX4.png',
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),

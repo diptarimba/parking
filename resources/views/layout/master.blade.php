@@ -37,7 +37,9 @@
 		@include("components.header")
 		<!--end header -->
 		<!--navigation-->
-		@include("components.sidebar")
+		{{-- @include("components.sidebar") --}}
+        @component('components.sidebar')
+        @endcomponent
 		<!--end navigation-->
 		<!--start page wrapper -->
 		@yield("page-content")

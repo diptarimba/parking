@@ -17,6 +17,7 @@ use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\Permission\LocationController;
 use App\Http\Controllers\Permission\RoleController;
+use App\Http\Controllers\UserLoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,12 +31,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', [AdminLoginController::class, 'index'])->name('admin.login.index');
-Route::post('/post', [AdminLoginController::class, 'login'])->name('admin.login');
+Route::get('/auth/admin/login', [AdminLoginController::class, 'index'])->name('admin.login.index');
+Route::post('/auth/admin/login', [AdminLoginController::class, 'login'])->name('admin.login');
+
+Route::get('/auth/login', [UserLoginController::class, 'index'])->name('user.login.index');
+Route::post('/auth/login', [UserLoginController::class, 'login'])->name('user.login');
 
 Route::post('/contact/store', [ContactController::class, 'store'])->name('landing.contact.store');
 
-Route::group(['middleware'=>'auth:admin'], function() {
+Route::group(['middleware'=>['auth:admin,web', 'userCheck']], function() {
     Route::get('/home', [HomeController::class, 'index'])->name('home.index');
     Route::get('/user/roles/authority/{role}/edit', [RoleController::class, 'edit'])->name('roles.permission.edit');
     Route::put('/user/roles/authority/{role}', [RoleController::class, 'update'])->name('roles.permission.update');

@@ -12,4 +12,9 @@ class SidebarMenuLabel extends Model
     protected $fillable = [
         'name'
     ];
+
+    public function route_limiter()
+    {
+        return $this->hasMany(RouteLimiter::class);
+    }
 }

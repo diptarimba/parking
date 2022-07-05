@@ -29,5 +29,6 @@ class DatabaseSeeder extends Seeder
         $this->call(FeedbackSeeder::class);
         $this->call(ActivitySeeder::class);
         $this->call(OptionalContentSeeder::class);
+        $this->call(UserSeeder::class);
     }
 }
