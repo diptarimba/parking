@@ -7,6 +7,7 @@ use App\Models\About;
 use App\Models\Icon;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Str;
 
 class AboutController extends Controller
 {
@@ -127,7 +128,7 @@ class AboutController extends Controller
     {
         $editBtn = route('about.edit', $data->id);
         $deleteBtn = route('about.destroy', $data->id);
-        $ident = substr(md5(now()), 0, 10);
+        $ident = Str::random(10);
         return
         '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
         . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">

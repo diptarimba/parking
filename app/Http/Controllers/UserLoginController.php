@@ -10,7 +10,7 @@ class UserLoginController extends Controller
     public function index()
     {
         if(Auth::guard('web')->check()){
-            return redirect(route('home.index'));
+            return redirect(route('user.profile.edit'));
         }
         return view('auth.user.signin');
     }
@@ -32,9 +32,10 @@ class UserLoginController extends Controller
         }
 
         if($auth){
+            $roleUser = Auth::guard('web')->user()->user_role->name;
             return redirect()
 				->intended(route('home.index'))
-				->with('status','Sukses Login Sebagai Admin!');
+				->with('status','Sukses Login Sebagai '.$roleUser.'!');
         }else{
             return back()->withErrors('username / password anda salah!');
         }

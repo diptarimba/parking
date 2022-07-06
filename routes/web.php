@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\OptionalContentController;
 use App\Http\Controllers\Admin\ParkingHistoryController;
 use App\Http\Controllers\Admin\ParkingLocationController;
+use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\UserRoleController;
 use App\Http\Controllers\AdminLoginController;
@@ -18,6 +19,8 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\Permission\LocationController;
 use App\Http\Controllers\Permission\RoleController;
 use App\Http\Controllers\UserLoginController;
+use App\Http\Controllers\UserProfileController;
+use App\Http\Controllers\UserRegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,15 +40,32 @@ Route::post('/auth/admin/login', [AdminLoginController::class, 'login'])->name('
 Route::get('/auth/login', [UserLoginController::class, 'index'])->name('user.login.index');
 Route::post('/auth/login', [UserLoginController::class, 'login'])->name('user.login');
 
+Route::get('/auth/register', [UserRegisterController::class, 'index'])->name('user.register.index');
+Route::post('/auth/register', [UserRegisterController::class, 'store'])->name('user.register.store');
+
 Route::post('/contact/store', [ContactController::class, 'store'])->name('landing.contact.store');
 
 Route::group(['middleware'=>['auth:admin,web', 'userCheck']], function() {
+
     Route::get('/home', [HomeController::class, 'index'])->name('home.index');
     Route::get('/user/roles/authority/{role}/edit', [RoleController::class, 'edit'])->name('roles.permission.edit');
     Route::put('/user/roles/authority/{role}', [RoleController::class, 'update'])->name('roles.permission.update');
     Route::get('/user/location/{user}/edit', [LocationController::class, 'edit'])->name('user.location.edit');
     Route::put('/user/location/{user}', [LocationController::class, 'update'])->name('user.location.update');
     Route::delete('/user/location/{location}', [LocationController::class, 'destroy'])->name('user.location.destroy');
+
+
+    Route::get('/user/profile/edit', [UserProfileController::class, 'editProfile'])->name('user.profile.edit');
+    Route::post('/user/profile', [UserProfileController::class, 'updateProfile'])->name('user.profile.update');
+    Route::get('/user/password/edit', [UserProfileController::class, 'editPass'])->name('user.password.edit');
+    Route::post('/user/password', [UserProfileController::class, 'updatePass'])->name('user.password.update');
+
+    Route::get('/admin/profile/edit', [ProfileController::class, 'editProfile'])->name('admin.profile.edit');
+    Route::post('/admin/profile', [ProfileController::class, 'updateProfile'])->name('admin.profile.update');
+    Route::get('/admin/password/edit', [ProfileController::class, 'editPass'])->name('admin.password.edit');
+    Route::post('/admin/password', [ProfileController::class, 'updatePass'])->name('admin.password.update');
+
+    Route::post('/user/roles/{userRole}/toggle', [UserRoleController::class, 'toggleRegister'])->name('roles.toggle');
 
     Route::resource('/user/roles', UserRoleController::class)->parameter('roles','userRole');
     Route::resource('/admin', AdminController::class);

@@ -11,7 +11,8 @@ class UserRole extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name'
+        'name',
+        'is_register'
     ];
 
     public function route_limiter()

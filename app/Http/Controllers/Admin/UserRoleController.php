@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\UserRole;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Str;
 
 class UserRoleController extends Controller
 {
@@ -115,7 +116,9 @@ class UserRoleController extends Controller
         $editBtn = route('admin.edit', $data->id);
         $deleteBtn = route('admin.destroy', $data->id);
         $roleBtn = route('roles.permission.edit', $data->id);
-        $ident = substr(md5(now()), 0, 10);
+        $toggleBtn = route('roles.toggle', $data->id);
+        $ident = Str::random(10);
+        $valueStatus = $data->is_register ? 'Nonaktifkan' : 'Aktifkan';
         return
         '<a href="'.$roleBtn.'" class="btn mx-1 my-1 btn-sm btn-warning">Role Permission</a>'
         . '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
@@ -123,6 +126,22 @@ class UserRoleController extends Controller
         <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
         <input type="hidden" name="_token" value="'.csrf_token().'" />
         <input type="hidden" name="_method" value="DELETE">
+        </form>'
+        . '<input form="formToggle'.$ident .'" type="submit" value="'. $valueStatus .' Register" class="mx-1 my-1 btn btn-sm btn-info">
+        <form id="formToggle'.$ident .'" action="'.$toggleBtn.'" method="post">
+        <input type="hidden" name="_token" value="'.csrf_token().'" />
         </form>';
+    }
+
+    public function toggleRegister(UserRole $userRole)
+    {
+        $userRole->update([
+            'is_register' => !$userRole->is_register
+        ]);
+
+        $msg = $userRole->is_register ? 'Diaktifkan' : 'Dinonaktifkan';
+
+        return redirect()->route('roles.index')->with('status', 'User Role ' . $msg. ' pada laman register.');
+
     }
 }

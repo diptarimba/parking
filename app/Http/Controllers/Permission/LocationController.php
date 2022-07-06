@@ -8,6 +8,7 @@ use App\Models\PivotUserLocation;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Str;
 
 class LocationController extends Controller
 {
@@ -60,7 +61,7 @@ class LocationController extends Controller
     {
         $deleteBtn = route('user.location.destroy', $data->id);
         $user = $data->user()->first()->id;
-        $ident = substr(md5(now()), 0, 10);
+        $ident = Str::random(10);
         return
         '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
         <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">

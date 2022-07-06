@@ -8,6 +8,7 @@ use App\Models\Zmdi;
 use Illuminate\Http\Request;
 use Illuminate\Notifications\Action;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Str;
 
 class ActivityController extends Controller
 {
@@ -123,7 +124,7 @@ class ActivityController extends Controller
     {
         $editBtn = route('activity.edit', $data->id);
         $deleteBtn = route('activity.destroy', $data->id);
-        $ident = substr(md5(now()), 0, 10);
+        $ident = Str::random(10);
         return
         '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
         . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">

@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\UserRole;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
@@ -53,9 +54,9 @@ class UserController extends Controller
         $this->validate($request, [
             'email' => 'required',
             'name' => 'required',
+            'username' => 'required',
             'avatar' => 'required|mimes:png,jpg,jpeg|max:1024',
             'password' => 'required',
-            'phone' => 'required',
             'phone' => 'required',
             'user_role_id' => 'required|exists:user_roles,id'
         ]);
@@ -103,9 +104,9 @@ class UserController extends Controller
         $this->validate($request, [
             'email' => 'required',
             'name' => 'required',
+            'username' => 'required',
             'avatar' => 'sometimes|mimes:png,jpg,jpeg|max:1024',
             'password' => 'sometimes',
-            'phone' => 'required',
             'phone' => 'required',
             'user_role_id' => 'required|exists:user_roles,id'
         ]);
@@ -137,7 +138,7 @@ class UserController extends Controller
         $editBtn = route('user.edit', $data->id);
         $locationBtn = route('user.location.edit', $data->id);
         $deleteBtn = route('user.destroy', $data->id);
-        $ident = substr(md5(now()), 0, 10);
+        $ident = Str::random(10);
         return
         '<a href="'.$locationBtn.'" class="btn mx-1 my-1 btn-sm btn-warning">Location</a>'
         .'<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'

@@ -15,13 +15,23 @@
         @php
             if(Auth::guard('web')->check()){
                 $permissionAvailable = Auth::guard('web')->user()->user_role->route_limiter->pluck('route');
+                $isUser = True;
+            }else{
+                $isUser = False;
             }
             $isAdmin = Auth::guard('admin')->check();
         @endphp
+
+        <x-sidebar.menu-label title="Profile"/>
+        <x-sidebar.single icon="bx bx-home-circle" route="{{ $isUser ? 'user.profile.edit' : 'admin.profile.edit'}}" link="{{$isUser ? route('user.profile.edit') : route('admin.profile.edit')}}" name="Update Data" />
+        <x-sidebar.single icon="bx bx-home-circle" route="{{ $isUser ? 'user.password.edit' : 'admin.password.edit'}}" link="{{$isUser ? route('user.password.edit') : route('admin.password.edit')}}" name="Update Password" />
+
         @if ($isAdmin || $permissionAvailable->contains('home.index'))
         <x-sidebar.menu-label title="Home"/>
         <x-sidebar.single icon="bx bx-home-circle" route="home.index" link="{{route('home.index')}}" name="Dashboard" />
         @endif
+
+
         @if (
                 $isAdmin ||
                     $permissionAvailable->contains('histories.index') ||
@@ -31,6 +41,7 @@
         <x-sidebar.single icon="bx bx-current-location" route="location.index"  link="{{route('location.index')}}" name="Location" />
         <x-sidebar.single icon="bx bx-history" route="histories.index"  link="{{route('histories.index')}}" name="History" />
         @endif
+
         @if (
                 $isAdmin ||
                 $permissionAvailable->contains('user.index') ||
@@ -42,6 +53,7 @@
         <x-sidebar.single icon="bx bx-user-voice" route="roles.index"  link="{{route('roles.index')}}" name="User Role" />
         <x-sidebar.single icon="bx bx-user-circle" route="user.index"  link="{{route('user.index')}}" name="User" />
         @endif
+
         @if (
                 $isAdmin ||
                 $permissionAvailable->contains('feature.index') ||
