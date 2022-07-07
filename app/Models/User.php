@@ -24,6 +24,7 @@ class User extends Authenticatable
         'password',
         'phone',
         'user_role_id',
+        'email_verified_at',
         'avatar'
     ];
 
@@ -54,5 +55,10 @@ class User extends Authenticatable
     public function parking_location()
     {
         return $this->belongsToMany(ParkingLocation::class, 'pivot_user_locations');
+    }
+
+    public function user_token()
+    {
+        return $this->hasMany(UserVerify::class);
     }
 }

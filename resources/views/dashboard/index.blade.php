@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', 'Product')
+@section('title', 'Dashboard')
 
 @section('header-content')
 

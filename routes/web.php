@@ -21,6 +21,7 @@ use App\Http\Controllers\Permission\RoleController;
 use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\UserRegisterController;
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,12 +41,15 @@ Route::post('/auth/admin/login', [AdminLoginController::class, 'login'])->name('
 Route::get('/auth/login', [UserLoginController::class, 'index'])->name('user.login.index');
 Route::post('/auth/login', [UserLoginController::class, 'login'])->name('user.login');
 
+Route::get('/auth/verify/{auth}',[UserRegisterController::class, 'verify'])->name('user.verify');
+
+
 Route::get('/auth/register', [UserRegisterController::class, 'index'])->name('user.register.index');
 Route::post('/auth/register', [UserRegisterController::class, 'store'])->name('user.register.store');
 
 Route::post('/contact/store', [ContactController::class, 'store'])->name('landing.contact.store');
 
-Route::group(['middleware'=>['auth:admin,web', 'userCheck']], function() {
+Route::group(['middleware'=>['auth:admin,web', 'userCheck', 'is_verify_email']], function() {
 
     Route::get('/home', [HomeController::class, 'index'])->name('home.index');
     Route::get('/user/roles/authority/{role}/edit', [RoleController::class, 'edit'])->name('roles.permission.edit');
@@ -82,4 +86,3 @@ Route::group(['middleware'=>['auth:admin,web', 'userCheck']], function() {
     Route::get('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 });
 
-Route::get('/', [LandingController::class, 'index']);

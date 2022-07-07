@@ -66,6 +66,8 @@ class UserController extends Controller
             'password' => bcrypt($request->password)
         ]));
 
+        $user->user_verify->create(['token' => Str::random(10)]);
+
         return redirect()->route('user.index')->with('status', 'Success create user');
     }
 

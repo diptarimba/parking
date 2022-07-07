@@ -19,6 +19,7 @@ class RouteLimiterSeeder extends Seeder
         $dataController = [
             1 => [
                 'HomeController',
+                'UserProfileController'
             ],
             2 => [
                 'ParkingLocationController',
@@ -51,12 +52,19 @@ class RouteLimiterSeeder extends Seeder
         ];
 
         foreach($routeCollection as $each){
-            if(str_contains($each->getActionName(), 'App\\Http\\Controllers\\Admin\\')){
+            if(
+                str_contains($each->getActionName(), 'App\\Http\\Controllers\\Admin\\') ||
+                str_contains($each->getActionName(), 'App\\Http\\Controllers\\UserProfileController')
+            ){
                 //Foreach as each key
                 foreach ($dataController as $key => $eachController) {
                     // foreach as each name controller per key
                     foreach($eachController as $lineController){
-                        $dataEach = str_replace('App\\Http\\Controllers\\Admin\\', '', $each->getActionName());
+                        if(str_contains($each->getActionName(), 'Admin')){
+                            $dataEach = str_replace('App\\Http\\Controllers\\Admin\\', '', $each->getActionName());
+                        }else{
+                            $dataEach = str_replace('App\\Http\\Controllers\\', '', $each->getActionName());
+                        }
                         if(str_contains($dataEach, $lineController)){
                             $route = $each->getName();
                             $splitRoute = explode('.', $route)[1];

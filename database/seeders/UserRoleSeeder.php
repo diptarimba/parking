@@ -20,6 +20,13 @@ class UserRoleSeeder extends Seeder
             ['name' => 'Karyawan'],
         ];
 
-        UserRole::insert($data);
+        $permission = [2,3,4,5];
+
+        foreach($data as $each){
+            $userRole = UserRole::create($each);
+            foreach($permission as $eachLine){
+            $userRole->pivot()->create(['route_limiter_id' => $eachLine]);
+            }
+        }
     }
 }

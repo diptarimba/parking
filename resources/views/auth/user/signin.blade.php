@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
-    <link rel="icon" href="{{asset('assets/images/favicon-32x32.png')}}" type="image/png" />
+    <link rel="icon" href="{{asset('assets/images/logo-icon.png')}}" type="image/png" />
     <!-- loader-->
     <link href="{{asset('assets/css/pace.min.css')}}" rel="stylesheet" />
     <script src="{{asset('assets/js/pace.min.js')}}"></script>
@@ -76,6 +76,11 @@
                                                 <div class="d-grid">
                                                     <button type="submit" class="btn btn-primary"><i
                                                             class="bx bxs-lock-open"></i>Sign in</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-grid">
+                                                    <a class="btn btn-success" href="{{route('user.register.index')}}"><i class="bx bx-box"></i>Register</a>
                                                 </div>
                                             </div>
                                         </form>

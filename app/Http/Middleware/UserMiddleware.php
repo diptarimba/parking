@@ -24,13 +24,13 @@ class UserMiddleware
         {
             $routeDestination = $request->route()->getName();
             $permissionAvailable = Auth::guard('web')->user()->user_role->route_limiter->pluck('route');
-            if(in_array($routeDestination, ['home.index', 'admin.logout'])){
+            if(in_array($routeDestination, ['admin.logout'])){
                 return $next($request);
             }
             if(!empty($permissionAvailable->toArray())){
                 if(!$permissionAvailable->contains($routeDestination))
                 {
-                    return redirect()->route('home.index')->with('error', 'You have no access to the destination');
+                    return redirect()->route('user.profile.edit')->with('error', 'You have no access to the destination');
                 }
             }
         }

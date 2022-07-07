@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
-    <link rel="icon" href="{{asset('assets/images/favicon-32x32.png')}}" type="image/png" />
+    <link rel="icon" href="{{asset('assets/images/logo-icon.png')}}" type="image/png" />
     <!-- loader-->
     <link href="{{asset('assets/css/pace.min.css')}}" rel="stylesheet" />
     <script src="{{asset('assets/js/pace.min.js')}}"></script>
@@ -15,13 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link href="{{asset('assets/css/app.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/icons.css')}}" rel="stylesheet">
-    <title>Signin - Smart Parking</title>
+    <title>Sign Up - Smart Parking</title>
 </head>
 
 <body class="bg-login">
     <!--wrapper-->
     <div class="wrapper">
-        <div class="section-authentication-signin d-flex align-items-center justify-content-center my-5 my-lg-0">
+        <div class="section-authentication-sigup d-flex align-items-center justify-content-center my-5">
             <div class="container-fluid">
                 <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
                     <div class="col mx-auto">
@@ -33,14 +33,8 @@
                             <div class="card-body">
                                 <div class="border p-4 rounded">
                                     <div class="text-center">
-                                        <h3 class="">Sign in</h3>
-                                        {{-- <p>Don't have an account yet? <a href="{{ url('authentication-signup') }}">Sign
-                                                up here</a>
-                                        </p> --}}
+                                        <h3 class="">Sign Up</h3>
                                     </div>
-                                    {{-- <div class="login-separater text-center mb-4"> <span>OR SIGN IN WITH EMAIL</span>
-                                        <hr />
-                                    </div> --}}
                                     <div class="form-body" >
                                         <form class="row g-3" action="{{route('user.register.store')}}" method="POST">
                                             @csrf
@@ -86,7 +80,12 @@
                                             <div class="col-12">
                                                 <div class="d-grid">
                                                     <button type="submit" class="btn btn-primary"><i
-                                                            class="bx bxs-lock-open"></i>Sign Up</button>
+                                                            class="bx bx-box"></i>Sign Up</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-grid">
+                                                    <a class="btn btn-success" href="{{route('user.login.index')}}"><i class="bx bxs-lock-open"></i>Sign In</a>
                                                 </div>
                                             </div>
                                         </form>

@@ -34,7 +34,7 @@ class UserLoginController extends Controller
         if($auth){
             $roleUser = Auth::guard('web')->user()->user_role->name;
             return redirect()
-				->intended(route('home.index'))
+				->intended(route('user.profile.edit'))
 				->with('status','Sukses Login Sebagai '.$roleUser.'!');
         }else{
             return back()->withErrors('username / password anda salah!');

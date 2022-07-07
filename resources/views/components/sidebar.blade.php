@@ -5,7 +5,7 @@
             <img src="{{ asset('assets/images/logo-icon.png') }}" class="logo-icon" alt="logo icon">
         </div>
         <div>
-            <h4 class="logo-text">SmartParking</h4>
+            <h4 class="logo-text">Smart Parking</h4>
         </div>
         <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
         </div>
@@ -23,8 +23,9 @@
         @endphp
 
         <x-sidebar.menu-label title="Profile"/>
-        <x-sidebar.single icon="bx bx-home-circle" route="{{ $isUser ? 'user.profile.edit' : 'admin.profile.edit'}}" link="{{$isUser ? route('user.profile.edit') : route('admin.profile.edit')}}" name="Update Data" />
-        <x-sidebar.single icon="bx bx-home-circle" route="{{ $isUser ? 'user.password.edit' : 'admin.password.edit'}}" link="{{$isUser ? route('user.password.edit') : route('admin.password.edit')}}" name="Update Password" />
+        <x-sidebar.single icon="bx bx-id-card" route="bypass" link="{{$isUser ? route('user.profile.edit') : route('admin.profile.edit')}}" name="Update Data" />
+        <x-sidebar.single icon="bx bx-lock" route="bypass" link="{{$isUser ? route('user.password.edit') : route('admin.password.edit')}}" name="Update Password" />
+        <x-sidebar.single icon="bx bx-log-out" route="bypass" link="{{route('admin.logout')}}" name="Logout" />
 
         @if ($isAdmin || $permissionAvailable->contains('home.index'))
         <x-sidebar.menu-label title="Home"/>
