@@ -86,3 +86,5 @@ Route::group(['middleware'=>['auth:admin,web', 'userCheck', 'is_verify_email']],
     Route::get('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 });
 
+Route::get('/', [LandingController::class, 'index']);
+
