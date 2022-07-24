@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\UserRoleController;
 use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Permission\LocationController;
 use App\Http\Controllers\Permission\RoleController;
 use App\Http\Controllers\UserLoginController;
@@ -35,14 +36,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/auth/admin/login', [AdminLoginController::class, 'index'])->name('admin.login.index');
-Route::post('/auth/admin/login', [AdminLoginController::class, 'login'])->name('admin.login');
+// Admin Login
+// Route::get('/auth/admin/login', [AdminLoginController::class, 'index'])->name('admin.login.index');
+// Route::post('/auth/admin/login', [AdminLoginController::class, 'login'])->name('admin.login');
 
-Route::get('/auth/login', [UserLoginController::class, 'index'])->name('user.login.index');
-Route::post('/auth/login', [UserLoginController::class, 'login'])->name('user.login');
+// User Login
+// Route::get('/auth/login', [UserLoginController::class, 'index'])->name('user.login.index');
+// Route::post('/auth/login', [UserLoginController::class, 'login'])->name('user.login');
+
+// Admin & User Login Route
+Route::get('/auth/login', [LoginController::class, 'index'])->name('login.index');
+Route::post('/auth/login', [LoginController::class, 'store'])->name('login.store');
 
 Route::get('/auth/verify/{auth}',[UserRegisterController::class, 'verify'])->name('user.verify');
-
 
 Route::get('/auth/register', [UserRegisterController::class, 'index'])->name('user.register.index');
 Route::post('/auth/register', [UserRegisterController::class, 'store'])->name('user.register.store');

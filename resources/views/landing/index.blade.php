@@ -51,13 +51,14 @@
                         <ul id="primary-menu">
                             <li><a class="nav-link active" href="#home">Home</a></li>
                             <li><a class="nav-link" href="#{{$optionalContent[0]['target']}}">{{$optionalContent[0]['menu']}}</a></li>
-                            <li><a class="nav-link" href="#feature">Feature</a></li>
-                            <li><a class="nav-link" href="#overview">Overview</a></li>
+                            <li><a class="nav-link" href="#feature">FEATURE</a></li>
+                            <li><a class="nav-link" href="#overview">OVERVIEW</a></li>
                             <li><a class="nav-link" href="#{{$optionalContent[1]['target']}}">{{$optionalContent[1]['menu']}}</a></li>
                             <li><a class="nav-link" href="#{{$optionalContent[2]['target']}}">{{$optionalContent[2]['menu']}}</a></li>
                             <li><a class="nav-link" href="#{{$optionalContent[3]['target']}}">{{$optionalContent[3]['menu']}}</a></li>
                             <li><a class="nav-link" href="#{{$optionalContent[4]['target']}}">{{$optionalContent[4]['menu']}}</a></li>
                             <li><a class="nav-link" href="#{{$optionalContent[5]['target']}}">{{$optionalContent[5]['menu']}}</a></li>
+                            <li><a class="nav-link" href="{{route('login.index')}}">LOGIN</a></li>
                         </ul>
                     </div>
                 </div>

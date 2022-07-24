@@ -51,12 +51,11 @@ class AdminLoginController extends Controller
         if (Auth::guard('admin')->check()) {
 			Auth::guard('admin')->logout();
 			session()->flush();
-			return redirect(route('admin.login.index'));
 		}else{
             Auth::guard('web')->logout();
             session()->flush();
-            return Redirect(route('user.login.index'));
         }
+        return Redirect(route('login.index'));
     }
 
 }

@@ -15,13 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link href="{{asset('assets/css/app.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/icons.css')}}" rel="stylesheet">
-    <title>Sign Up - Smart Parking</title>
+    <title>Signin - Smart Parking</title>
 </head>
 
 <body class="bg-login">
     <!--wrapper-->
     <div class="wrapper">
-        <div class="section-authentication-sigup d-flex align-items-center justify-content-center my-5">
+        <div class="section-authentication-signin d-flex align-items-center justify-content-center my-5 my-lg-0">
             <div class="container-fluid">
                 <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
                     <div class="col mx-auto">
@@ -33,30 +33,21 @@
                             <div class="card-body">
                                 <div class="border p-4 rounded">
                                     <div class="text-center">
-                                        <h3 class="">Sign Up</h3>
+                                        <h3 class="">Sign in</h3>
+                                        {{-- <p>Don't have an account yet? <a href="{{ url('authentication-signup') }}">Sign
+                                                up here</a>
+                                        </p> --}}
                                     </div>
+                                    {{-- <div class="login-separater text-center mb-4"> <span>OR SIGN IN WITH EMAIL</span>
+                                        <hr />
+                                    </div> --}}
                                     <div class="form-body" >
-                                        <form class="row g-3" action="{{route('user.register.store')}}" method="POST">
+                                        <form class="row g-3" action="{{route('login.store')}}" method="POST">
                                             @csrf
                                             <div class="col-12">
-                                                <label for="inputFullName" class="form-label">Enter Name</label>
-                                                <input type="text" name="name" class="form-control"
-                                                    id="inputFullName" placeholder="Mr. Lorem">
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="inputEmailAddress" class="form-label">Enter Email</label>
-                                                <input type="email" name="email" class="form-control"
-                                                    id="inputEmailAddress" placeholder="unknown@example.net">
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="inputUsername" class="form-label">Enter Username</label>
+                                                <label for="inputEmailAddress" class="form-label">Enter Username</label>
                                                 <input type="text" name="username" class="form-control"
-                                                    id="inputUsername" placeholder="Username">
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="inputPhone" class="form-label">Enter Phone</label>
-                                                <input type="text" name="phone" class="form-control"
-                                                    id="inputPhone" placeholder="+62">
+                                                    id="inputEmailAddress" placeholder="Username">
                                             </div>
                                             <div class="col-12">
                                                 <label for="inputChoosePassword" class="form-label">Enter
@@ -70,22 +61,33 @@
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <label for="inputSelectRole" class="form-label">Select Role</label>
-                                                <select class="form-control" id="inputSelectRole" placeholder="" name="user_role_id">
-                                                    @foreach ($userRole as $id => $name)
-                                                        <option value="{{ $id }}" @if (@$value == $id) selected @endif>{{ $name }}</option>
-                                                    @endforeach
-                                                </select>
+                                                <label for="inputChooseType" class="form-label">Select Role</label>
+                                                <select id="inputChooseType" name="type_login" class="form-select" aria-label="select example">
+                                                    <option selected value="user">User</option>
+                                                    <option value="admin">Admin</option>
+                                                    </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="flexSwitchCheckChecked" checked>
+                                                    <label class="form-check-label"
+                                                        for="flexSwitchCheckChecked">Remember Me</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 text-end"> <a
+                                                    href="{{ url('authentication-forgot-password') }}">Forgot Password
+                                                    ?</a>
                                             </div>
                                             <div class="col-12">
                                                 <div class="d-grid">
                                                     <button type="submit" class="btn btn-primary"><i
-                                                            class="bx bx-box"></i>Sign Up</button>
+                                                            class="bx bxs-lock-open"></i>Sign in</button>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="d-grid">
-                                                    <a class="btn btn-success" href="{{route('login.index')}}"><i class="bx bxs-lock-open"></i>Sign In</a>
+                                                    <a class="btn btn-success" href="{{route('user.register.index')}}"><i class="bx bx-box"></i>Register</a>
                                                 </div>
                                             </div>
                                         </form>
