@@ -46,7 +46,7 @@ class UserLoginController extends Controller
         if (Auth::guard('web')->check()) {
 			Auth::guard('web')->logout();
 			session()->flush();
-			return redirect(route('user.login.index'));
+			return redirect(route('login.index'));
 		}
     }
 
