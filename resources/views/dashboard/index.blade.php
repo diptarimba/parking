@@ -206,8 +206,8 @@
                             @foreach ($parkingHistory as $each)
                             <tr>
                                 <td>{{$each->parking_location->name}}</td>
-                                <td>CAR</td>
-                                <td>Rp. {{number_format($each->pay_amount, 0, ".", ",")}}</td>
+                                <td>{{$each->vehicle}}</td>
+                                <td>Rp. {{number_format($each->amount, 0, ".", ",")}}</td>
                                 <td>{{ date('H:i:s', strtotime($each->created_at)) }}</td>
                             </tr>
                             @endforeach

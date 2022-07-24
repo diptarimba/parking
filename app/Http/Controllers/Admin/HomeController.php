@@ -30,7 +30,7 @@ class HomeController extends Controller
 
         $parkingHistory = $mainParkingHistory->with('parking_location')->whereDate('created_at', Carbon::now())->orderBy('created_at', 'desc')->take(10)->get();
         $parkingHistoryVisitor = $mainParkingHistory->whereDate('created_at',Carbon::now()->format('Y-m-d'))->get()->countBy('parking_location_id');
-        $parkingHistoryRevenue = $mainParkingHistory->whereDate('created_at', Carbon::now()->format('Y-m-d'))->sum('pay_amount');
+        $parkingHistoryRevenue = $mainParkingHistory->whereDate('created_at', Carbon::now()->format('Y-m-d'))->sum('amount');
         $parkingHistoryTransaction = $mainParkingHistory->whereDate('created_at', Carbon::now())->count();
 
         $user = User::count();

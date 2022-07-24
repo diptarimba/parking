@@ -41,9 +41,9 @@
             {data: 'DT_RowIndex', name: 'DT_RowIndex', sortable: false, orderable: false,
                 searchable: false},
             {data: 'parking_location.name', name: 'parking_location.name'},
-            {data: 'pay_amount', name: 'pay_amount'},
-            {data: 'start_time', name: 'start_time'},
-            {data: 'end_time', name: 'end_time'},
+            {data: 'amount', name: 'amount'},
+            {data: 'check_in', name: 'check_in'},
+            {data: 'check_out', name: 'check_out'},
             {
                 data: 'action',
                 name: 'action',

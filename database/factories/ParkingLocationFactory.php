@@ -18,6 +18,7 @@ class ParkingLocationFactory extends Factory
     {
         return [
             'name' => $this->faker->words(3, true),
+            'location_code' => 'cek',
             'description' => $this->faker->paragraph(1, true),
             'latitude' => $this->faker->latitude(),
             'longitude' => $this->faker->longitude(),

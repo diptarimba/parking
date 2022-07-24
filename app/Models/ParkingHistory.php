@@ -10,7 +10,14 @@ class ParkingHistory extends Model
     use HasFactory;
 
     protected $fillable = [
-        'parking_location_id', 'ref_id', 'pay_amount', 'start_time', 'end_time'
+        'parking_location_id',
+        'code',
+        'vehicle',
+        'amount',
+        'check_in',
+        'check_out',
+        'payment_status',
+        'payment_type'
     ];
 
     public function parking_location()

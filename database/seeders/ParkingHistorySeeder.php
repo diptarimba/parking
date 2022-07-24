@@ -21,16 +21,10 @@ class ParkingHistorySeeder extends Seeder
         ParkingHistory::factory()->count(500)
             ->state(
                 new Sequence(
-                    ['parking_location_id' => 1],
-                    ['parking_location_id' => 2],
-                    ['parking_location_id' => 3],
-                    ['parking_location_id' => 4],
-                    // ['parking_location_id' => 5],
-                    // ['parking_location_id' => 6],
-                    // ['parking_location_id' => 7],
-                    // ['parking_location_id' => 8],
-                    // ['parking_location_id' => 9],
-                    // ['parking_location_id' => 10],
+                    ['vehicle' => 'MOBIL', 'parking_location_id' => 1],
+                    ['vehicle' => 'MOTOR', 'parking_location_id' => 2],
+                    ['vehicle' => 'MOBIL', 'parking_location_id' => 3],
+                    ['vehicle' => 'MOTOR', 'parking_location_id' => 4],
                 )
             )->create();
     }

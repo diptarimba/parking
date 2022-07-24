@@ -18,8 +18,13 @@ class ParkingHistoryFactory extends Factory
     {
         return [
             'parking_location_id' => 1,
-            'ref_id' => $this->faker->regexify('[A-Za-z0-9]{15}'),
-            'pay_amount' => rand(1000,4000),
+            'code' => $this->faker->regexify('[A-Za-z0-9]{15}'),
+            'vehicle' => 'CAR',
+            'amount' => rand(1000,8000),
+            'check_in' => $this->faker->dateTimeBetween('-30 days', '-26 days')->format('Y-m-d H:i:s'),
+            'check_out' => $this->faker->dateTimeBetween('-25 days', '-21 days')->format('Y-m-d H:i:s'),
+            'payment_status' => 'settlement',
+            'payment_type' => 'GoPay',
             'created_at' => $this->faker->dateTimeBetween('-30 days', 'now')->format('Y-m-d H:i:s')
         ];
     }

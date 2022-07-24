@@ -16,10 +16,13 @@ return new class extends Migration
         Schema::create('parking_histories', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('parking_location_id')->references('id')->on('parking_locations');
-            $table->string('ref_id');
-            $table->bigInteger('pay_amount');
-            $table->timestamp('start_time')->useCurrent();
-            $table->timestamp('end_time')->useCurrent();
+            $table->string('code');
+            $table->string('vehicle');
+            $table->bigInteger('amount');
+            $table->string('check_in');
+            $table->string('check_out');
+            $table->string('payment_status');
+            $table->string('payment_type');
             $table->timestamps();
         });
     }
