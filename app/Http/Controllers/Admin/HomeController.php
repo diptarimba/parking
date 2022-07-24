@@ -26,16 +26,24 @@ class HomeController extends Controller
 
         $mainParkingHistory = ParkingHistory::when(!empty($locationLimit), function($query) use ($locationLimit){
             $query->whereIn('parking_location_id', $locationLimit);
-        });
+        })->whereDate('created_at', Carbon::now()->format('Y-m-d'));
 
-        $parkingHistory = $mainParkingHistory->with('parking_location')->whereDate('created_at', Carbon::now())->orderBy('created_at', 'desc')->take(10)->get();
-        $parkingHistoryVisitor = $mainParkingHistory->whereDate('created_at',Carbon::now()->format('Y-m-d'))->get()->countBy('parking_location_id');
-        $parkingHistoryRevenue = $mainParkingHistory->whereDate('created_at', Carbon::now()->format('Y-m-d'))->sum('amount');
-        $parkingHistoryTransaction = $mainParkingHistory->whereDate('created_at', Carbon::now())->count();
+        $parkingHistory = $mainParkingHistory->with('parking_location')->orderBy('created_at', 'desc')->take(10)->get();
+        $parkingHistoryVisitor = $mainParkingHistory->get()->countBy('parking_location_id');
+        $parkingHistoryRevenue = $mainParkingHistory->sum('amount');
+        $parkingHistoryTransaction = $mainParkingHistory->count();
+
+        $allParkingHistory = ParkingHistory::when(!empty($locationLimit), function($query) use ($locationLimit){
+            $query->whereIn('parking_location_id', $locationLimit);
+        })->count();
+        $allTurnOverParking = ParkingHistory::when(!empty($locationLimit), function($query) use ($locationLimit){
+            $query->whereIn('parking_location_id', $locationLimit);
+        })->sum('amount');
+
 
         $user = User::count();
         $admin = Admin::count();
 
-        return view('dashboard.index', compact('parkingLocation', 'parkingHistoryRevenue', 'parkingHistoryTransaction','user', 'admin', 'parkingHistory'));
+        return view('dashboard.index', compact('parkingLocation', 'parkingHistoryRevenue', 'parkingHistoryTransaction','user', 'admin', 'parkingHistory', 'allParkingHistory', 'allTurnOverParking'));
     }
 }
