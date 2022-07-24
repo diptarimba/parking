@@ -21,7 +21,7 @@ class IsVerifyEmail
         {
             Auth::guard('web')->logout();
             session()->flush();
-            return redirect()->route('user.login.index')->with('error', 'You must verify your email');
+            return redirect()->route('login.index')->with('error', 'You must verify your email');
         }
         return $next($request);
     }

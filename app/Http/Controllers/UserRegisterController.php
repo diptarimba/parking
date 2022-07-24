@@ -17,7 +17,7 @@ class UserRegisterController extends Controller
         $userRole = UserRole::where('is_register', 1)->get()->pluck('name','id');
         // dd($userRole);
         if(empty($userRole->toArray())){
-            return redirect()->route('user.login.index')->with('error', 'Laman Register Tidak Tersedia');
+            return redirect()->route('login.index')->with('error', 'Laman Register Tidak Tersedia');
         }
         return view('auth.user.register', compact('userRole'));
     }
@@ -63,7 +63,7 @@ class UserRegisterController extends Controller
 
         });
 
-        return redirect()->route('user.login.index')->with('status', 'Berhasil registrasi, silahkan login terlebih dahulu');
+        return redirect()->route('login.index')->with('status', 'Berhasil registrasi, silahkan login terlebih dahulu');
 
     }
 
@@ -76,9 +76,9 @@ class UserRegisterController extends Controller
 
             if(is_null($user->email_verified_at)){
                 $user->update(['email_verified_at' => Carbon::now()->format('Y-m-d H:i:s')]);
-                return redirect()->route('user.login.index')->with('status', 'Success successfully verify, you can login now');
+                return redirect()->route('login.index')->with('status', 'Success successfully verify, you can login now');
             }else{
-                return redirect()->route('user.login.index')->with('status', 'Success already verified, you can login now');
+                return redirect()->route('login.index')->with('status', 'Success already verified, you can login now');
             }
         }
 
