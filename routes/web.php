@@ -22,6 +22,7 @@ use App\Http\Controllers\Permission\RoleController;
 use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\UserRegisterController;
+use App\Models\ParkingHistory;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
@@ -64,6 +65,7 @@ Route::group(['middleware'=>['auth:admin,web', 'userCheck', 'is_verify_email']],
     Route::put('/user/location/{user}', [LocationController::class, 'update'])->name('user.location.update');
     Route::delete('/user/location/{location}', [LocationController::class, 'destroy'])->name('user.location.destroy');
 
+    Route::get('/parking/histories/get', [ParkingHistoryController::class, 'all'])->name('histories.export');
 
     Route::get('/user/profile/edit', [UserProfileController::class, 'editProfile'])->name('user.profile.edit');
     Route::post('/user/profile', [UserProfileController::class, 'updateProfile'])->name('user.profile.update');

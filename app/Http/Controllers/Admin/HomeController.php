@@ -43,7 +43,13 @@ class HomeController extends Controller
 
         $user = User::count();
         $admin = Admin::count();
+        $parkingStatistic = ParkingHistory::where('created_at','>=',Carbon::now()->subdays(15))->orderBy('created_at', 'asc')->get()->groupBy(function($d) {
+            return Carbon::parse($d->created_at)->format('d F Y');
+        })->map(function ($query){
+            return $query->sum('amount');
+        });
+        // dd($parkingStatistic->toArray());
 
-        return view('dashboard.index', compact('parkingLocation', 'parkingHistoryRevenue', 'parkingHistoryTransaction','user', 'admin', 'parkingHistory', 'allParkingHistory', 'allTurnOverParking'));
+        return view('dashboard.index', compact('parkingLocation', 'parkingHistoryRevenue', 'parkingHistoryTransaction','user', 'admin', 'parkingHistory', 'allParkingHistory', 'allTurnOverParking', 'parkingStatistic'));
     }
 }

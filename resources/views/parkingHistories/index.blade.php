@@ -9,7 +9,7 @@
 @section('page-content')
 <x-card.layout >
     <x-slot name="header">
-        <x-card.h-buat url="{{route('histories.create')}}" title="Parking History Management"/>
+        <x-card.h-buat url="{{route('histories.export')}}" customButton="Export" title="Parking History Management"/>
     </x-slot>
 
     <x-slot name="body">
