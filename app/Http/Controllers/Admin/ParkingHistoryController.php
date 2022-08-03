@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\ParkingHistory;
+use App\Models\User;
 use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Str;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
@@ -21,14 +23,22 @@ class ParkingHistoryController extends Controller
      */
     public function index(Request $request)
     {
+        $user_id = Auth::guard('web')->user()->id ?? null;
+        $locationLimit = [];
+        if($user_id){
+            $user = User::whereId($user_id)->first();
+            $locationLimit = collect($user->parking_location)->pluck('id');
+        }
+
         if($request->ajax()){
-            $parkingHistory = ParkingHistory::with('parking_location');
+            $parkingHistory = ParkingHistory::with('parking_location')->whereHas('parking_location', function ($query) use ($locationLimit){
+                $query->when(!empty($locationLimit), function($query) use ($locationLimit){
+                    $query->whereIn('id', $locationLimit);
+                });
+            });
             return DataTables::of($parkingHistory)
             ->addIndexColumn()
             ->addColumn('amount', function($query){
-                return 'Rp. ' . number_format($query->amount, 0, ",", ".");
-            })
-            ->addColumn('payment_type', function($query){
                 return 'Rp. ' . number_format($query->amount, 0, ",", ".");
             })
             ->addColumn('action', function($eachRow){
