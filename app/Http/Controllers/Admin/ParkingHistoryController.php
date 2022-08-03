@@ -28,6 +28,9 @@ class ParkingHistoryController extends Controller
             ->addColumn('amount', function($query){
                 return 'Rp. ' . number_format($query->amount, 0, ",", ".");
             })
+            ->addColumn('payment_type', function($query){
+                return 'Rp. ' . number_format($query->amount, 0, ",", ".");
+            })
             ->addColumn('action', function($eachRow){
                 return $this->getActionColumn($eachRow);
             })
