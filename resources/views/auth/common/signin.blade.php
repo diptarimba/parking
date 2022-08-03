@@ -6,15 +6,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
-    <link rel="icon" href="{{asset('assets/images/logo-icon.png')}}" type="image/png" />
+    <link rel="icon" href="{{ asset('assets/images/logo-icon.png') }}" type="image/png" />
     <!-- loader-->
-    <link href="{{asset('assets/css/pace.min.css')}}" rel="stylesheet" />
-    <script src="{{asset('assets/js/pace.min.js')}}"></script>
+    <link href="{{ asset('assets/css/pace.min.css') }}" rel="stylesheet" />
+    <script src="{{ asset('assets/js/pace.min.js') }}"></script>
     <!-- Bootstrap CSS -->
-    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link href="{{asset('assets/css/app.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/icons.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet">
     <title>Signin - Smart Parking</title>
 </head>
 
@@ -26,7 +26,8 @@
                 <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
                     <div class="col mx-auto">
                         <div class="mb-4 text-center">
-                            <img src="{{asset('assets/images/logo-img.png')}}" width="180" alt="" />
+                            <h4>WELCOME SMART PARKING</h4>
+                            {{-- <img src="{{ asset('assets/images/logo-icon.png') }}" width="180" alt="" /> --}}
                         </div>
                         @include('components.flash')
                         <div class="card">
@@ -41,8 +42,8 @@
                                     {{-- <div class="login-separater text-center mb-4"> <span>OR SIGN IN WITH EMAIL</span>
                                         <hr />
                                     </div> --}}
-                                    <div class="form-body" >
-                                        <form class="row g-3" action="{{route('login.store')}}" method="POST">
+                                    <div class="form-body">
+                                        <form class="row g-3" action="{{ route('login.store') }}" method="POST">
                                             @csrf
                                             <div class="col-12">
                                                 <label for="inputEmailAddress" class="form-label">Enter Username</label>
@@ -55,17 +56,18 @@
                                                 <div class="input-group" id="show_hide_password">
                                                     <input type="password" name="password"
                                                         class="form-control border-end-0" id="inputChoosePassword"
-                                                        placeholder="Enter Password"> <a
-                                                        href="javascript:;" class="input-group-text bg-transparent"><i
+                                                        placeholder="Enter Password"> <a href="javascript:;"
+                                                        class="input-group-text bg-transparent"><i
                                                             class='bx bx-hide'></i></a>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <label for="inputChooseType" class="form-label">Select Role</label>
-                                                <select id="inputChooseType" name="type_login" class="form-select" aria-label="select example">
+                                                <select id="inputChooseType" name="type_login" class="form-select"
+                                                    aria-label="select example">
                                                     <option selected value="user">User</option>
                                                     <option value="admin">Admin</option>
-                                                    </select>
+                                                </select>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-check form-switch">
@@ -87,7 +89,9 @@
                                             </div>
                                             <div class="col-12">
                                                 <div class="d-grid">
-                                                    <a class="btn btn-success" href="{{route('user.register.index')}}"><i class="bx bx-box"></i>Register</a>
+                                                    <a class="btn btn-success"
+                                                        href="{{ route('user.register.index') }}"><i
+                                                            class="bx bx-box"></i>Register</a>
                                                 </div>
                                             </div>
                                         </form>
@@ -104,11 +108,11 @@
     <!--end wrapper-->
 
     <!--plugins-->
-    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
 
     <script>
-        $(document).ready(function () {
-            $("#show_hide_password a").on('click', function (event) {
+        $(document).ready(function() {
+            $("#show_hide_password a").on('click', function(event) {
                 event.preventDefault();
                 if ($('#show_hide_password input').attr("type") == "text") {
                     $('#show_hide_password input').attr('type', 'password');
