@@ -25,6 +25,9 @@ class ParkingHistoryController extends Controller
             $parkingHistory = ParkingHistory::with('parking_location');
             return DataTables::of($parkingHistory)
             ->addIndexColumn()
+            ->addColumn('amount', function($query){
+                return 'Rp. ' . number_format($query->amount, 0, ",", ".");
+            })
             ->addColumn('action', function($eachRow){
                 return $this->getActionColumn($eachRow);
             })
@@ -102,16 +105,16 @@ class ParkingHistoryController extends Controller
 
     public function getActionColumn($data)
     {
-        $editBtn = route('histories.edit', $data->id);
-        $deleteBtn = route('histories.destroy', $data->id);
-        $ident = Str::random(10);
-        return
-        '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
-        . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
-        <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
-        <input type="hidden" name="_token" value="'.csrf_token().'" />
-        <input type="hidden" name="_method" value="DELETE">
-        </form>';
+        // $editBtn = route('histories.edit', $data->id);
+        // $deleteBtn = route('histories.destroy', $data->id);
+        // $ident = Str::random(10);
+        // return
+        // '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
+        // . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
+        // <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
+        // <input type="hidden" name="_token" value="'.csrf_token().'" />
+        // <input type="hidden" name="_method" value="DELETE">
+        // </form>';
     }
 
     public function ExportExcel($customer_data){
