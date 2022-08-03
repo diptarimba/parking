@@ -76,6 +76,26 @@
         </div><!--end row-->
 
         <div class="row">
+            @if (Auth::guard('web')->check())
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        Choose Location
+                    </div>
+                    <div class="card-body">
+                        <select class="form-control" id="ParkingLocationList">
+                            <option selected>Pilih Lokasi</option>
+                            @foreach ($parkingLocationList as $each)
+                            <option value="{{$each->id}}">{{$each->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="card-body">
+                        Data Lokasi Terkini : {{$parkName ?? 'Semua Lokasi'}}
+                    </div>
+                </div>
+            </div>
+            @endif
             <div class="col-12">
                 <div class="card radius-10">
                     <div class="card-body">
@@ -193,4 +213,29 @@
     <script src="{{ asset('assets/plugins/chartjs/js/Chart.extension.js') }}"></script>
     <script src="{{ asset('assets/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js') }}"></script>
     <script src="{{ asset('assets/js/index.js') }}"></script>
+    <script>
+        $(document).ready(() => {
+            function updateQueryStringParameter(uri, key, value) {
+                var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+                var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+                if (uri.match(re)) {
+                    return uri.replace(re, '$1' + key + "=" + value + '$2');
+                }
+                else {
+                    return uri + separator + key + "=" + value;
+                }
+            }
+            //You can reload the url like so
+
+            $('#ParkingLocationList').on('change', function(){
+                $('#ParkingLocationList option').each(function() {
+                    if($(this).is(':selected'))
+                    {
+                        var newUrl = updateQueryStringParameter(window.location.href,"location_id",$(this).val());
+                        window.location.href=newUrl
+                    }
+                })
+            })
+        })
+    </script>
 @endsection
