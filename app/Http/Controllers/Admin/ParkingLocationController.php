@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\ParkingLocation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Str;
 
@@ -118,14 +119,30 @@ class ParkingLocationController extends Controller
     public function getActionColumn($data)
     {
         $editBtn = route('location.edit', $data->id);
+        $viewBtn = route('location.slot', $data->id);
         $deleteBtn = route('location.destroy', $data->id);
         $ident = Str::random(10);
         return
         '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
+        .'<a href="'.$viewBtn.'" class="btn mx-1 my-1 btn-sm btn-warning">Parking Slot</a>'
         . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
         <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
         <input type="hidden" name="_token" value="'.csrf_token().'" />
         <input type="hidden" name="_method" value="DELETE">
         </form>';
+    }
+
+    public function getSlot($id)
+    {
+        $parking = ParkingLocation::whereId($id)->first();
+
+        $data = Http::get(config('parkingslot.url'), [
+            'location_name' => $parking->name
+        ]);
+
+        $response = json_decode($data->getBody()->getContents());
+        // dd($response);
+        return view('parkingLocations.slot', compact('response'));
+
     }
 }

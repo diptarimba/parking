@@ -66,6 +66,7 @@ Route::group(['middleware'=>['auth:admin,web', 'userCheck', 'is_verify_email']],
     Route::delete('/user/location/{location}', [LocationController::class, 'destroy'])->name('user.location.destroy');
 
     Route::get('/parking/histories/get', [ParkingHistoryController::class, 'all'])->name('histories.export');
+    Route::get('//parking/location/{id}/slot', [ParkingLocationController::class, 'getSlot'])->name('location.slot');
 
     Route::get('/user/profile/edit', [UserProfileController::class, 'editProfile'])->name('user.profile.edit');
     Route::post('/user/profile', [UserProfileController::class, 'updateProfile'])->name('user.profile.update');
