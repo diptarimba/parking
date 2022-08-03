@@ -48,6 +48,8 @@ class HomeController extends Controller
             })->when(isset($location_request), function ($query) use ($location_request){
                 $query->where('parking_location_id', $location_request);
             });
+
+            $parkName = ParkingLocation::whereId($location_request)->first()->name;
         }else{
             $mainParkingHistory = ParkingHistory::when(!empty($locationLimit), function($query) use ($locationLimit){
                 $query->whereIn('parking_location_id', $locationLimit);
