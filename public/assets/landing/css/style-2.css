@@ -146,6 +146,9 @@ Version: 1.0
 	background: -webkit-linear-gradient(left, #e1a0f7 0%,#d39ff8 21%,#9b9cfa 75%,#7c9afc 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to right, #e1a0f7 0%,#d39ff8 21%,#9b9cfa 75%,#7c9afc 100%);
 }
+.logo-icon {
+	width: 40px
+}
 /*--------------------------------------
 --------- HEADER AREA CSS END ---------
 ---------------------------------------*/
