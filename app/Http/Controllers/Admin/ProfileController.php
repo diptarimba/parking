@@ -24,7 +24,7 @@ class ProfileController extends Controller
             'email' => 'required',
             'name' => 'required',
             'username' => 'required',
-            'avatar' => 'required|mimes:png,jpg,jpeg|max:1024',
+            'avatar' => 'mimes:png,jpg,jpeg|max:1024',
             'phone' => 'required',
         ]);
 
