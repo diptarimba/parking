@@ -222,9 +222,9 @@ a {
 .sidebar-wrapper .metismenu a:active,
 .sidebar-wrapper .metismenu a:focus,
 .sidebar-wrapper .metismenu a:hover {
-	color: #505a63;
+	color: #ffffff;
 	text-decoration: none;
-	background: rgb(13 110 253 / .12)
+	background: rgba(13, 110, 200, 0.250)
 }
 
 .menu-label {

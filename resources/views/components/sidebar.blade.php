@@ -11,7 +11,7 @@
         </div>
     </div>
     <!--navigation-->
-    <ul class="metismenu" id="menu" style="background: #9b9cfa">
+    <ul class="metismenu" id="menu">
         @php
             if (Auth::guard('web')->check()) {
                 $permissionAvailable = Auth::guard('web')
