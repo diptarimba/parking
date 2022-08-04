@@ -7,20 +7,20 @@
 @endsection
 
 @section('page-content')
-<x-card.layout >
-    <x-slot name="header">
-        <x-card.h-buat url="{{route('location.create')}}" title="Parking Location Management"/>
-    </x-slot>
+    <x-card.layout mainTitle="Location" subTitle="Parking Location Management">
+        <x-slot name="header">
+            <x-card.h-buat url="{{ route('location.create') }}" title="Parking Location Management" />
+        </x-slot>
 
-    <x-slot name="body">
-        <table class="table table-striped datatables-target-exec">
-            <thead>
-                <th>No</th>
-                <th>Name</th>
-                <th>Action</th>
-            </thead>
-            <tbody>
-                {{-- @foreach ($parkingLocations as $each)
+        <x-slot name="body">
+            <table class="table table-striped datatables-target-exec">
+                <thead>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </thead>
+                <tbody>
+                    {{-- @foreach ($parkingLocations as $each)
                     <tr>
                         <td>{{$loop->iteration}}</td>
                         <td>{{$each->name}}</td>
@@ -30,36 +30,41 @@
                         </td>
                     </tr>
                 @endforeach --}}
-            </tbody>
-        </table>
-    </x-slot>
-</x-card.layout>
+                </tbody>
+            </table>
+        </x-slot>
+    </x-card.layout>
 @endsection
 
 @section('footer-content')
-<script src="{{asset('assets/plugins/datatable/js/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('assets/plugins/datatable/js/dataTables.bootstrap5.min.js')}}"></script>
-<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
-<script>
-    $(document).ready(() => {
-        var table = $('.datatables-target-exec').DataTable({
-        processing: true,
-        serverSide: true,
-        ajax: "{{ route('location.index') }}",
-        columns: [
-            {data: 'DT_RowIndex', name: 'DT_RowIndex',
-                orderable: false,
-                searchable: false,
-                sortable: false},
-            {data: 'name', name: 'name'},
-            {
-                data: 'action',
-                name: 'action',
-                orderable: false,
-                searchable: false
-            },
-        ]
-    });
-    })
-</script>
+    <script src="{{ asset('assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script>
+        $(document).ready(() => {
+            var table = $('.datatables-target-exec').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('location.index') }}",
+                columns: [{
+                        data: 'DT_RowIndex',
+                        name: 'DT_RowIndex',
+                        orderable: false,
+                        searchable: false,
+                        sortable: false
+                    },
+                    {
+                        data: 'name',
+                        name: 'name'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false,
+                        searchable: false
+                    },
+                ]
+            });
+        })
+    </script>
 @endsection
