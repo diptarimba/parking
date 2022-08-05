@@ -70,7 +70,7 @@
             $permissionAvailable->contains('optional.content.index'))
             <x-sidebar.menu-label title="Landing Page" />
             <x-sidebar.single icon="bx bx-package" route="feature.index" link="{{ route('feature.index') }}"
-                name="Feature" />
+                name="Home" />
             <x-sidebar.single icon="bx bx-question-mark" route="faq.index" link="{{ route('faq.index') }}"
                 name="Faq" />
             <x-sidebar.single icon="bx bx-message-square-check" route="about.index" link="{{ route('about.index') }}"
