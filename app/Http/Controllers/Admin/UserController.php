@@ -18,11 +18,11 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        if($request->ajax()){
+        if ($request->ajax()) {
             $users = User::with('user_role')->select();
             return DataTables::of($users)
                 ->addIndexColumn()
-                ->addColumn('action', function($eachRow){
+                ->addColumn('action', function ($eachRow) {
                     return $this->getActionColumn($eachRow);
                 })
                 ->rawColumns(['action'])
@@ -39,7 +39,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        $userRole = UserRole::get()->pluck('id', 'name');
+        $userRole = UserRole::get()->pluck('name', 'id');
         return view('users.create-edit', compact('userRole'));
     }
 
@@ -62,7 +62,7 @@ class UserController extends Controller
         ]);
 
         $user = User::create(array_merge($request->all(), [
-            'avatar' => 'storage/'. $request->file('avatar')->storePublicly('avatar'),
+            'avatar' => 'storage/' . $request->file('avatar')->storePublicly('avatar'),
             'password' => bcrypt($request->password)
         ]));
 
@@ -90,7 +90,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        $userRole = UserRole::pluck('id', 'name');
+        $userRole = UserRole::pluck('name', 'id');
         return view('users.create-edit', compact('user', 'userRole'));
     }
 
@@ -115,11 +115,10 @@ class UserController extends Controller
 
         $user->update(array_merge($request->all(), [
             'password' => $request->password ? bcrypt($request->password) : $user->password,
-            'avatar' => $request->file('avatar') ? 'storage/'. $request->file('avatar')->storePublicly('avatar') : $user->avatar
+            'avatar' => $request->file('avatar') ? 'storage/' . $request->file('avatar')->storePublicly('avatar') : $user->avatar
         ]));
 
         return redirect()->route('user.index')->with('status', 'Success Update User Profile');
-
     }
 
     /**
@@ -142,11 +141,11 @@ class UserController extends Controller
         $deleteBtn = route('user.destroy', $data->id);
         $ident = Str::random(10);
         return
-        '<a href="'.$locationBtn.'" class="btn mx-1 my-1 btn-sm btn-warning">Location</a>'
-        .'<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
-        . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
-        <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
-        <input type="hidden" name="_token" value="'.csrf_token().'" />
+            '<a href="' . $locationBtn . '" class="btn mx-1 my-1 btn-sm btn-warning">Location</a>'
+            . '<a href="' . $editBtn . '" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
+            . '<input form="form' . $ident . '" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
+        <form id="form' . $ident . '" action="' . $deleteBtn . '" method="post">
+        <input type="hidden" name="_token" value="' . csrf_token() . '" />
         <input type="hidden" name="_method" value="DELETE">
         </form>';
     }

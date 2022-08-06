@@ -1,868 +1,868 @@
-zmdi zmdi-group zmdi-hc-fw,group
-zmdi zmdi-rss zmdi-hc-fw,rss
-zmdi zmdi-shape zmdi-hc-fw,shape
-zmdi zmdi-spinner zmdi-hc-fw,spinner
-zmdi zmdi-ungroup zmdi-hc-fw,ungroup
-zmdi zmdi-500px zmdi-hc-fw,500px
-zmdi zmdi-8tracks zmdi-hc-fw,8tracks
-zmdi zmdi-amazon zmdi-hc-fw,amazon
-zmdi zmdi-blogger zmdi-hc-fw,blogger
-zmdi zmdi-delicious zmdi-hc-fw,delicious
-zmdi zmdi-disqus zmdi-hc-fw,disqus
-zmdi zmdi-flattr zmdi-hc-fw,flattr
-zmdi zmdi-flickr zmdi-hc-fw,flickr
-zmdi zmdi-github-alt zmdi-hc-fw,github-alt
-zmdi zmdi-google-old zmdi-hc-fw,google-old
-zmdi zmdi-linkedin zmdi-hc-fw,linkedin
-zmdi zmdi-odnoklassniki zmdi-hc-fw,odnoklassniki
-zmdi zmdi-outlook zmdi-hc-fw,outlook
-zmdi zmdi-paypal-alt zmdi-hc-fw,paypal-alt
-zmdi zmdi-pinterest zmdi-hc-fw,pinterest
-zmdi zmdi-playstation zmdi-hc-fw,playstation
-zmdi zmdi-reddit zmdi-hc-fw,reddit
-zmdi zmdi-skype zmdi-hc-fw,skype
-zmdi zmdi-slideshare zmdi-hc-fw,slideshare
-zmdi zmdi-soundcloud zmdi-hc-fw,soundcloud
-zmdi zmdi-tumblr zmdi-hc-fw,tumblr
-zmdi zmdi-twitch zmdi-hc-fw,twitch
-zmdi zmdi-vimeo zmdi-hc-fw,vimeo
-zmdi zmdi-whatsapp zmdi-hc-fw,whatsapp
-zmdi zmdi-xbox zmdi-hc-fw,xbox
-zmdi zmdi-yahoo zmdi-hc-fw,yahoo
-zmdi zmdi-youtube-play zmdi-hc-fw,youtube-play
-zmdi zmdi-youtube zmdi-hc-fw,youtube
-zmdi zmdi-google zmdi-hc-fw,google
-zmdi zmdi-google-plus-box zmdi-hc-fw,google-plus-box
-zmdi zmdi-google-plus zmdi-hc-fw,google-plus
-zmdi zmdi-paypal zmdi-hc-fw,paypal
-zmdi zmdi-3d-rotation zmdi-hc-fw,3d-rotation
-zmdi zmdi-airplane-off zmdi-hc-fw,airplane-off
-zmdi zmdi-airplane zmdi-hc-fw,airplane
-zmdi zmdi-album zmdi-hc-fw,album
-zmdi zmdi-archive zmdi-hc-fw,archive
-zmdi zmdi-assignment-account zmdi-hc-fw,assignment-account
-zmdi zmdi-assignment-alert zmdi-hc-fw,assignment-alert
-zmdi zmdi-assignment-check zmdi-hc-fw,assignment-check
-zmdi zmdi-assignment-o zmdi-hc-fw,assignment-o
-zmdi zmdi-assignment-return zmdi-hc-fw,assignment-return
-zmdi zmdi-assignment-returned zmdi-hc-fw,assignment-returned
-zmdi zmdi-assignment zmdi-hc-fw,assignment
-zmdi zmdi-attachment-alt zmdi-hc-fw,attachment-alt
-zmdi zmdi-attachment zmdi-hc-fw,attachment
-zmdi zmdi-audio zmdi-hc-fw,audio
-zmdi zmdi-badge-check zmdi-hc-fw,badge-check
-zmdi zmdi-balance-wallet zmdi-hc-fw,balance-wallet
-zmdi zmdi-balance zmdi-hc-fw,balance
-zmdi zmdi-battery-alert zmdi-hc-fw,battery-alert
-zmdi zmdi-battery-flash zmdi-hc-fw,battery-flash
-zmdi zmdi-battery-unknown zmdi-hc-fw,battery-unknown
-zmdi zmdi-battery zmdi-hc-fw,battery
-zmdi zmdi-bike zmdi-hc-fw,bike
-zmdi zmdi-block-alt zmdi-hc-fw,block-alt
-zmdi zmdi-block zmdi-hc-fw,block
-zmdi zmdi-boat zmdi-hc-fw,boat
-zmdi zmdi-book-image zmdi-hc-fw,book-image
-zmdi zmdi-book zmdi-hc-fw,book
-zmdi zmdi-bookmark-outline zmdi-hc-fw,bookmark-outline
-zmdi zmdi-bookmark zmdi-hc-fw,bookmark
-zmdi zmdi-brush zmdi-hc-fw,brush
-zmdi zmdi-bug zmdi-hc-fw,bug
-zmdi zmdi-bus zmdi-hc-fw,bus
-zmdi zmdi-cake zmdi-hc-fw,cake
-zmdi zmdi-car-taxi zmdi-hc-fw,car-taxi
-zmdi zmdi-car-wash zmdi-hc-fw,car-wash
-zmdi zmdi-car zmdi-hc-fw,car
-zmdi zmdi-card-giftcard zmdi-hc-fw,card-giftcard
-zmdi zmdi-card-membership zmdi-hc-fw,card-membership
-zmdi zmdi-card-travel zmdi-hc-fw,card-travel
-zmdi zmdi-card zmdi-hc-fw,card
-zmdi zmdi-case-check zmdi-hc-fw,case-check
-zmdi zmdi-case-download zmdi-hc-fw,case-download
-zmdi zmdi-case-play zmdi-hc-fw,case-play
-zmdi zmdi-case zmdi-hc-fw,case
-zmdi zmdi-cast-connected zmdi-hc-fw,cast-connected
-zmdi zmdi-cast zmdi-hc-fw,cast
-zmdi zmdi-chart-donut zmdi-hc-fw,chart-donut
-zmdi zmdi-chart zmdi-hc-fw,chart
-zmdi zmdi-city-alt zmdi-hc-fw,city-alt
-zmdi zmdi-city zmdi-hc-fw,city
-zmdi zmdi-close-circle-o zmdi-hc-fw,close-circle-o
-zmdi zmdi-close-circle zmdi-hc-fw,close-circle
-zmdi zmdi-close zmdi-hc-fw,close
-zmdi zmdi-cocktail zmdi-hc-fw,cocktail
-zmdi zmdi-code-setting zmdi-hc-fw,code-setting
-zmdi zmdi-code-smartphone zmdi-hc-fw,code-smartphone
-zmdi zmdi-code zmdi-hc-fw,code
-zmdi zmdi-coffee zmdi-hc-fw,coffee
-zmdi zmdi-collection-bookmark zmdi-hc-fw,collection-bookmark
-zmdi zmdi-collection-case-play zmdi-hc-fw,collection-case-play
-zmdi zmdi-collection-folder-image zmdi-hc-fw,collection-folder-image
-zmdi zmdi-collection-image-o zmdi-hc-fw,collection-image-o
-zmdi zmdi-collection-image zmdi-hc-fw,collection-image
-zmdi zmdi-collection-item-1 zmdi-hc-fw,collection-item-1
-zmdi zmdi-collection-item-2 zmdi-hc-fw,collection-item-2
-zmdi zmdi-collection-item-3 zmdi-hc-fw,collection-item-3
-zmdi zmdi-collection-item-4 zmdi-hc-fw,collection-item-4
-zmdi zmdi-collection-item-5 zmdi-hc-fw,collection-item-5
-zmdi zmdi-collection-item-6 zmdi-hc-fw,collection-item-6
-zmdi zmdi-collection-item-7 zmdi-hc-fw,collection-item-7
-zmdi zmdi-collection-item-8 zmdi-hc-fw,collection-item-8
-zmdi zmdi-collection-item-9-plus zmdi-hc-fw,collection-item-9-plus
-zmdi zmdi-collection-item-9 zmdi-hc-fw,collection-item-9
-zmdi zmdi-collection-item zmdi-hc-fw,collection-item
-zmdi zmdi-collection-music zmdi-hc-fw,collection-music
-zmdi zmdi-collection-pdf zmdi-hc-fw,collection-pdf
-zmdi zmdi-collection-plus zmdi-hc-fw,collection-plus
-zmdi zmdi-collection-speaker zmdi-hc-fw,collection-speaker
-zmdi zmdi-collection-text zmdi-hc-fw,collection-text
-zmdi zmdi-collection-video zmdi-hc-fw,collection-video
-zmdi zmdi-compass zmdi-hc-fw,compass
-zmdi zmdi-cutlery zmdi-hc-fw,cutlery
-zmdi zmdi-delete zmdi-hc-fw,delete
-zmdi zmdi-dialpad zmdi-hc-fw,dialpad
-zmdi zmdi-dns zmdi-hc-fw,dns
-zmdi zmdi-drink zmdi-hc-fw,drink
-zmdi zmdi-edit zmdi-hc-fw,edit
-zmdi zmdi-email-open zmdi-hc-fw,email-open
-zmdi zmdi-email zmdi-hc-fw,email
-zmdi zmdi-eye-off zmdi-hc-fw,eye-off
-zmdi zmdi-eye zmdi-hc-fw,eye
-zmdi zmdi-eyedropper zmdi-hc-fw,eyedropper
-zmdi zmdi-favorite-outline zmdi-hc-fw,favorite-outline
-zmdi zmdi-favorite zmdi-hc-fw,favorite
-zmdi zmdi-filter-list zmdi-hc-fw,filter-list
-zmdi zmdi-fire zmdi-hc-fw,fire
-zmdi zmdi-flag zmdi-hc-fw,flag
-zmdi zmdi-flare zmdi-hc-fw,flare
-zmdi zmdi-flash-auto zmdi-hc-fw,flash-auto
-zmdi zmdi-flash-off zmdi-hc-fw,flash-off
-zmdi zmdi-flash zmdi-hc-fw,flash
-zmdi zmdi-flip zmdi-hc-fw,flip
-zmdi zmdi-flower-alt zmdi-hc-fw,flower-alt
-zmdi zmdi-flower zmdi-hc-fw,flower
-zmdi zmdi-font zmdi-hc-fw,font
-zmdi zmdi-fullscreen-alt zmdi-hc-fw,fullscreen-alt
-zmdi zmdi-fullscreen-exit zmdi-hc-fw,fullscreen-exit
-zmdi zmdi-fullscreen zmdi-hc-fw,fullscreen
-zmdi zmdi-functions zmdi-hc-fw,functions
-zmdi zmdi-gas-station zmdi-hc-fw,gas-station
-zmdi zmdi-gesture zmdi-hc-fw,gesture
-zmdi zmdi-globe-alt zmdi-hc-fw,globe-alt
-zmdi zmdi-globe-lock zmdi-hc-fw,globe-lock
-zmdi zmdi-globe zmdi-hc-fw,globe
-zmdi zmdi-graduation-cap zmdi-hc-fw,graduation-cap
-zmdi zmdi-group zmdi-hc-fw,group
-zmdi zmdi-home zmdi-hc-fw,home
-zmdi zmdi-hospital-alt zmdi-hc-fw,hospital-alt
-zmdi zmdi-hospital zmdi-hc-fw,hospital
-zmdi zmdi-hotel zmdi-hc-fw,hotel
-zmdi zmdi-hourglass-alt zmdi-hc-fw,hourglass-alt
-zmdi zmdi-hourglass-outline zmdi-hc-fw,hourglass-outline
-zmdi zmdi-hourglass zmdi-hc-fw,hourglass
-zmdi zmdi-http zmdi-hc-fw,http
-zmdi zmdi-image-alt zmdi-hc-fw,image-alt
-zmdi zmdi-image-o zmdi-hc-fw,image-o
-zmdi zmdi-image zmdi-hc-fw,image
-zmdi zmdi-inbox zmdi-hc-fw,inbox
-zmdi zmdi-invert-colors-off zmdi-hc-fw,invert-colors-off
-zmdi zmdi-invert-colors zmdi-hc-fw,invert-colors
-zmdi zmdi-key zmdi-hc-fw,key
-zmdi zmdi-label-alt-outline zmdi-hc-fw,label-alt-outline
-zmdi zmdi-label-alt zmdi-hc-fw,label-alt
-zmdi zmdi-label-heart zmdi-hc-fw,label-heart
-zmdi zmdi-label zmdi-hc-fw,label
-zmdi zmdi-labels zmdi-hc-fw,labels
-zmdi zmdi-lamp zmdi-hc-fw,lamp
-zmdi zmdi-landscape zmdi-hc-fw,landscape
-zmdi zmdi-layers-off zmdi-hc-fw,layers-off
-zmdi zmdi-layers zmdi-hc-fw,layers
-zmdi zmdi-library zmdi-hc-fw,library
-zmdi zmdi-link zmdi-hc-fw,link
-zmdi zmdi-lock-open zmdi-hc-fw,lock-open
-zmdi zmdi-lock-outline zmdi-hc-fw,lock-outline
-zmdi zmdi-lock zmdi-hc-fw,lock
-zmdi zmdi-mail-reply-all zmdi-hc-fw,mail-reply-all
-zmdi zmdi-mail-reply zmdi-hc-fw,mail-reply
-zmdi zmdi-mail-send zmdi-hc-fw,mail-send
-zmdi zmdi-mall zmdi-hc-fw,mall
-zmdi zmdi-map zmdi-hc-fw,map
-zmdi zmdi-menu zmdi-hc-fw,menu
-zmdi zmdi-money-box zmdi-hc-fw,money-box
-zmdi zmdi-money-off zmdi-hc-fw,money-off
-zmdi zmdi-money zmdi-hc-fw,money
-zmdi zmdi-more-vert zmdi-hc-fw,more-vert
-zmdi zmdi-more zmdi-hc-fw,more
-zmdi zmdi-movie-alt zmdi-hc-fw,movie-alt
-zmdi zmdi-movie zmdi-hc-fw,movie
-zmdi zmdi-nature-people zmdi-hc-fw,nature-people
-zmdi zmdi-nature zmdi-hc-fw,nature
-zmdi zmdi-navigation zmdi-hc-fw,navigation
-zmdi zmdi-open-in-browser zmdi-hc-fw,open-in-browser
-zmdi zmdi-open-in-new zmdi-hc-fw,open-in-new
-zmdi zmdi-palette zmdi-hc-fw,palette
-zmdi zmdi-parking zmdi-hc-fw,parking
-zmdi zmdi-pin-account zmdi-hc-fw,pin-account
-zmdi zmdi-pin-assistant zmdi-hc-fw,pin-assistant
-zmdi zmdi-pin-drop zmdi-hc-fw,pin-drop
-zmdi zmdi-pin-help zmdi-hc-fw,pin-help
-zmdi zmdi-pin-off zmdi-hc-fw,pin-off
-zmdi zmdi-pin zmdi-hc-fw,pin
-zmdi zmdi-pizza zmdi-hc-fw,pizza
-zmdi zmdi-plaster zmdi-hc-fw,plaster
-zmdi zmdi-power-setting zmdi-hc-fw,power-setting
-zmdi zmdi-power zmdi-hc-fw,power
-zmdi zmdi-print zmdi-hc-fw,print
-zmdi zmdi-puzzle-piece zmdi-hc-fw,puzzle-piece
-zmdi zmdi-quote zmdi-hc-fw,quote
-zmdi zmdi-railway zmdi-hc-fw,railway
-zmdi zmdi-receipt zmdi-hc-fw,receipt
-zmdi zmdi-refresh-alt zmdi-hc-fw,refresh-alt
-zmdi zmdi-refresh-sync-alert zmdi-hc-fw,refresh-sync-alert
-zmdi zmdi-refresh-sync-off zmdi-hc-fw,refresh-sync-off
-zmdi zmdi-refresh-sync zmdi-hc-fw,refresh-sync
-zmdi zmdi-refresh zmdi-hc-fw,refresh
-zmdi zmdi-roller zmdi-hc-fw,roller
-zmdi zmdi-ruler zmdi-hc-fw,ruler
-zmdi zmdi-scissors zmdi-hc-fw,scissors
-zmdi zmdi-screen-rotation-lock zmdi-hc-fw,screen-rotation-lock
-zmdi zmdi-screen-rotation zmdi-hc-fw,screen-rotation
-zmdi zmdi-search-for zmdi-hc-fw,search-for
-zmdi zmdi-search-in-file zmdi-hc-fw,search-in-file
-zmdi zmdi-search-in-page zmdi-hc-fw,search-in-page
-zmdi zmdi-search-replace zmdi-hc-fw,search-replace
-zmdi zmdi-search zmdi-hc-fw,search
-zmdi zmdi-seat zmdi-hc-fw,seat
-zmdi zmdi-settings-square zmdi-hc-fw,settings-square
-zmdi zmdi-settings zmdi-hc-fw,settings
-zmdi zmdi-shape zmdi-hc-fw,shape
-zmdi zmdi-shield-check zmdi-hc-fw,shield-check
-zmdi zmdi-shield-security zmdi-hc-fw,shield-security
-zmdi zmdi-shopping-basket zmdi-hc-fw,shopping-basket
-zmdi zmdi-shopping-cart-plus zmdi-hc-fw,shopping-cart-plus
-zmdi zmdi-shopping-cart zmdi-hc-fw,shopping-cart
-zmdi zmdi-sign-in zmdi-hc-fw,sign-in
-zmdi zmdi-sort-amount-asc zmdi-hc-fw,sort-amount-asc
-zmdi zmdi-sort-amount-desc zmdi-hc-fw,sort-amount-desc
-zmdi zmdi-sort-asc zmdi-hc-fw,sort-asc
-zmdi zmdi-sort-desc zmdi-hc-fw,sort-desc
-zmdi zmdi-spellcheck zmdi-hc-fw,spellcheck
-zmdi zmdi-spinner zmdi-hc-fw,spinner
-zmdi zmdi-storage zmdi-hc-fw,storage
-zmdi zmdi-store-24 zmdi-hc-fw,store-24
-zmdi zmdi-store zmdi-hc-fw,store
-zmdi zmdi-subway zmdi-hc-fw,subway
-zmdi zmdi-sun zmdi-hc-fw,sun
-zmdi zmdi-tab-unselected zmdi-hc-fw,tab-unselected
-zmdi zmdi-tab zmdi-hc-fw,tab
-zmdi zmdi-tag-close zmdi-hc-fw,tag-close
-zmdi zmdi-tag-more zmdi-hc-fw,tag-more
-zmdi zmdi-tag zmdi-hc-fw,tag
-zmdi zmdi-thumb-down zmdi-hc-fw,thumb-down
-zmdi zmdi-thumb-up-down zmdi-hc-fw,thumb-up-down
-zmdi zmdi-thumb-up zmdi-hc-fw,thumb-up
-zmdi zmdi-ticket-star zmdi-hc-fw,ticket-star
-zmdi zmdi-toll zmdi-hc-fw,toll
-zmdi zmdi-toys zmdi-hc-fw,toys
-zmdi zmdi-traffic zmdi-hc-fw,traffic
-zmdi zmdi-translate zmdi-hc-fw,translate
-zmdi zmdi-triangle-down zmdi-hc-fw,triangle-down
-zmdi zmdi-triangle-up zmdi-hc-fw,triangle-up
-zmdi zmdi-truck zmdi-hc-fw,truck
-zmdi zmdi-turning-sign zmdi-hc-fw,turning-sign
-zmdi zmdi-ungroup zmdi-hc-fw,ungroup
-zmdi zmdi-wallpaper zmdi-hc-fw,wallpaper
-zmdi zmdi-washing-machine zmdi-hc-fw,washing-machine
-zmdi zmdi-window-maximize zmdi-hc-fw,window-maximize
-zmdi zmdi-window-minimize zmdi-hc-fw,window-minimize
-zmdi zmdi-window-restore zmdi-hc-fw,window-restore
-zmdi zmdi-wrench zmdi-hc-fw,wrench
-zmdi zmdi-zoom-in zmdi-hc-fw,zoom-in
-zmdi zmdi-zoom-out zmdi-hc-fw,zoom-out
-zmdi zmdi-alert-circle-o zmdi-hc-fw,alert-circle-o
-zmdi zmdi-alert-circle zmdi-hc-fw,alert-circle
-zmdi zmdi-alert-octagon zmdi-hc-fw,alert-octagon
-zmdi zmdi-alert-polygon zmdi-hc-fw,alert-polygon
-zmdi zmdi-alert-triangle zmdi-hc-fw,alert-triangle
-zmdi zmdi-help-outline zmdi-hc-fw,help-outline
-zmdi zmdi-help zmdi-hc-fw,help
-zmdi zmdi-info-outline zmdi-hc-fw,info-outline
-zmdi zmdi-info zmdi-hc-fw,info
-zmdi zmdi-notifications-active zmdi-hc-fw,notifications-active
-zmdi zmdi-notifications-add zmdi-hc-fw,notifications-add
-zmdi zmdi-notifications-none zmdi-hc-fw,notifications-none
-zmdi zmdi-notifications-off zmdi-hc-fw,notifications-off
-zmdi zmdi-notifications-paused zmdi-hc-fw,notifications-paused
-zmdi zmdi-notifications zmdi-hc-fw,notifications
-zmdi zmdi-account-add zmdi-hc-fw,account-add
-zmdi zmdi-account-box-mail zmdi-hc-fw,account-box-mail
-zmdi zmdi-account-box-o zmdi-hc-fw,account-box-o
-zmdi zmdi-account-box-phone zmdi-hc-fw,account-box-phone
-zmdi zmdi-account-box zmdi-hc-fw,account-box
-zmdi zmdi-account-calendar zmdi-hc-fw,account-calendar
-zmdi zmdi-account-circle zmdi-hc-fw,account-circle
-zmdi zmdi-account-o zmdi-hc-fw,account-o
-zmdi zmdi-account zmdi-hc-fw,account
-zmdi zmdi-accounts-add zmdi-hc-fw,accounts-add
-zmdi zmdi-accounts-alt zmdi-hc-fw,accounts-alt
-zmdi zmdi-accounts-list-alt zmdi-hc-fw,accounts-list-alt
-zmdi zmdi-accounts-list zmdi-hc-fw,accounts-list
-zmdi zmdi-accounts-outline zmdi-hc-fw,accounts-outline
-zmdi zmdi-accounts zmdi-hc-fw,accounts
-zmdi zmdi-face zmdi-hc-fw,face
-zmdi zmdi-female zmdi-hc-fw,female
-zmdi zmdi-male-alt zmdi-hc-fw,male-alt
-zmdi zmdi-male-female zmdi-hc-fw,male-female
-zmdi zmdi-male zmdi-hc-fw,male
-zmdi zmdi-mood-bad zmdi-hc-fw,mood-bad
-zmdi zmdi-mood zmdi-hc-fw,mood
-zmdi zmdi-run zmdi-hc-fw,run
-zmdi zmdi-walk zmdi-hc-fw,walk
-zmdi zmdi-cloud-box zmdi-hc-fw,cloud-box
-zmdi zmdi-cloud-circle zmdi-hc-fw,cloud-circle
-zmdi zmdi-cloud-done zmdi-hc-fw,cloud-done
-zmdi zmdi-cloud-download zmdi-hc-fw,cloud-download
-zmdi zmdi-cloud-off zmdi-hc-fw,cloud-off
-zmdi zmdi-cloud-outline-alt zmdi-hc-fw,cloud-outline-alt
-zmdi zmdi-cloud-outline zmdi-hc-fw,cloud-outline
-zmdi zmdi-cloud-upload zmdi-hc-fw,cloud-upload
-zmdi zmdi-cloud zmdi-hc-fw,cloud
-zmdi zmdi-download zmdi-hc-fw,download
-zmdi zmdi-file-plus zmdi-hc-fw,file-plus
-zmdi zmdi-file-text zmdi-hc-fw,file-text
-zmdi zmdi-file zmdi-hc-fw,file
-zmdi zmdi-folder-outline zmdi-hc-fw,folder-outline
-zmdi zmdi-folder-person zmdi-hc-fw,folder-person
-zmdi zmdi-folder-star-alt zmdi-hc-fw,folder-star-alt
-zmdi zmdi-folder-star zmdi-hc-fw,folder-star
-zmdi zmdi-folder zmdi-hc-fw,folder
-zmdi zmdi-gif zmdi-hc-fw,gif
-zmdi zmdi-upload zmdi-hc-fw,upload
-zmdi zmdi-border-all zmdi-hc-fw,border-all
-zmdi zmdi-border-bottom zmdi-hc-fw,border-bottom
-zmdi zmdi-border-clear zmdi-hc-fw,border-clear
-zmdi zmdi-border-color zmdi-hc-fw,border-color
-zmdi zmdi-border-horizontal zmdi-hc-fw,border-horizontal
-zmdi zmdi-border-inner zmdi-hc-fw,border-inner
-zmdi zmdi-border-left zmdi-hc-fw,border-left
-zmdi zmdi-border-outer zmdi-hc-fw,border-outer
-zmdi zmdi-border-right zmdi-hc-fw,border-right
-zmdi zmdi-border-style zmdi-hc-fw,border-style
-zmdi zmdi-border-top zmdi-hc-fw,border-top
-zmdi zmdi-border-vertical zmdi-hc-fw,border-vertical
-zmdi zmdi-copy zmdi-hc-fw,copy
-zmdi zmdi-crop zmdi-hc-fw,crop
-zmdi zmdi-format-align-center zmdi-hc-fw,format-align-center
-zmdi zmdi-format-align-justify zmdi-hc-fw,format-align-justify
-zmdi zmdi-format-align-left zmdi-hc-fw,format-align-left
-zmdi zmdi-format-align-right zmdi-hc-fw,format-align-right
-zmdi zmdi-format-bold zmdi-hc-fw,format-bold
-zmdi zmdi-format-clear-all zmdi-hc-fw,format-clear-all
-zmdi zmdi-format-clear zmdi-hc-fw,format-clear
-zmdi zmdi-format-color-fill zmdi-hc-fw,format-color-fill
-zmdi zmdi-format-color-reset zmdi-hc-fw,format-color-reset
-zmdi zmdi-format-color-text zmdi-hc-fw,format-color-text
-zmdi zmdi-format-indent-decrease zmdi-hc-fw,format-indent-decrease
-zmdi zmdi-format-indent-increase zmdi-hc-fw,format-indent-increase
-zmdi zmdi-format-italic zmdi-hc-fw,format-italic
-zmdi zmdi-format-line-spacing zmdi-hc-fw,format-line-spacing
-zmdi zmdi-format-list-bulleted zmdi-hc-fw,format-list-bulleted
-zmdi zmdi-format-list-numbered zmdi-hc-fw,format-list-numbered
-zmdi zmdi-format-ltr zmdi-hc-fw,format-ltr
-zmdi zmdi-format-rtl zmdi-hc-fw,format-rtl
-zmdi zmdi-format-size zmdi-hc-fw,format-size
-zmdi zmdi-format-strikethrough-s zmdi-hc-fw,format-strikethrough-s
-zmdi zmdi-format-strikethrough zmdi-hc-fw,format-strikethrough
-zmdi zmdi-format-subject zmdi-hc-fw,format-subject
-zmdi zmdi-format-underlined zmdi-hc-fw,format-underlined
-zmdi zmdi-format-valign-bottom zmdi-hc-fw,format-valign-bottom
-zmdi zmdi-format-valign-center zmdi-hc-fw,format-valign-center
-zmdi zmdi-format-valign-top zmdi-hc-fw,format-valign-top
-zmdi zmdi-redo zmdi-hc-fw,redo
-zmdi zmdi-select-all zmdi-hc-fw,select-all
-zmdi zmdi-space-bar zmdi-hc-fw,space-bar
-zmdi zmdi-text-format zmdi-hc-fw,text-format
-zmdi zmdi-transform zmdi-hc-fw,transform
-zmdi zmdi-undo zmdi-hc-fw,undo
-zmdi zmdi-wrap-text zmdi-hc-fw,wrap-text
-zmdi zmdi-comment-alert zmdi-hc-fw,comment-alert
-zmdi zmdi-comment-alt-text zmdi-hc-fw,comment-alt-text
-zmdi zmdi-comment-alt zmdi-hc-fw,comment-alt
-zmdi zmdi-comment-edit zmdi-hc-fw,comment-edit
-zmdi zmdi-comment-image zmdi-hc-fw,comment-image
-zmdi zmdi-comment-list zmdi-hc-fw,comment-list
-zmdi zmdi-comment-more zmdi-hc-fw,comment-more
-zmdi zmdi-comment-outline zmdi-hc-fw,comment-outline
-zmdi zmdi-comment-text-alt zmdi-hc-fw,comment-text-alt
-zmdi zmdi-comment-text zmdi-hc-fw,comment-text
-zmdi zmdi-comment-video zmdi-hc-fw,comment-video
-zmdi zmdi-comment zmdi-hc-fw,comment
-zmdi zmdi-comments zmdi-hc-fw,comments
-zmdi zmdi-check-all zmdi-hc-fw,check-all
-zmdi zmdi-check-circle-u zmdi-hc-fw,check-circle-u
-zmdi zmdi-check-circle zmdi-hc-fw,check-circle
-zmdi zmdi-check-square zmdi-hc-fw,check-square
-zmdi zmdi-check zmdi-hc-fw,check
-zmdi zmdi-circle-o zmdi-hc-fw,circle-o
-zmdi zmdi-circle zmdi-hc-fw,circle
-zmdi zmdi-dot-circle-alt zmdi-hc-fw,dot-circle-alt
-zmdi zmdi-dot-circle zmdi-hc-fw,dot-circle
-zmdi zmdi-minus-circle-outline zmdi-hc-fw,minus-circle-outline
-zmdi zmdi-minus-circle zmdi-hc-fw,minus-circle
-zmdi zmdi-minus-square zmdi-hc-fw,minus-square
-zmdi zmdi-minus zmdi-hc-fw,minus
-zmdi zmdi-plus-circle-o-duplicate zmdi-hc-fw,plus-circle-o-duplicate
-zmdi zmdi-plus-circle-o zmdi-hc-fw,plus-circle-o
-zmdi zmdi-plus-circle zmdi-hc-fw,plus-circle
-zmdi zmdi-plus-square zmdi-hc-fw,plus-square
-zmdi zmdi-plus zmdi-hc-fw,plus
-zmdi zmdi-square-o zmdi-hc-fw,square-o
-zmdi zmdi-star-circle zmdi-hc-fw,star-circle
-zmdi zmdi-star-half zmdi-hc-fw,star-half
-zmdi zmdi-star-outline zmdi-hc-fw,star-outline
-zmdi zmdi-star zmdi-hc-fw,star
-zmdi zmdi-bluetooth-connected zmdi-hc-fw,bluetooth-connected
-zmdi zmdi-bluetooth-off zmdi-hc-fw,bluetooth-off
-zmdi zmdi-bluetooth-search zmdi-hc-fw,bluetooth-search
-zmdi zmdi-bluetooth-setting zmdi-hc-fw,bluetooth-setting
-zmdi zmdi-bluetooth zmdi-hc-fw,bluetooth
-zmdi zmdi-camera-add zmdi-hc-fw,camera-add
-zmdi zmdi-camera-alt zmdi-hc-fw,camera-alt
-zmdi zmdi-camera-bw zmdi-hc-fw,camera-bw
-zmdi zmdi-camera-front zmdi-hc-fw,camera-front
-zmdi zmdi-camera-mic zmdi-hc-fw,camera-mic
-zmdi zmdi-camera-party-mode zmdi-hc-fw,camera-party-mode
-zmdi zmdi-camera-rear zmdi-hc-fw,camera-rear
-zmdi zmdi-camera-roll zmdi-hc-fw,camera-roll
-zmdi zmdi-camera-switch zmdi-hc-fw,camera-switch
-zmdi zmdi-camera zmdi-hc-fw,camera
-zmdi zmdi-card-alert zmdi-hc-fw,card-alert
-zmdi zmdi-card-off zmdi-hc-fw,card-off
-zmdi zmdi-card-sd zmdi-hc-fw,card-sd
-zmdi zmdi-card-sim zmdi-hc-fw,card-sim
-zmdi zmdi-desktop-mac zmdi-hc-fw,desktop-mac
-zmdi zmdi-desktop-windows zmdi-hc-fw,desktop-windows
-zmdi zmdi-device-hub zmdi-hc-fw,device-hub
-zmdi zmdi-devices-off zmdi-hc-fw,devices-off
-zmdi zmdi-devices zmdi-hc-fw,devices
-zmdi zmdi-dock zmdi-hc-fw,dock
-zmdi zmdi-floppy zmdi-hc-fw,floppy
-zmdi zmdi-gamepad zmdi-hc-fw,gamepad
-zmdi zmdi-gps-dot zmdi-hc-fw,gps-dot
-zmdi zmdi-gps-off zmdi-hc-fw,gps-off
-zmdi zmdi-gps zmdi-hc-fw,gps
-zmdi zmdi-headset-mic zmdi-hc-fw,headset-mic
-zmdi zmdi-headset zmdi-hc-fw,headset
-zmdi zmdi-input-antenna zmdi-hc-fw,input-antenna
-zmdi zmdi-input-composite zmdi-hc-fw,input-composite
-zmdi zmdi-input-hdmi zmdi-hc-fw,input-hdmi
-zmdi zmdi-input-power zmdi-hc-fw,input-power
-zmdi zmdi-input-svideo zmdi-hc-fw,input-svideo
-zmdi zmdi-keyboard-hide zmdi-hc-fw,keyboard-hide
-zmdi zmdi-keyboard zmdi-hc-fw,keyboard
-zmdi zmdi-laptop-chromebook zmdi-hc-fw,laptop-chromebook
-zmdi zmdi-laptop-mac zmdi-hc-fw,laptop-mac
-zmdi zmdi-laptop zmdi-hc-fw,laptop
-zmdi zmdi-mic-off zmdi-hc-fw,mic-off
-zmdi zmdi-mic-outline zmdi-hc-fw,mic-outline
-zmdi zmdi-mic-setting zmdi-hc-fw,mic-setting
-zmdi zmdi-mic zmdi-hc-fw,mic
-zmdi zmdi-mouse zmdi-hc-fw,mouse
-zmdi zmdi-network-alert zmdi-hc-fw,network-alert
-zmdi zmdi-network-locked zmdi-hc-fw,network-locked
-zmdi zmdi-network-off zmdi-hc-fw,network-off
-zmdi zmdi-network-outline zmdi-hc-fw,network-outline
-zmdi zmdi-network-setting zmdi-hc-fw,network-setting
-zmdi zmdi-network zmdi-hc-fw,network
-zmdi zmdi-phone-bluetooth zmdi-hc-fw,phone-bluetooth
-zmdi zmdi-phone-end zmdi-hc-fw,phone-end
-zmdi zmdi-phone-forwarded zmdi-hc-fw,phone-forwarded
-zmdi zmdi-phone-in-talk zmdi-hc-fw,phone-in-talk
-zmdi zmdi-phone-locked zmdi-hc-fw,phone-locked
-zmdi zmdi-phone-missed zmdi-hc-fw,phone-missed
-zmdi zmdi-phone-msg zmdi-hc-fw,phone-msg
-zmdi zmdi-phone-paused zmdi-hc-fw,phone-paused
-zmdi zmdi-phone-ring zmdi-hc-fw,phone-ring
-zmdi zmdi-phone-setting zmdi-hc-fw,phone-setting
-zmdi zmdi-phone-sip zmdi-hc-fw,phone-sip
-zmdi zmdi-phone zmdi-hc-fw,phone
-zmdi zmdi-portable-wifi-changes zmdi-hc-fw,portable-wifi-changes
-zmdi zmdi-portable-wifi-off zmdi-hc-fw,portable-wifi-off
-zmdi zmdi-portable-wifi zmdi-hc-fw,portable-wifi
-zmdi zmdi-radio zmdi-hc-fw,radio
-zmdi zmdi-reader zmdi-hc-fw,reader
-zmdi zmdi-remote-control-alt zmdi-hc-fw,remote-control-alt
-zmdi zmdi-remote-control zmdi-hc-fw,remote-control
-zmdi zmdi-router zmdi-hc-fw,router
-zmdi zmdi-scanner zmdi-hc-fw,scanner
-zmdi zmdi-smartphone-android zmdi-hc-fw,smartphone-android
-zmdi zmdi-smartphone-download zmdi-hc-fw,smartphone-download
-zmdi zmdi-smartphone-erase zmdi-hc-fw,smartphone-erase
-zmdi zmdi-smartphone-info zmdi-hc-fw,smartphone-info
-zmdi zmdi-smartphone-iphone zmdi-hc-fw,smartphone-iphone
-zmdi zmdi-smartphone-landscape-lock zmdi-hc-fw,smartphone-landscape-lock
-zmdi zmdi-smartphone-landscape zmdi-hc-fw,smartphone-landscape
-zmdi zmdi-smartphone-lock zmdi-hc-fw,smartphone-lock
-zmdi zmdi-smartphone-portrait-lock zmdi-hc-fw,smartphone-portrait-lock
-zmdi zmdi-smartphone-ring zmdi-hc-fw,smartphone-ring
-zmdi zmdi-smartphone-setting zmdi-hc-fw,smartphone-setting
-zmdi zmdi-smartphone-setup zmdi-hc-fw,smartphone-setup
-zmdi zmdi-smartphone zmdi-hc-fw,smartphone
-zmdi zmdi-speaker zmdi-hc-fw,speaker
-zmdi zmdi-tablet-android zmdi-hc-fw,tablet-android
-zmdi zmdi-tablet-mac zmdi-hc-fw,tablet-mac
-zmdi zmdi-tablet zmdi-hc-fw,tablet
-zmdi zmdi-tv-alt-play zmdi-hc-fw,tv-alt-play
-zmdi zmdi-tv-list zmdi-hc-fw,tv-list
-zmdi zmdi-tv-play zmdi-hc-fw,tv-play
-zmdi zmdi-tv zmdi-hc-fw,tv
-zmdi zmdi-usb zmdi-hc-fw,usb
-zmdi zmdi-videocam-off zmdi-hc-fw,videocam-off
-zmdi zmdi-videocam-switch zmdi-hc-fw,videocam-switch
-zmdi zmdi-videocam zmdi-hc-fw,videocam
-zmdi zmdi-watch zmdi-hc-fw,watch
-zmdi zmdi-wifi-alt-2 zmdi-hc-fw,wifi-alt-2
-zmdi zmdi-wifi-alt zmdi-hc-fw,wifi-alt
-zmdi zmdi-wifi-info zmdi-hc-fw,wifi-info
-zmdi zmdi-wifi-lock zmdi-hc-fw,wifi-lock
-zmdi zmdi-wifi-off zmdi-hc-fw,wifi-off
-zmdi zmdi-wifi-outline zmdi-hc-fw,wifi-outline
-zmdi zmdi-wifi zmdi-hc-fw,wifi
-zmdi zmdi-arrow-left-bottom zmdi-hc-fw,arrow-left-bottom
-zmdi zmdi-arrow-left zmdi-hc-fw,arrow-left
-zmdi zmdi-arrow-merge zmdi-hc-fw,arrow-merge
-zmdi zmdi-arrow-missed zmdi-hc-fw,arrow-missed
-zmdi zmdi-arrow-right-top zmdi-hc-fw,arrow-right-top
-zmdi zmdi-arrow-right zmdi-hc-fw,arrow-right
-zmdi zmdi-arrow-split zmdi-hc-fw,arrow-split
-zmdi zmdi-arrows zmdi-hc-fw,arrows
-zmdi zmdi-caret-down-circle zmdi-hc-fw,caret-down-circle
-zmdi zmdi-caret-down zmdi-hc-fw,caret-down
-zmdi zmdi-caret-left-circle zmdi-hc-fw,caret-left-circle
-zmdi zmdi-caret-left zmdi-hc-fw,caret-left
-zmdi zmdi-caret-right-circle zmdi-hc-fw,caret-right-circle
-zmdi zmdi-caret-right zmdi-hc-fw,caret-right
-zmdi zmdi-caret-up-circle zmdi-hc-fw,caret-up-circle
-zmdi zmdi-caret-up zmdi-hc-fw,caret-up
-zmdi zmdi-chevron-down zmdi-hc-fw,chevron-down
-zmdi zmdi-chevron-left zmdi-hc-fw,chevron-left
-zmdi zmdi-chevron-right zmdi-hc-fw,chevron-right
-zmdi zmdi-chevron-up zmdi-hc-fw,chevron-up
-zmdi zmdi-forward zmdi-hc-fw,forward
-zmdi zmdi-long-arrow-down zmdi-hc-fw,long-arrow-down
-zmdi zmdi-long-arrow-left zmdi-hc-fw,long-arrow-left
-zmdi zmdi-long-arrow-return zmdi-hc-fw,long-arrow-return
-zmdi zmdi-long-arrow-right zmdi-hc-fw,long-arrow-right
-zmdi zmdi-long-arrow-tab zmdi-hc-fw,long-arrow-tab
-zmdi zmdi-long-arrow-up zmdi-hc-fw,long-arrow-up
-zmdi zmdi-rotate-ccw zmdi-hc-fw,rotate-ccw
-zmdi zmdi-rotate-cw zmdi-hc-fw,rotate-cw
-zmdi zmdi-rotate-left zmdi-hc-fw,rotate-left
-zmdi zmdi-rotate-right zmdi-hc-fw,rotate-right
-zmdi zmdi-square-down zmdi-hc-fw,square-down
-zmdi zmdi-square-right zmdi-hc-fw,square-right
-zmdi zmdi-swap-alt zmdi-hc-fw,swap-alt
-zmdi zmdi-swap-vertical-circle zmdi-hc-fw,swap-vertical-circle
-zmdi zmdi-swap-vertical zmdi-hc-fw,swap-vertical
-zmdi zmdi-swap zmdi-hc-fw,swap
-zmdi zmdi-trending-down zmdi-hc-fw,trending-down
-zmdi zmdi-trending-flat zmdi-hc-fw,trending-flat
-zmdi zmdi-trending-up zmdi-hc-fw,trending-up
-zmdi zmdi-unfold-less zmdi-hc-fw,unfold-less
-zmdi zmdi-unfold-more zmdi-hc-fw,unfold-more
-zmdi zmdi-directions-bike zmdi-hc-fw"></i> zmdi-directions-bike</a></div>
-zmdi zmdi-directions-boat zmdi-hc-fw"></i> zmdi-directions-boat</a></div>
-zmdi zmdi-directions-bus zmdi-hc-fw"></i> zmdi-directions-bus</a></div>
-zmdi zmdi-directions-car zmdi-hc-fw"></i> zmdi-directions-car</a></div>
-zmdi zmdi-directions-railway zmdi-hc-fw"></i> zmdi-directions-railway</a></div>
-zmdi zmdi-directions-run zmdi-hc-fw"></i> zmdi-directions-run</a></div>
-zmdi zmdi-directions-subway zmdi-hc-fw"></i> zmdi-directions-subway</a></div>
-zmdi zmdi-directions-walk zmdi-hc-fw"></i> zmdi-directions-walk</a></div>
-zmdi zmdi-directions zmdi-hc-fw"></i> zmdi-directions</a></div>
-zmdi zmdi-layers-off zmdi-hc-fw"></i> zmdi-layers-off</a></div>
-zmdi zmdi-layers zmdi-hc-fw"></i> zmdi-layers</a></div>
-zmdi zmdi-local-activity zmdi-hc-fw"></i> zmdi-local-activity</a></div>
-zmdi zmdi-local-airport zmdi-hc-fw"></i> zmdi-local-airport</a></div>
-zmdi zmdi-local-atm zmdi-hc-fw"></i> zmdi-local-atm</a></div>
-zmdi zmdi-local-bar zmdi-hc-fw"></i> zmdi-local-bar</a></div>
-zmdi zmdi-local-cafe zmdi-hc-fw"></i> zmdi-local-cafe</a></div>
-zmdi zmdi-local-car-wash zmdi-hc-fw"></i> zmdi-local-car-wash</a></div>
-zmdi zmdi-local-convenience-store zmdi-hc-fw"></i> zmdi-local-convenience-store</a></div>
-zmdi zmdi-local-dining zmdi-hc-fw"></i> zmdi-local-dining</a></div>
-zmdi zmdi-local-drink zmdi-hc-fw"></i> zmdi-local-drink</a></div>
-zmdi zmdi-local-florist zmdi-hc-fw"></i> zmdi-local-florist</a></div>
-zmdi zmdi-local-gas-station zmdi-hc-fw"></i> zmdi-local-gas-station</a></div>
-zmdi zmdi-local-grocery-store zmdi-hc-fw"></i> zmdi-local-grocery-store</a></div>
-zmdi zmdi-local-hospital zmdi-hc-fw"></i> zmdi-local-hospital</a></div>
-zmdi zmdi-local-hotel zmdi-hc-fw"></i> zmdi-local-hotel</a></div>
-zmdi zmdi-local-laundry-service zmdi-hc-fw"></i> zmdi-local-laundry-service</a></div>
-zmdi zmdi-local-library zmdi-hc-fw"></i> zmdi-local-library</a></div>
-zmdi zmdi-local-mall zmdi-hc-fw"></i> zmdi-local-mall</a></div>
-zmdi zmdi-local-movies zmdi-hc-fw"></i> zmdi-local-movies</a></div>
-zmdi zmdi-local-offer zmdi-hc-fw"></i> zmdi-local-offer</a></div>
-zmdi zmdi-local-parking zmdi-hc-fw"></i> zmdi-local-parking</a></div>
-zmdi zmdi-local-pharmacy zmdi-hc-fw"></i> zmdi-local-pharmacy</a></div>
-zmdi zmdi-local-phone zmdi-hc-fw"></i> zmdi-local-phone</a></div>
-zmdi zmdi-local-pizza zmdi-hc-fw"></i> zmdi-local-pizza</a></div>
-zmdi zmdi-local-activity zmdi-hc-fw"></i> zmdi-local-activity</a></div>
-zmdi zmdi-local-post-office zmdi-hc-fw"></i> zmdi-local-post-office</a></div>
-zmdi zmdi-local-printshop zmdi-hc-fw"></i> zmdi-local-printshop</a></div>
-zmdi zmdi-local-see zmdi-hc-fw"></i> zmdi-local-see</a></div>
-zmdi zmdi-local-shipping zmdi-hc-fw"></i> zmdi-local-shipping</a></div>
-zmdi zmdi-local-store zmdi-hc-fw"></i> zmdi-local-store</a></div>
-zmdi zmdi-local-taxi zmdi-hc-fw"></i> zmdi-local-taxi</a></div>
-zmdi zmdi-local-wc zmdi-hc-fw"></i> zmdi-local-wc</a></div>
-zmdi zmdi-map zmdi-hc-fw"></i> zmdi-map</a></div>
-zmdi zmdi-my-location zmdi-hc-fw"></i> zmdi-my-location</a></div>
-zmdi zmdi-nature-people zmdi-hc-fw"></i> zmdi-nature-people</a></div>
-zmdi zmdi-nature zmdi-hc-fw"></i> zmdi-nature</a></div>
-zmdi zmdi-navigation zmdi-hc-fw"></i> zmdi-navigation</a></div>
-zmdi zmdi-pin-account zmdi-hc-fw"></i> zmdi-pin-account</a></div>
-zmdi zmdi-pin-assistant zmdi-hc-fw"></i> zmdi-pin-assistant</a></div>
-zmdi zmdi-pin-drop zmdi-hc-fw"></i> zmdi-pin-drop</a></div>
-zmdi zmdi-pin-help zmdi-hc-fw"></i> zmdi-pin-help</a></div>
-zmdi zmdi-pin-off zmdi-hc-fw"></i> zmdi-pin-off</a></div>
-zmdi zmdi-pin zmdi-hc-fw"></i> zmdi-pin</a></div>
-zmdi zmdi-traffic zmdi-hc-fw"></i> zmdi-traffic</a></div>
-zmdi zmdi-apps zmdi-hc-fw,apps
-zmdi zmdi-grid-off zmdi-hc-fw,grid-off
-zmdi zmdi-grid zmdi-hc-fw,grid
-zmdi zmdi-view-agenda zmdi-hc-fw,view-agenda
-zmdi zmdi-view-array zmdi-hc-fw,view-array
-zmdi zmdi-view-carousel zmdi-hc-fw,view-carousel
-zmdi zmdi-view-column zmdi-hc-fw,view-column
-zmdi zmdi-view-comfy zmdi-hc-fw,view-comfy
-zmdi zmdi-view-compact zmdi-hc-fw,view-compact
-zmdi zmdi-view-dashboard zmdi-hc-fw,view-dashboard
-zmdi zmdi-view-day zmdi-hc-fw,view-day
-zmdi zmdi-view-headline zmdi-hc-fw,view-headline
-zmdi zmdi-view-list-alt zmdi-hc-fw,view-list-alt
-zmdi zmdi-view-list zmdi-hc-fw,view-list
-zmdi zmdi-view-module zmdi-hc-fw,view-module
-zmdi zmdi-view-quilt zmdi-hc-fw,view-quilt
-zmdi zmdi-view-stream zmdi-hc-fw,view-stream
-zmdi zmdi-view-subtitles zmdi-hc-fw,view-subtitles
-zmdi zmdi-view-toc zmdi-hc-fw,view-toc
-zmdi zmdi-view-web zmdi-hc-fw,view-web
-zmdi zmdi-view-week zmdi-hc-fw,view-week
-zmdi zmdi-widgets zmdi-hc-fw,widgets
-zmdi zmdi-alarm-check zmdi-hc-fw,alarm-check
-zmdi zmdi-alarm-off zmdi-hc-fw,alarm-off
-zmdi zmdi-alarm-plus zmdi-hc-fw,alarm-plus
-zmdi zmdi-alarm-snooze zmdi-hc-fw,alarm-snooze
-zmdi zmdi-alarm zmdi-hc-fw,alarm
-zmdi zmdi-calendar-alt zmdi-hc-fw,calendar-alt
-zmdi zmdi-calendar-check zmdi-hc-fw,calendar-check
-zmdi zmdi-calendar-close zmdi-hc-fw,calendar-close
-zmdi zmdi-calendar-note zmdi-hc-fw,calendar-note
-zmdi zmdi-calendar zmdi-hc-fw,calendar
-zmdi zmdi-time-countdown zmdi-hc-fw,time-countdown
-zmdi zmdi-time-interval zmdi-hc-fw,time-interval
-zmdi zmdi-time-restore-setting zmdi-hc-fw,time-restore-setting
-zmdi zmdi-time-restore zmdi-hc-fw,time-restore
-zmdi zmdi-time zmdi-hc-fw,time
-zmdi zmdi-timer-off zmdi-hc-fw,timer-off
-zmdi zmdi-timer zmdi-hc-fw,timer
-zmdi zmdi-android-alt zmdi-hc-fw,android-alt
-zmdi zmdi-android zmdi-hc-fw,android
-zmdi zmdi-apple zmdi-hc-fw,apple
-zmdi zmdi-behance zmdi-hc-fw,behance
-zmdi zmdi-codepen zmdi-hc-fw,codepen
-zmdi zmdi-dribbble zmdi-hc-fw,dribbble
-zmdi zmdi-dropbox zmdi-hc-fw,dropbox
-zmdi zmdi-evernote zmdi-hc-fw,evernote
-zmdi zmdi-facebook-box zmdi-hc-fw,facebook-box
-zmdi zmdi-facebook zmdi-hc-fw,facebook
-zmdi zmdi-github-box zmdi-hc-fw,github-box
-zmdi zmdi-github zmdi-hc-fw,github
-zmdi zmdi-google-drive zmdi-hc-fw,google-drive
-zmdi zmdi-google-earth zmdi-hc-fw,google-earth
-zmdi zmdi-google-glass zmdi-hc-fw,google-glass
-zmdi zmdi-google-maps zmdi-hc-fw,google-maps
-zmdi zmdi-google-pages zmdi-hc-fw,google-pages
-zmdi zmdi-google-play zmdi-hc-fw,google-play
-zmdi zmdi-google-plus-box zmdi-hc-fw,google-plus-box
-zmdi zmdi-google-plus zmdi-hc-fw,google-plus
-zmdi zmdi-google zmdi-hc-fw,google
-zmdi zmdi-instagram zmdi-hc-fw,instagram
-zmdi zmdi-language-css3 zmdi-hc-fw,language-css3
-zmdi zmdi-language-html5 zmdi-hc-fw,language-html5
-zmdi zmdi-language-javascript zmdi-hc-fw,language-javascript
-zmdi zmdi-language-python-alt zmdi-hc-fw,language-python-alt
-zmdi zmdi-language-python zmdi-hc-fw,language-python
-zmdi zmdi-lastfm zmdi-hc-fw,lastfm
-zmdi zmdi-linkedin-box zmdi-hc-fw,linkedin-box
-zmdi zmdi-paypal zmdi-hc-fw,paypal
-zmdi zmdi-pinterest-box zmdi-hc-fw,pinterest-box
-zmdi zmdi-pocket zmdi-hc-fw,pocket
-zmdi zmdi-polymer zmdi-hc-fw,polymer
-zmdi zmdi-rss zmdi-hc-fw,rss
-zmdi zmdi-share zmdi-hc-fw,share
-zmdi zmdi-stackoverflow zmdi-hc-fw,stackoverflow
-zmdi zmdi-steam-square zmdi-hc-fw,steam-square
-zmdi zmdi-steam zmdi-hc-fw,steam
-zmdi zmdi-twitter-box zmdi-hc-fw,twitter-box
-zmdi zmdi-twitter zmdi-hc-fw,twitter
-zmdi zmdi-vk zmdi-hc-fw,vk
-zmdi zmdi-wikipedia zmdi-hc-fw,wikipedia
-zmdi zmdi-windows zmdi-hc-fw,windows
-zmdi zmdi-500px zmdi-hc-fw,500px
-zmdi zmdi-8tracks zmdi-hc-fw,8tracks
-zmdi zmdi-amazon zmdi-hc-fw,amazon
-zmdi zmdi-blogger zmdi-hc-fw,blogger
-zmdi zmdi-delicious zmdi-hc-fw,delicious
-zmdi zmdi-disqus zmdi-hc-fw,disqus
-zmdi zmdi-flattr zmdi-hc-fw,flattr
-zmdi zmdi-flickr zmdi-hc-fw,flickr
-zmdi zmdi-github-alt zmdi-hc-fw,github-alt
-zmdi zmdi-google-old zmdi-hc-fw,google-old
-zmdi zmdi-linkedin zmdi-hc-fw,linkedin
-zmdi zmdi-odnoklassniki zmdi-hc-fw,odnoklassniki
-zmdi zmdi-outlook zmdi-hc-fw,outlook
-zmdi zmdi-paypal-alt zmdi-hc-fw,paypal-alt
-zmdi zmdi-pinterest zmdi-hc-fw,pinterest
-zmdi zmdi-playstation zmdi-hc-fw,playstation
-zmdi zmdi-reddit zmdi-hc-fw,reddit
-zmdi zmdi-skype zmdi-hc-fw,skype
-zmdi zmdi-slideshare zmdi-hc-fw,slideshare
-zmdi zmdi-soundcloud zmdi-hc-fw,soundcloud
-zmdi zmdi-tumblr zmdi-hc-fw,tumblr
-zmdi zmdi-twitch zmdi-hc-fw,twitch
-zmdi zmdi-vimeo zmdi-hc-fw,vimeo
-zmdi zmdi-whatsapp zmdi-hc-fw,whatsapp
-zmdi zmdi-xbox zmdi-hc-fw,xbox
-zmdi zmdi-yahoo zmdi-hc-fw,yahoo
-zmdi zmdi-youtube-play zmdi-hc-fw,youtube-play
-zmdi zmdi-youtube zmdi-hc-fw,youtube
-zmdi zmdi-aspect-ratio-alt zmdi-hc-fw,aspect-ratio-alt
-zmdi zmdi-aspect-ratio zmdi-hc-fw,aspect-ratio
-zmdi zmdi-blur-circular zmdi-hc-fw,blur-circular
-zmdi zmdi-blur-linear zmdi-hc-fw,blur-linear
-zmdi zmdi-blur-off zmdi-hc-fw,blur-off
-zmdi zmdi-blur zmdi-hc-fw,blur
-zmdi zmdi-brightness-2 zmdi-hc-fw,brightness-2
-zmdi zmdi-brightness-3 zmdi-hc-fw,brightness-3
-zmdi zmdi-brightness-4 zmdi-hc-fw,brightness-4
-zmdi zmdi-brightness-5 zmdi-hc-fw,brightness-5
-zmdi zmdi-brightness-6 zmdi-hc-fw,brightness-6
-zmdi zmdi-brightness-7 zmdi-hc-fw,brightness-7
-zmdi zmdi-brightness-auto zmdi-hc-fw,brightness-auto
-zmdi zmdi-brightness-setting zmdi-hc-fw,brightness-setting
-zmdi zmdi-broken-image zmdi-hc-fw,broken-image
-zmdi zmdi-center-focus-strong zmdi-hc-fw,center-focus-strong
-zmdi zmdi-center-focus-weak zmdi-hc-fw,center-focus-weak
-zmdi zmdi-compare zmdi-hc-fw,compare
-zmdi zmdi-crop-16-9 zmdi-hc-fw,crop-16-9
-zmdi zmdi-crop-3-2 zmdi-hc-fw,crop-3-2
-zmdi zmdi-crop-5-4 zmdi-hc-fw,crop-5-4
-zmdi zmdi-crop-7-5 zmdi-hc-fw,crop-7-5
-zmdi zmdi-crop-din zmdi-hc-fw,crop-din
-zmdi zmdi-crop-free zmdi-hc-fw,crop-free
-zmdi zmdi-crop-landscape zmdi-hc-fw,crop-landscape
-zmdi zmdi-crop-portrait zmdi-hc-fw,crop-portrait
-zmdi zmdi-crop-square zmdi-hc-fw,crop-square
-zmdi zmdi-exposure-alt zmdi-hc-fw,exposure-alt
-zmdi zmdi-exposure zmdi-hc-fw,exposure
-zmdi zmdi-filter-b-and-w zmdi-hc-fw,filter-b-and-w
-zmdi zmdi-filter-center-focus zmdi-hc-fw,filter-center-focus
-zmdi zmdi-filter-frames zmdi-hc-fw,filter-frames
-zmdi zmdi-filter-tilt-shift zmdi-hc-fw,filter-tilt-shift
-zmdi zmdi-gradient zmdi-hc-fw,gradient
-zmdi zmdi-grain zmdi-hc-fw,grain
-zmdi zmdi-graphic-eq zmdi-hc-fw,graphic-eq
-zmdi zmdi-hdr-off zmdi-hc-fw,hdr-off
-zmdi zmdi-hdr-strong zmdi-hc-fw,hdr-strong
-zmdi zmdi-hdr-weak zmdi-hc-fw,hdr-weak
-zmdi zmdi-hdr zmdi-hc-fw,hdr
-zmdi zmdi-iridescent zmdi-hc-fw,iridescent
-zmdi zmdi-leak-off zmdi-hc-fw,leak-off
-zmdi zmdi-leak zmdi-hc-fw,leak
-zmdi zmdi-looks zmdi-hc-fw,looks
-zmdi zmdi-loupe zmdi-hc-fw,loupe
-zmdi zmdi-panorama-horizontal zmdi-hc-fw,panorama-horizontal
-zmdi zmdi-panorama-vertical zmdi-hc-fw,panorama-vertical
-zmdi zmdi-panorama-wide-angle zmdi-hc-fw,panorama-wide-angle
-zmdi zmdi-photo-size-select-large zmdi-hc-fw,photo-size-select-large
-zmdi zmdi-photo-size-select-small zmdi-hc-fw,photo-size-select-small
-zmdi zmdi-picture-in-picture zmdi-hc-fw,picture-in-picture
-zmdi zmdi-slideshow zmdi-hc-fw,slideshow
-zmdi zmdi-texture zmdi-hc-fw,texture
-zmdi zmdi-tonality zmdi-hc-fw,tonality
-zmdi zmdi-vignette zmdi-hc-fw,vignette
-zmdi zmdi-wb-auto zmdi-hc-fw,wb-auto
-zmdi zmdi-eject-alt zmdi-hc-fw,eject-alt
-zmdi zmdi-eject zmdi-hc-fw,eject
-zmdi zmdi-equalizer zmdi-hc-fw,equalizer
-zmdi zmdi-fast-forward zmdi-hc-fw,fast-forward
-zmdi zmdi-fast-rewind zmdi-hc-fw,fast-rewind
-zmdi zmdi-forward-10 zmdi-hc-fw,forward-10
-zmdi zmdi-forward-30 zmdi-hc-fw,forward-30
-zmdi zmdi-forward-5 zmdi-hc-fw,forward-5
-zmdi zmdi-hearing zmdi-hc-fw,hearing
-zmdi zmdi-pause-circle-outline zmdi-hc-fw,pause-circle-outline
-zmdi zmdi-pause-circle zmdi-hc-fw,pause-circle
-zmdi zmdi-pause zmdi-hc-fw,pause
-zmdi zmdi-play-circle-outline zmdi-hc-fw,play-circle-outline
-zmdi zmdi-play-circle zmdi-hc-fw,play-circle
-zmdi zmdi-play zmdi-hc-fw,play
-zmdi zmdi-playlist-audio zmdi-hc-fw,playlist-audio
-zmdi zmdi-playlist-plus zmdi-hc-fw,playlist-plus
-zmdi zmdi-repeat-one zmdi-hc-fw,repeat-one
-zmdi zmdi-repeat zmdi-hc-fw,repeat
-zmdi zmdi-replay-10 zmdi-hc-fw,replay-10
-zmdi zmdi-replay-30 zmdi-hc-fw,replay-30
-zmdi zmdi-replay-5 zmdi-hc-fw,replay-5
-zmdi zmdi-replay zmdi-hc-fw,replay
-zmdi zmdi-shuffle zmdi-hc-fw,shuffle
-zmdi zmdi-skip-next zmdi-hc-fw,skip-next
-zmdi zmdi-skip-previous zmdi-hc-fw,skip-previous
-zmdi zmdi-stop zmdi-hc-fw,stop
-zmdi zmdi-surround-sound zmdi-hc-fw,surround-sound
-zmdi zmdi-tune zmdi-hc-fw,tune
-zmdi zmdi-volume-down zmdi-hc-fw,volume-down
-zmdi zmdi-volume-mute zmdi-hc-fw,volume-mute
-zmdi zmdi-volume-off zmdi-hc-fw,volume-off
-zmdi zmdi-volume-up zmdi-hc-fw,volume-up
-zmdi zmdi-n-1-square zmdi-hc-fw,n-1-square
-zmdi zmdi-n-2-square zmdi-hc-fw,n-2-square
-zmdi zmdi-n-3-square zmdi-hc-fw,n-3-square
-zmdi zmdi-n-4-square zmdi-hc-fw,n-4-square
-zmdi zmdi-n-5-square zmdi-hc-fw,n-5-square
-zmdi zmdi-n-6-square zmdi-hc-fw,n-6-square
-zmdi zmdi-neg-1 zmdi-hc-fw,neg-1
-zmdi zmdi-neg-2 zmdi-hc-fw,neg-2
-zmdi zmdi-plus-1 zmdi-hc-fw,plus-1
-zmdi zmdi-plus-2 zmdi-hc-fw,plus-2
-zmdi zmdi-sec-10 zmdi-hc-fw,sec-10
-zmdi zmdi-sec-3 zmdi-hc-fw,sec-3
-zmdi zmdi-zero zmdi-hc-fw,zero
-zmdi zmdi-airline-seat-flat-angled zmdi-hc-fw,airline-seat-flat-angled
-zmdi zmdi-airline-seat-flat zmdi-hc-fw,airline-seat-flat
-zmdi zmdi-airline-seat-individual-suite zmdi-hc-fw,airline-seat-individual-suite
-zmdi zmdi-airline-seat-legroom-extra zmdi-hc-fw,airline-seat-legroom-extra
-zmdi zmdi-airline-seat-legroom-normal zmdi-hc-fw,airline-seat-legroom-normal
-zmdi zmdi-airline-seat-legroom-reduced zmdi-hc-fw,airline-seat-legroom-reduced
-zmdi zmdi-airline-seat-recline-extra zmdi-hc-fw,airline-seat-recline-extra
-zmdi zmdi-airline-seat-recline-normal zmdi-hc-fw,airline-seat-recline-normal
-zmdi zmdi-airplay zmdi-hc-fw,airplay
-zmdi zmdi-closed-caption zmdi-hc-fw,closed-caption
-zmdi zmdi-confirmation-number zmdi-hc-fw,confirmation-number
-zmdi zmdi-developer-board zmdi-hc-fw,developer-board
-zmdi zmdi-disc-full zmdi-hc-fw,disc-full
-zmdi zmdi-explicit zmdi-hc-fw,explicit
-zmdi zmdi-flight-land zmdi-hc-fw,flight-land
-zmdi zmdi-flight-takeoff zmdi-hc-fw,flight-takeoff
-zmdi zmdi-flip-to-back zmdi-hc-fw,flip-to-back
-zmdi zmdi-flip-to-front zmdi-hc-fw,flip-to-front
-zmdi zmdi-group-work zmdi-hc-fw,group-work
-zmdi zmdi-hd zmdi-hc-fw,hd
-zmdi zmdi-hq zmdi-hc-fw,hq
-zmdi zmdi-markunread-mailbox zmdi-hc-fw,markunread-mailbox
-zmdi zmdi-memory zmdi-hc-fw,memory
-zmdi zmdi-nfc zmdi-hc-fw,nfc
-zmdi zmdi-play-for-work zmdi-hc-fw,play-for-work
-zmdi zmdi-power-input zmdi-hc-fw,power-input
-zmdi zmdi-present-to-all zmdi-hc-fw,present-to-all
-zmdi zmdi-satellite zmdi-hc-fw,satellite
-zmdi zmdi-tap-and-play zmdi-hc-fw,tap-and-play
-zmdi zmdi-vibration zmdi-hc-fw,vibration
-zmdi zmdi-voicemail zmdi-hc-fw,voicemail
+zmdi zmdi-group,group
+zmdi zmdi-rss,rss
+zmdi zmdi-shape,shape
+zmdi zmdi-spinner,spinner
+zmdi zmdi-ungroup,ungroup
+zmdi zmdi-500px,500px
+zmdi zmdi-8tracks,8tracks
+zmdi zmdi-amazon,amazon
+zmdi zmdi-blogger,blogger
+zmdi zmdi-delicious,delicious
+zmdi zmdi-disqus,disqus
+zmdi zmdi-flattr,flattr
+zmdi zmdi-flickr,flickr
+zmdi zmdi-github-alt,github-alt
+zmdi zmdi-google-old,google-old
+zmdi zmdi-linkedin,linkedin
+zmdi zmdi-odnoklassniki,odnoklassniki
+zmdi zmdi-outlook,outlook
+zmdi zmdi-paypal-alt,paypal-alt
+zmdi zmdi-pinterest,pinterest
+zmdi zmdi-playstation,playstation
+zmdi zmdi-reddit,reddit
+zmdi zmdi-skype,skype
+zmdi zmdi-slideshare,slideshare
+zmdi zmdi-soundcloud,soundcloud
+zmdi zmdi-tumblr,tumblr
+zmdi zmdi-twitch,twitch
+zmdi zmdi-vimeo,vimeo
+zmdi zmdi-whatsapp,whatsapp
+zmdi zmdi-xbox,xbox
+zmdi zmdi-yahoo,yahoo
+zmdi zmdi-youtube-play,youtube-play
+zmdi zmdi-youtube,youtube
+zmdi zmdi-google,google
+zmdi zmdi-google-plus-box,google-plus-box
+zmdi zmdi-google-plus,google-plus
+zmdi zmdi-paypal,paypal
+zmdi zmdi-3d-rotation,3d-rotation
+zmdi zmdi-airplane-off,airplane-off
+zmdi zmdi-airplane,airplane
+zmdi zmdi-album,album
+zmdi zmdi-archive,archive
+zmdi zmdi-assignment-account,assignment-account
+zmdi zmdi-assignment-alert,assignment-alert
+zmdi zmdi-assignment-check,assignment-check
+zmdi zmdi-assignment-o,assignment-o
+zmdi zmdi-assignment-return,assignment-return
+zmdi zmdi-assignment-returned,assignment-returned
+zmdi zmdi-assignment,assignment
+zmdi zmdi-attachment-alt,attachment-alt
+zmdi zmdi-attachment,attachment
+zmdi zmdi-audio,audio
+zmdi zmdi-badge-check,badge-check
+zmdi zmdi-balance-wallet,balance-wallet
+zmdi zmdi-balance,balance
+zmdi zmdi-battery-alert,battery-alert
+zmdi zmdi-battery-flash,battery-flash
+zmdi zmdi-battery-unknown,battery-unknown
+zmdi zmdi-battery,battery
+zmdi zmdi-bike,bike
+zmdi zmdi-block-alt,block-alt
+zmdi zmdi-block,block
+zmdi zmdi-boat,boat
+zmdi zmdi-book-image,book-image
+zmdi zmdi-book,book
+zmdi zmdi-bookmark-outline,bookmark-outline
+zmdi zmdi-bookmark,bookmark
+zmdi zmdi-brush,brush
+zmdi zmdi-bug,bug
+zmdi zmdi-bus,bus
+zmdi zmdi-cake,cake
+zmdi zmdi-car-taxi,car-taxi
+zmdi zmdi-car-wash,car-wash
+zmdi zmdi-car,car
+zmdi zmdi-card-giftcard,card-giftcard
+zmdi zmdi-card-membership,card-membership
+zmdi zmdi-card-travel,card-travel
+zmdi zmdi-card,card
+zmdi zmdi-case-check,case-check
+zmdi zmdi-case-download,case-download
+zmdi zmdi-case-play,case-play
+zmdi zmdi-case,case
+zmdi zmdi-cast-connected,cast-connected
+zmdi zmdi-cast,cast
+zmdi zmdi-chart-donut,chart-donut
+zmdi zmdi-chart,chart
+zmdi zmdi-city-alt,city-alt
+zmdi zmdi-city,city
+zmdi zmdi-close-circle-o,close-circle-o
+zmdi zmdi-close-circle,close-circle
+zmdi zmdi-close,close
+zmdi zmdi-cocktail,cocktail
+zmdi zmdi-code-setting,code-setting
+zmdi zmdi-code-smartphone,code-smartphone
+zmdi zmdi-code,code
+zmdi zmdi-coffee,coffee
+zmdi zmdi-collection-bookmark,collection-bookmark
+zmdi zmdi-collection-case-play,collection-case-play
+zmdi zmdi-collection-folder-image,collection-folder-image
+zmdi zmdi-collection-image-o,collection-image-o
+zmdi zmdi-collection-image,collection-image
+zmdi zmdi-collection-item-1,collection-item-1
+zmdi zmdi-collection-item-2,collection-item-2
+zmdi zmdi-collection-item-3,collection-item-3
+zmdi zmdi-collection-item-4,collection-item-4
+zmdi zmdi-collection-item-5,collection-item-5
+zmdi zmdi-collection-item-6,collection-item-6
+zmdi zmdi-collection-item-7,collection-item-7
+zmdi zmdi-collection-item-8,collection-item-8
+zmdi zmdi-collection-item-9-plus,collection-item-9-plus
+zmdi zmdi-collection-item-9,collection-item-9
+zmdi zmdi-collection-item,collection-item
+zmdi zmdi-collection-music,collection-music
+zmdi zmdi-collection-pdf,collection-pdf
+zmdi zmdi-collection-plus,collection-plus
+zmdi zmdi-collection-speaker,collection-speaker
+zmdi zmdi-collection-text,collection-text
+zmdi zmdi-collection-video,collection-video
+zmdi zmdi-compass,compass
+zmdi zmdi-cutlery,cutlery
+zmdi zmdi-delete,delete
+zmdi zmdi-dialpad,dialpad
+zmdi zmdi-dns,dns
+zmdi zmdi-drink,drink
+zmdi zmdi-edit,edit
+zmdi zmdi-email-open,email-open
+zmdi zmdi-email,email
+zmdi zmdi-eye-off,eye-off
+zmdi zmdi-eye,eye
+zmdi zmdi-eyedropper,eyedropper
+zmdi zmdi-favorite-outline,favorite-outline
+zmdi zmdi-favorite,favorite
+zmdi zmdi-filter-list,filter-list
+zmdi zmdi-fire,fire
+zmdi zmdi-flag,flag
+zmdi zmdi-flare,flare
+zmdi zmdi-flash-auto,flash-auto
+zmdi zmdi-flash-off,flash-off
+zmdi zmdi-flash,flash
+zmdi zmdi-flip,flip
+zmdi zmdi-flower-alt,flower-alt
+zmdi zmdi-flower,flower
+zmdi zmdi-font,font
+zmdi zmdi-fullscreen-alt,fullscreen-alt
+zmdi zmdi-fullscreen-exit,fullscreen-exit
+zmdi zmdi-fullscreen,fullscreen
+zmdi zmdi-functions,functions
+zmdi zmdi-gas-station,gas-station
+zmdi zmdi-gesture,gesture
+zmdi zmdi-globe-alt,globe-alt
+zmdi zmdi-globe-lock,globe-lock
+zmdi zmdi-globe,globe
+zmdi zmdi-graduation-cap,graduation-cap
+zmdi zmdi-group,group
+zmdi zmdi-home,home
+zmdi zmdi-hospital-alt,hospital-alt
+zmdi zmdi-hospital,hospital
+zmdi zmdi-hotel,hotel
+zmdi zmdi-hourglass-alt,hourglass-alt
+zmdi zmdi-hourglass-outline,hourglass-outline
+zmdi zmdi-hourglass,hourglass
+zmdi zmdi-http,http
+zmdi zmdi-image-alt,image-alt
+zmdi zmdi-image-o,image-o
+zmdi zmdi-image,image
+zmdi zmdi-inbox,inbox
+zmdi zmdi-invert-colors-off,invert-colors-off
+zmdi zmdi-invert-colors,invert-colors
+zmdi zmdi-key,key
+zmdi zmdi-label-alt-outline,label-alt-outline
+zmdi zmdi-label-alt,label-alt
+zmdi zmdi-label-heart,label-heart
+zmdi zmdi-label,label
+zmdi zmdi-labels,labels
+zmdi zmdi-lamp,lamp
+zmdi zmdi-landscape,landscape
+zmdi zmdi-layers-off,layers-off
+zmdi zmdi-layers,layers
+zmdi zmdi-library,library
+zmdi zmdi-link,link
+zmdi zmdi-lock-open,lock-open
+zmdi zmdi-lock-outline,lock-outline
+zmdi zmdi-lock,lock
+zmdi zmdi-mail-reply-all,mail-reply-all
+zmdi zmdi-mail-reply,mail-reply
+zmdi zmdi-mail-send,mail-send
+zmdi zmdi-mall,mall
+zmdi zmdi-map,map
+zmdi zmdi-menu,menu
+zmdi zmdi-money-box,money-box
+zmdi zmdi-money-off,money-off
+zmdi zmdi-money,money
+zmdi zmdi-more-vert,more-vert
+zmdi zmdi-more,more
+zmdi zmdi-movie-alt,movie-alt
+zmdi zmdi-movie,movie
+zmdi zmdi-nature-people,nature-people
+zmdi zmdi-nature,nature
+zmdi zmdi-navigation,navigation
+zmdi zmdi-open-in-browser,open-in-browser
+zmdi zmdi-open-in-new,open-in-new
+zmdi zmdi-palette,palette
+zmdi zmdi-parking,parking
+zmdi zmdi-pin-account,pin-account
+zmdi zmdi-pin-assistant,pin-assistant
+zmdi zmdi-pin-drop,pin-drop
+zmdi zmdi-pin-help,pin-help
+zmdi zmdi-pin-off,pin-off
+zmdi zmdi-pin,pin
+zmdi zmdi-pizza,pizza
+zmdi zmdi-plaster,plaster
+zmdi zmdi-power-setting,power-setting
+zmdi zmdi-power,power
+zmdi zmdi-print,print
+zmdi zmdi-puzzle-piece,puzzle-piece
+zmdi zmdi-quote,quote
+zmdi zmdi-railway,railway
+zmdi zmdi-receipt,receipt
+zmdi zmdi-refresh-alt,refresh-alt
+zmdi zmdi-refresh-sync-alert,refresh-sync-alert
+zmdi zmdi-refresh-sync-off,refresh-sync-off
+zmdi zmdi-refresh-sync,refresh-sync
+zmdi zmdi-refresh,refresh
+zmdi zmdi-roller,roller
+zmdi zmdi-ruler,ruler
+zmdi zmdi-scissors,scissors
+zmdi zmdi-screen-rotation-lock,screen-rotation-lock
+zmdi zmdi-screen-rotation,screen-rotation
+zmdi zmdi-search-for,search-for
+zmdi zmdi-search-in-file,search-in-file
+zmdi zmdi-search-in-page,search-in-page
+zmdi zmdi-search-replace,search-replace
+zmdi zmdi-search,search
+zmdi zmdi-seat,seat
+zmdi zmdi-settings-square,settings-square
+zmdi zmdi-settings,settings
+zmdi zmdi-shape,shape
+zmdi zmdi-shield-check,shield-check
+zmdi zmdi-shield-security,shield-security
+zmdi zmdi-shopping-basket,shopping-basket
+zmdi zmdi-shopping-cart-plus,shopping-cart-plus
+zmdi zmdi-shopping-cart,shopping-cart
+zmdi zmdi-sign-in,sign-in
+zmdi zmdi-sort-amount-asc,sort-amount-asc
+zmdi zmdi-sort-amount-desc,sort-amount-desc
+zmdi zmdi-sort-asc,sort-asc
+zmdi zmdi-sort-desc,sort-desc
+zmdi zmdi-spellcheck,spellcheck
+zmdi zmdi-spinner,spinner
+zmdi zmdi-storage,storage
+zmdi zmdi-store-24,store-24
+zmdi zmdi-store,store
+zmdi zmdi-subway,subway
+zmdi zmdi-sun,sun
+zmdi zmdi-tab-unselected,tab-unselected
+zmdi zmdi-tab,tab
+zmdi zmdi-tag-close,tag-close
+zmdi zmdi-tag-more,tag-more
+zmdi zmdi-tag,tag
+zmdi zmdi-thumb-down,thumb-down
+zmdi zmdi-thumb-up-down,thumb-up-down
+zmdi zmdi-thumb-up,thumb-up
+zmdi zmdi-ticket-star,ticket-star
+zmdi zmdi-toll,toll
+zmdi zmdi-toys,toys
+zmdi zmdi-traffic,traffic
+zmdi zmdi-translate,translate
+zmdi zmdi-triangle-down,triangle-down
+zmdi zmdi-triangle-up,triangle-up
+zmdi zmdi-truck,truck
+zmdi zmdi-turning-sign,turning-sign
+zmdi zmdi-ungroup,ungroup
+zmdi zmdi-wallpaper,wallpaper
+zmdi zmdi-washing-machine,washing-machine
+zmdi zmdi-window-maximize,window-maximize
+zmdi zmdi-window-minimize,window-minimize
+zmdi zmdi-window-restore,window-restore
+zmdi zmdi-wrench,wrench
+zmdi zmdi-zoom-in,zoom-in
+zmdi zmdi-zoom-out,zoom-out
+zmdi zmdi-alert-circle-o,alert-circle-o
+zmdi zmdi-alert-circle,alert-circle
+zmdi zmdi-alert-octagon,alert-octagon
+zmdi zmdi-alert-polygon,alert-polygon
+zmdi zmdi-alert-triangle,alert-triangle
+zmdi zmdi-help-outline,help-outline
+zmdi zmdi-help,help
+zmdi zmdi-info-outline,info-outline
+zmdi zmdi-info,info
+zmdi zmdi-notifications-active,notifications-active
+zmdi zmdi-notifications-add,notifications-add
+zmdi zmdi-notifications-none,notifications-none
+zmdi zmdi-notifications-off,notifications-off
+zmdi zmdi-notifications-paused,notifications-paused
+zmdi zmdi-notifications,notifications
+zmdi zmdi-account-add,account-add
+zmdi zmdi-account-box-mail,account-box-mail
+zmdi zmdi-account-box-o,account-box-o
+zmdi zmdi-account-box-phone,account-box-phone
+zmdi zmdi-account-box,account-box
+zmdi zmdi-account-calendar,account-calendar
+zmdi zmdi-account-circle,account-circle
+zmdi zmdi-account-o,account-o
+zmdi zmdi-account,account
+zmdi zmdi-accounts-add,accounts-add
+zmdi zmdi-accounts-alt,accounts-alt
+zmdi zmdi-accounts-list-alt,accounts-list-alt
+zmdi zmdi-accounts-list,accounts-list
+zmdi zmdi-accounts-outline,accounts-outline
+zmdi zmdi-accounts,accounts
+zmdi zmdi-face,face
+zmdi zmdi-female,female
+zmdi zmdi-male-alt,male-alt
+zmdi zmdi-male-female,male-female
+zmdi zmdi-male,male
+zmdi zmdi-mood-bad,mood-bad
+zmdi zmdi-mood,mood
+zmdi zmdi-run,run
+zmdi zmdi-walk,walk
+zmdi zmdi-cloud-box,cloud-box
+zmdi zmdi-cloud-circle,cloud-circle
+zmdi zmdi-cloud-done,cloud-done
+zmdi zmdi-cloud-download,cloud-download
+zmdi zmdi-cloud-off,cloud-off
+zmdi zmdi-cloud-outline-alt,cloud-outline-alt
+zmdi zmdi-cloud-outline,cloud-outline
+zmdi zmdi-cloud-upload,cloud-upload
+zmdi zmdi-cloud,cloud
+zmdi zmdi-download,download
+zmdi zmdi-file-plus,file-plus
+zmdi zmdi-file-text,file-text
+zmdi zmdi-file,file
+zmdi zmdi-folder-outline,folder-outline
+zmdi zmdi-folder-person,folder-person
+zmdi zmdi-folder-star-alt,folder-star-alt
+zmdi zmdi-folder-star,folder-star
+zmdi zmdi-folder,folder
+zmdi zmdi-gif,gif
+zmdi zmdi-upload,upload
+zmdi zmdi-border-all,border-all
+zmdi zmdi-border-bottom,border-bottom
+zmdi zmdi-border-clear,border-clear
+zmdi zmdi-border-color,border-color
+zmdi zmdi-border-horizontal,border-horizontal
+zmdi zmdi-border-inner,border-inner
+zmdi zmdi-border-left,border-left
+zmdi zmdi-border-outer,border-outer
+zmdi zmdi-border-right,border-right
+zmdi zmdi-border-style,border-style
+zmdi zmdi-border-top,border-top
+zmdi zmdi-border-vertical,border-vertical
+zmdi zmdi-copy,copy
+zmdi zmdi-crop,crop
+zmdi zmdi-format-align-center,format-align-center
+zmdi zmdi-format-align-justify,format-align-justify
+zmdi zmdi-format-align-left,format-align-left
+zmdi zmdi-format-align-right,format-align-right
+zmdi zmdi-format-bold,format-bold
+zmdi zmdi-format-clear-all,format-clear-all
+zmdi zmdi-format-clear,format-clear
+zmdi zmdi-format-color-fill,format-color-fill
+zmdi zmdi-format-color-reset,format-color-reset
+zmdi zmdi-format-color-text,format-color-text
+zmdi zmdi-format-indent-decrease,format-indent-decrease
+zmdi zmdi-format-indent-increase,format-indent-increase
+zmdi zmdi-format-italic,format-italic
+zmdi zmdi-format-line-spacing,format-line-spacing
+zmdi zmdi-format-list-bulleted,format-list-bulleted
+zmdi zmdi-format-list-numbered,format-list-numbered
+zmdi zmdi-format-ltr,format-ltr
+zmdi zmdi-format-rtl,format-rtl
+zmdi zmdi-format-size,format-size
+zmdi zmdi-format-strikethrough-s,format-strikethrough-s
+zmdi zmdi-format-strikethrough,format-strikethrough
+zmdi zmdi-format-subject,format-subject
+zmdi zmdi-format-underlined,format-underlined
+zmdi zmdi-format-valign-bottom,format-valign-bottom
+zmdi zmdi-format-valign-center,format-valign-center
+zmdi zmdi-format-valign-top,format-valign-top
+zmdi zmdi-redo,redo
+zmdi zmdi-select-all,select-all
+zmdi zmdi-space-bar,space-bar
+zmdi zmdi-text-format,text-format
+zmdi zmdi-transform,transform
+zmdi zmdi-undo,undo
+zmdi zmdi-wrap-text,wrap-text
+zmdi zmdi-comment-alert,comment-alert
+zmdi zmdi-comment-alt-text,comment-alt-text
+zmdi zmdi-comment-alt,comment-alt
+zmdi zmdi-comment-edit,comment-edit
+zmdi zmdi-comment-image,comment-image
+zmdi zmdi-comment-list,comment-list
+zmdi zmdi-comment-more,comment-more
+zmdi zmdi-comment-outline,comment-outline
+zmdi zmdi-comment-text-alt,comment-text-alt
+zmdi zmdi-comment-text,comment-text
+zmdi zmdi-comment-video,comment-video
+zmdi zmdi-comment,comment
+zmdi zmdi-comments,comments
+zmdi zmdi-check-all,check-all
+zmdi zmdi-check-circle-u,check-circle-u
+zmdi zmdi-check-circle,check-circle
+zmdi zmdi-check-square,check-square
+zmdi zmdi-check,check
+zmdi zmdi-circle-o,circle-o
+zmdi zmdi-circle,circle
+zmdi zmdi-dot-circle-alt,dot-circle-alt
+zmdi zmdi-dot-circle,dot-circle
+zmdi zmdi-minus-circle-outline,minus-circle-outline
+zmdi zmdi-minus-circle,minus-circle
+zmdi zmdi-minus-square,minus-square
+zmdi zmdi-minus,minus
+zmdi zmdi-plus-circle-o-duplicate,plus-circle-o-duplicate
+zmdi zmdi-plus-circle-o,plus-circle-o
+zmdi zmdi-plus-circle,plus-circle
+zmdi zmdi-plus-square,plus-square
+zmdi zmdi-plus,plus
+zmdi zmdi-square-o,square-o
+zmdi zmdi-star-circle,star-circle
+zmdi zmdi-star-half,star-half
+zmdi zmdi-star-outline,star-outline
+zmdi zmdi-star,star
+zmdi zmdi-bluetooth-connected,bluetooth-connected
+zmdi zmdi-bluetooth-off,bluetooth-off
+zmdi zmdi-bluetooth-search,bluetooth-search
+zmdi zmdi-bluetooth-setting,bluetooth-setting
+zmdi zmdi-bluetooth,bluetooth
+zmdi zmdi-camera-add,camera-add
+zmdi zmdi-camera-alt,camera-alt
+zmdi zmdi-camera-bw,camera-bw
+zmdi zmdi-camera-front,camera-front
+zmdi zmdi-camera-mic,camera-mic
+zmdi zmdi-camera-party-mode,camera-party-mode
+zmdi zmdi-camera-rear,camera-rear
+zmdi zmdi-camera-roll,camera-roll
+zmdi zmdi-camera-switch,camera-switch
+zmdi zmdi-camera,camera
+zmdi zmdi-card-alert,card-alert
+zmdi zmdi-card-off,card-off
+zmdi zmdi-card-sd,card-sd
+zmdi zmdi-card-sim,card-sim
+zmdi zmdi-desktop-mac,desktop-mac
+zmdi zmdi-desktop-windows,desktop-windows
+zmdi zmdi-device-hub,device-hub
+zmdi zmdi-devices-off,devices-off
+zmdi zmdi-devices,devices
+zmdi zmdi-dock,dock
+zmdi zmdi-floppy,floppy
+zmdi zmdi-gamepad,gamepad
+zmdi zmdi-gps-dot,gps-dot
+zmdi zmdi-gps-off,gps-off
+zmdi zmdi-gps,gps
+zmdi zmdi-headset-mic,headset-mic
+zmdi zmdi-headset,headset
+zmdi zmdi-input-antenna,input-antenna
+zmdi zmdi-input-composite,input-composite
+zmdi zmdi-input-hdmi,input-hdmi
+zmdi zmdi-input-power,input-power
+zmdi zmdi-input-svideo,input-svideo
+zmdi zmdi-keyboard-hide,keyboard-hide
+zmdi zmdi-keyboard,keyboard
+zmdi zmdi-laptop-chromebook,laptop-chromebook
+zmdi zmdi-laptop-mac,laptop-mac
+zmdi zmdi-laptop,laptop
+zmdi zmdi-mic-off,mic-off
+zmdi zmdi-mic-outline,mic-outline
+zmdi zmdi-mic-setting,mic-setting
+zmdi zmdi-mic,mic
+zmdi zmdi-mouse,mouse
+zmdi zmdi-network-alert,network-alert
+zmdi zmdi-network-locked,network-locked
+zmdi zmdi-network-off,network-off
+zmdi zmdi-network-outline,network-outline
+zmdi zmdi-network-setting,network-setting
+zmdi zmdi-network,network
+zmdi zmdi-phone-bluetooth,phone-bluetooth
+zmdi zmdi-phone-end,phone-end
+zmdi zmdi-phone-forwarded,phone-forwarded
+zmdi zmdi-phone-in-talk,phone-in-talk
+zmdi zmdi-phone-locked,phone-locked
+zmdi zmdi-phone-missed,phone-missed
+zmdi zmdi-phone-msg,phone-msg
+zmdi zmdi-phone-paused,phone-paused
+zmdi zmdi-phone-ring,phone-ring
+zmdi zmdi-phone-setting,phone-setting
+zmdi zmdi-phone-sip,phone-sip
+zmdi zmdi-phone,phone
+zmdi zmdi-portable-wifi-changes,portable-wifi-changes
+zmdi zmdi-portable-wifi-off,portable-wifi-off
+zmdi zmdi-portable-wifi,portable-wifi
+zmdi zmdi-radio,radio
+zmdi zmdi-reader,reader
+zmdi zmdi-remote-control-alt,remote-control-alt
+zmdi zmdi-remote-control,remote-control
+zmdi zmdi-router,router
+zmdi zmdi-scanner,scanner
+zmdi zmdi-smartphone-android,smartphone-android
+zmdi zmdi-smartphone-download,smartphone-download
+zmdi zmdi-smartphone-erase,smartphone-erase
+zmdi zmdi-smartphone-info,smartphone-info
+zmdi zmdi-smartphone-iphone,smartphone-iphone
+zmdi zmdi-smartphone-landscape-lock,smartphone-landscape-lock
+zmdi zmdi-smartphone-landscape,smartphone-landscape
+zmdi zmdi-smartphone-lock,smartphone-lock
+zmdi zmdi-smartphone-portrait-lock,smartphone-portrait-lock
+zmdi zmdi-smartphone-ring,smartphone-ring
+zmdi zmdi-smartphone-setting,smartphone-setting
+zmdi zmdi-smartphone-setup,smartphone-setup
+zmdi zmdi-smartphone,smartphone
+zmdi zmdi-speaker,speaker
+zmdi zmdi-tablet-android,tablet-android
+zmdi zmdi-tablet-mac,tablet-mac
+zmdi zmdi-tablet,tablet
+zmdi zmdi-tv-alt-play,tv-alt-play
+zmdi zmdi-tv-list,tv-list
+zmdi zmdi-tv-play,tv-play
+zmdi zmdi-tv,tv
+zmdi zmdi-usb,usb
+zmdi zmdi-videocam-off,videocam-off
+zmdi zmdi-videocam-switch,videocam-switch
+zmdi zmdi-videocam,videocam
+zmdi zmdi-watch,watch
+zmdi zmdi-wifi-alt-2,wifi-alt-2
+zmdi zmdi-wifi-alt,wifi-alt
+zmdi zmdi-wifi-info,wifi-info
+zmdi zmdi-wifi-lock,wifi-lock
+zmdi zmdi-wifi-off,wifi-off
+zmdi zmdi-wifi-outline,wifi-outline
+zmdi zmdi-wifi,wifi
+zmdi zmdi-arrow-left-bottom,arrow-left-bottom
+zmdi zmdi-arrow-left,arrow-left
+zmdi zmdi-arrow-merge,arrow-merge
+zmdi zmdi-arrow-missed,arrow-missed
+zmdi zmdi-arrow-right-top,arrow-right-top
+zmdi zmdi-arrow-right,arrow-right
+zmdi zmdi-arrow-split,arrow-split
+zmdi zmdi-arrows,arrows
+zmdi zmdi-caret-down-circle,caret-down-circle
+zmdi zmdi-caret-down,caret-down
+zmdi zmdi-caret-left-circle,caret-left-circle
+zmdi zmdi-caret-left,caret-left
+zmdi zmdi-caret-right-circle,caret-right-circle
+zmdi zmdi-caret-right,caret-right
+zmdi zmdi-caret-up-circle,caret-up-circle
+zmdi zmdi-caret-up,caret-up
+zmdi zmdi-chevron-down,chevron-down
+zmdi zmdi-chevron-left,chevron-left
+zmdi zmdi-chevron-right,chevron-right
+zmdi zmdi-chevron-up,chevron-up
+zmdi zmdi-forward,forward
+zmdi zmdi-long-arrow-down,long-arrow-down
+zmdi zmdi-long-arrow-left,long-arrow-left
+zmdi zmdi-long-arrow-return,long-arrow-return
+zmdi zmdi-long-arrow-right,long-arrow-right
+zmdi zmdi-long-arrow-tab,long-arrow-tab
+zmdi zmdi-long-arrow-up,long-arrow-up
+zmdi zmdi-rotate-ccw,rotate-ccw
+zmdi zmdi-rotate-cw,rotate-cw
+zmdi zmdi-rotate-left,rotate-left
+zmdi zmdi-rotate-right,rotate-right
+zmdi zmdi-square-down,square-down
+zmdi zmdi-square-right,square-right
+zmdi zmdi-swap-alt,swap-alt
+zmdi zmdi-swap-vertical-circle,swap-vertical-circle
+zmdi zmdi-swap-vertical,swap-vertical
+zmdi zmdi-swap,swap
+zmdi zmdi-trending-down,trending-down
+zmdi zmdi-trending-flat,trending-flat
+zmdi zmdi-trending-up,trending-up
+zmdi zmdi-unfold-less,unfold-less
+zmdi zmdi-unfold-more,unfold-more
+zmdi zmdi-directions-bike "></i> zmdi-directions-bike</a></div>
+zmdi zmdi-directions-boat "></i> zmdi-directions-boat</a></div>
+zmdi zmdi-directions-bus "></i> zmdi-directions-bus</a></div>
+zmdi zmdi-directions-car "></i> zmdi-directions-car</a></div>
+zmdi zmdi-directions-railway "></i> zmdi-directions-railway</a></div>
+zmdi zmdi-directions-run "></i> zmdi-directions-run</a></div>
+zmdi zmdi-directions-subway "></i> zmdi-directions-subway</a></div>
+zmdi zmdi-directions-walk "></i> zmdi-directions-walk</a></div>
+zmdi zmdi-directions "></i> zmdi-directions</a></div>
+zmdi zmdi-layers-off "></i> zmdi-layers-off</a></div>
+zmdi zmdi-layers "></i> zmdi-layers</a></div>
+zmdi zmdi-local-activity "></i> zmdi-local-activity</a></div>
+zmdi zmdi-local-airport "></i> zmdi-local-airport</a></div>
+zmdi zmdi-local-atm "></i> zmdi-local-atm</a></div>
+zmdi zmdi-local-bar "></i> zmdi-local-bar</a></div>
+zmdi zmdi-local-cafe "></i> zmdi-local-cafe</a></div>
+zmdi zmdi-local-car-wash "></i> zmdi-local-car-wash</a></div>
+zmdi zmdi-local-convenience-store "></i> zmdi-local-convenience-store</a></div>
+zmdi zmdi-local-dining "></i> zmdi-local-dining</a></div>
+zmdi zmdi-local-drink "></i> zmdi-local-drink</a></div>
+zmdi zmdi-local-florist "></i> zmdi-local-florist</a></div>
+zmdi zmdi-local-gas-station "></i> zmdi-local-gas-station</a></div>
+zmdi zmdi-local-grocery-store "></i> zmdi-local-grocery-store</a></div>
+zmdi zmdi-local-hospital "></i> zmdi-local-hospital</a></div>
+zmdi zmdi-local-hotel "></i> zmdi-local-hotel</a></div>
+zmdi zmdi-local-laundry-service "></i> zmdi-local-laundry-service</a></div>
+zmdi zmdi-local-library "></i> zmdi-local-library</a></div>
+zmdi zmdi-local-mall "></i> zmdi-local-mall</a></div>
+zmdi zmdi-local-movies "></i> zmdi-local-movies</a></div>
+zmdi zmdi-local-offer "></i> zmdi-local-offer</a></div>
+zmdi zmdi-local-parking "></i> zmdi-local-parking</a></div>
+zmdi zmdi-local-pharmacy "></i> zmdi-local-pharmacy</a></div>
+zmdi zmdi-local-phone "></i> zmdi-local-phone</a></div>
+zmdi zmdi-local-pizza "></i> zmdi-local-pizza</a></div>
+zmdi zmdi-local-activity "></i> zmdi-local-activity</a></div>
+zmdi zmdi-local-post-office "></i> zmdi-local-post-office</a></div>
+zmdi zmdi-local-printshop "></i> zmdi-local-printshop</a></div>
+zmdi zmdi-local-see "></i> zmdi-local-see</a></div>
+zmdi zmdi-local-shipping "></i> zmdi-local-shipping</a></div>
+zmdi zmdi-local-store "></i> zmdi-local-store</a></div>
+zmdi zmdi-local-taxi "></i> zmdi-local-taxi</a></div>
+zmdi zmdi-local-wc "></i> zmdi-local-wc</a></div>
+zmdi zmdi-map "></i> zmdi-map</a></div>
+zmdi zmdi-my-location "></i> zmdi-my-location</a></div>
+zmdi zmdi-nature-people "></i> zmdi-nature-people</a></div>
+zmdi zmdi-nature "></i> zmdi-nature</a></div>
+zmdi zmdi-navigation "></i> zmdi-navigation</a></div>
+zmdi zmdi-pin-account "></i> zmdi-pin-account</a></div>
+zmdi zmdi-pin-assistant "></i> zmdi-pin-assistant</a></div>
+zmdi zmdi-pin-drop "></i> zmdi-pin-drop</a></div>
+zmdi zmdi-pin-help "></i> zmdi-pin-help</a></div>
+zmdi zmdi-pin-off "></i> zmdi-pin-off</a></div>
+zmdi zmdi-pin "></i> zmdi-pin</a></div>
+zmdi zmdi-traffic "></i> zmdi-traffic</a></div>
+zmdi zmdi-apps,apps
+zmdi zmdi-grid-off,grid-off
+zmdi zmdi-grid,grid
+zmdi zmdi-view-agenda,view-agenda
+zmdi zmdi-view-array,view-array
+zmdi zmdi-view-carousel,view-carousel
+zmdi zmdi-view-column,view-column
+zmdi zmdi-view-comfy,view-comfy
+zmdi zmdi-view-compact,view-compact
+zmdi zmdi-view-dashboard,view-dashboard
+zmdi zmdi-view-day,view-day
+zmdi zmdi-view-headline,view-headline
+zmdi zmdi-view-list-alt,view-list-alt
+zmdi zmdi-view-list,view-list
+zmdi zmdi-view-module,view-module
+zmdi zmdi-view-quilt,view-quilt
+zmdi zmdi-view-stream,view-stream
+zmdi zmdi-view-subtitles,view-subtitles
+zmdi zmdi-view-toc,view-toc
+zmdi zmdi-view-web,view-web
+zmdi zmdi-view-week,view-week
+zmdi zmdi-widgets,widgets
+zmdi zmdi-alarm-check,alarm-check
+zmdi zmdi-alarm-off,alarm-off
+zmdi zmdi-alarm-plus,alarm-plus
+zmdi zmdi-alarm-snooze,alarm-snooze
+zmdi zmdi-alarm,alarm
+zmdi zmdi-calendar-alt,calendar-alt
+zmdi zmdi-calendar-check,calendar-check
+zmdi zmdi-calendar-close,calendar-close
+zmdi zmdi-calendar-note,calendar-note
+zmdi zmdi-calendar,calendar
+zmdi zmdi-time-countdown,time-countdown
+zmdi zmdi-time-interval,time-interval
+zmdi zmdi-time-restore-setting,time-restore-setting
+zmdi zmdi-time-restore,time-restore
+zmdi zmdi-time,time
+zmdi zmdi-timer-off,timer-off
+zmdi zmdi-timer,timer
+zmdi zmdi-android-alt,android-alt
+zmdi zmdi-android,android
+zmdi zmdi-apple,apple
+zmdi zmdi-behance,behance
+zmdi zmdi-codepen,codepen
+zmdi zmdi-dribbble,dribbble
+zmdi zmdi-dropbox,dropbox
+zmdi zmdi-evernote,evernote
+zmdi zmdi-facebook-box,facebook-box
+zmdi zmdi-facebook,facebook
+zmdi zmdi-github-box,github-box
+zmdi zmdi-github,github
+zmdi zmdi-google-drive,google-drive
+zmdi zmdi-google-earth,google-earth
+zmdi zmdi-google-glass,google-glass
+zmdi zmdi-google-maps,google-maps
+zmdi zmdi-google-pages,google-pages
+zmdi zmdi-google-play,google-play
+zmdi zmdi-google-plus-box,google-plus-box
+zmdi zmdi-google-plus,google-plus
+zmdi zmdi-google,google
+zmdi zmdi-instagram,instagram
+zmdi zmdi-language-css3,language-css3
+zmdi zmdi-language-html5,language-html5
+zmdi zmdi-language-javascript,language-javascript
+zmdi zmdi-language-python-alt,language-python-alt
+zmdi zmdi-language-python,language-python
+zmdi zmdi-lastfm,lastfm
+zmdi zmdi-linkedin-box,linkedin-box
+zmdi zmdi-paypal,paypal
+zmdi zmdi-pinterest-box,pinterest-box
+zmdi zmdi-pocket,pocket
+zmdi zmdi-polymer,polymer
+zmdi zmdi-rss,rss
+zmdi zmdi-share,share
+zmdi zmdi-stackoverflow,stackoverflow
+zmdi zmdi-steam-square,steam-square
+zmdi zmdi-steam,steam
+zmdi zmdi-twitter-box,twitter-box
+zmdi zmdi-twitter,twitter
+zmdi zmdi-vk,vk
+zmdi zmdi-wikipedia,wikipedia
+zmdi zmdi-windows,windows
+zmdi zmdi-500px,500px
+zmdi zmdi-8tracks,8tracks
+zmdi zmdi-amazon,amazon
+zmdi zmdi-blogger,blogger
+zmdi zmdi-delicious,delicious
+zmdi zmdi-disqus,disqus
+zmdi zmdi-flattr,flattr
+zmdi zmdi-flickr,flickr
+zmdi zmdi-github-alt,github-alt
+zmdi zmdi-google-old,google-old
+zmdi zmdi-linkedin,linkedin
+zmdi zmdi-odnoklassniki,odnoklassniki
+zmdi zmdi-outlook,outlook
+zmdi zmdi-paypal-alt,paypal-alt
+zmdi zmdi-pinterest,pinterest
+zmdi zmdi-playstation,playstation
+zmdi zmdi-reddit,reddit
+zmdi zmdi-skype,skype
+zmdi zmdi-slideshare,slideshare
+zmdi zmdi-soundcloud,soundcloud
+zmdi zmdi-tumblr,tumblr
+zmdi zmdi-twitch,twitch
+zmdi zmdi-vimeo,vimeo
+zmdi zmdi-whatsapp,whatsapp
+zmdi zmdi-xbox,xbox
+zmdi zmdi-yahoo,yahoo
+zmdi zmdi-youtube-play,youtube-play
+zmdi zmdi-youtube,youtube
+zmdi zmdi-aspect-ratio-alt,aspect-ratio-alt
+zmdi zmdi-aspect-ratio,aspect-ratio
+zmdi zmdi-blur-circular,blur-circular
+zmdi zmdi-blur-linear,blur-linear
+zmdi zmdi-blur-off,blur-off
+zmdi zmdi-blur,blur
+zmdi zmdi-brightness-2,brightness-2
+zmdi zmdi-brightness-3,brightness-3
+zmdi zmdi-brightness-4,brightness-4
+zmdi zmdi-brightness-5,brightness-5
+zmdi zmdi-brightness-6,brightness-6
+zmdi zmdi-brightness-7,brightness-7
+zmdi zmdi-brightness-auto,brightness-auto
+zmdi zmdi-brightness-setting,brightness-setting
+zmdi zmdi-broken-image,broken-image
+zmdi zmdi-center-focus-strong,center-focus-strong
+zmdi zmdi-center-focus-weak,center-focus-weak
+zmdi zmdi-compare,compare
+zmdi zmdi-crop-16-9,crop-16-9
+zmdi zmdi-crop-3-2,crop-3-2
+zmdi zmdi-crop-5-4,crop-5-4
+zmdi zmdi-crop-7-5,crop-7-5
+zmdi zmdi-crop-din,crop-din
+zmdi zmdi-crop-free,crop-free
+zmdi zmdi-crop-landscape,crop-landscape
+zmdi zmdi-crop-portrait,crop-portrait
+zmdi zmdi-crop-square,crop-square
+zmdi zmdi-exposure-alt,exposure-alt
+zmdi zmdi-exposure,exposure
+zmdi zmdi-filter-b-and-w,filter-b-and-w
+zmdi zmdi-filter-center-focus,filter-center-focus
+zmdi zmdi-filter-frames,filter-frames
+zmdi zmdi-filter-tilt-shift,filter-tilt-shift
+zmdi zmdi-gradient,gradient
+zmdi zmdi-grain,grain
+zmdi zmdi-graphic-eq,graphic-eq
+zmdi zmdi-hdr-off,hdr-off
+zmdi zmdi-hdr-strong,hdr-strong
+zmdi zmdi-hdr-weak,hdr-weak
+zmdi zmdi-hdr,hdr
+zmdi zmdi-iridescent,iridescent
+zmdi zmdi-leak-off,leak-off
+zmdi zmdi-leak,leak
+zmdi zmdi-looks,looks
+zmdi zmdi-loupe,loupe
+zmdi zmdi-panorama-horizontal,panorama-horizontal
+zmdi zmdi-panorama-vertical,panorama-vertical
+zmdi zmdi-panorama-wide-angle,panorama-wide-angle
+zmdi zmdi-photo-size-select-large,photo-size-select-large
+zmdi zmdi-photo-size-select-small,photo-size-select-small
+zmdi zmdi-picture-in-picture,picture-in-picture
+zmdi zmdi-slideshow,slideshow
+zmdi zmdi-texture,texture
+zmdi zmdi-tonality,tonality
+zmdi zmdi-vignette,vignette
+zmdi zmdi-wb-auto,wb-auto
+zmdi zmdi-eject-alt,eject-alt
+zmdi zmdi-eject,eject
+zmdi zmdi-equalizer,equalizer
+zmdi zmdi-fast-forward,fast-forward
+zmdi zmdi-fast-rewind,fast-rewind
+zmdi zmdi-forward-10,forward-10
+zmdi zmdi-forward-30,forward-30
+zmdi zmdi-forward-5,forward-5
+zmdi zmdi-hearing,hearing
+zmdi zmdi-pause-circle-outline,pause-circle-outline
+zmdi zmdi-pause-circle,pause-circle
+zmdi zmdi-pause,pause
+zmdi zmdi-play-circle-outline,play-circle-outline
+zmdi zmdi-play-circle,play-circle
+zmdi zmdi-play,play
+zmdi zmdi-playlist-audio,playlist-audio
+zmdi zmdi-playlist-plus,playlist-plus
+zmdi zmdi-repeat-one,repeat-one
+zmdi zmdi-repeat,repeat
+zmdi zmdi-replay-10,replay-10
+zmdi zmdi-replay-30,replay-30
+zmdi zmdi-replay-5,replay-5
+zmdi zmdi-replay,replay
+zmdi zmdi-shuffle,shuffle
+zmdi zmdi-skip-next,skip-next
+zmdi zmdi-skip-previous,skip-previous
+zmdi zmdi-stop,stop
+zmdi zmdi-surround-sound,surround-sound
+zmdi zmdi-tune,tune
+zmdi zmdi-volume-down,volume-down
+zmdi zmdi-volume-mute,volume-mute
+zmdi zmdi-volume-off,volume-off
+zmdi zmdi-volume-up,volume-up
+zmdi zmdi-n-1-square,n-1-square
+zmdi zmdi-n-2-square,n-2-square
+zmdi zmdi-n-3-square,n-3-square
+zmdi zmdi-n-4-square,n-4-square
+zmdi zmdi-n-5-square,n-5-square
+zmdi zmdi-n-6-square,n-6-square
+zmdi zmdi-neg-1,neg-1
+zmdi zmdi-neg-2,neg-2
+zmdi zmdi-plus-1,plus-1
+zmdi zmdi-plus-2,plus-2
+zmdi zmdi-sec-10,sec-10
+zmdi zmdi-sec-3,sec-3
+zmdi zmdi-zero,zero
+zmdi zmdi-airline-seat-flat-angled,airline-seat-flat-angled
+zmdi zmdi-airline-seat-flat,airline-seat-flat
+zmdi zmdi-airline-seat-individual-suite,airline-seat-individual-suite
+zmdi zmdi-airline-seat-legroom-extra,airline-seat-legroom-extra
+zmdi zmdi-airline-seat-legroom-normal,airline-seat-legroom-normal
+zmdi zmdi-airline-seat-legroom-reduced,airline-seat-legroom-reduced
+zmdi zmdi-airline-seat-recline-extra,airline-seat-recline-extra
+zmdi zmdi-airline-seat-recline-normal,airline-seat-recline-normal
+zmdi zmdi-airplay,airplay
+zmdi zmdi-closed-caption,closed-caption
+zmdi zmdi-confirmation-number,confirmation-number
+zmdi zmdi-developer-board,developer-board
+zmdi zmdi-disc-full,disc-full
+zmdi zmdi-explicit,explicit
+zmdi zmdi-flight-land,flight-land
+zmdi zmdi-flight-takeoff,flight-takeoff
+zmdi zmdi-flip-to-back,flip-to-back
+zmdi zmdi-flip-to-front,flip-to-front
+zmdi zmdi-group-work,group-work
+zmdi zmdi-hd,hd
+zmdi zmdi-hq,hq
+zmdi zmdi-markunread-mailbox,markunread-mailbox
+zmdi zmdi-memory,memory
+zmdi zmdi-nfc,nfc
+zmdi zmdi-play-for-work,play-for-work
+zmdi zmdi-power-input,power-input
+zmdi zmdi-present-to-all,present-to-all
+zmdi zmdi-satellite,satellite
+zmdi zmdi-tap-and-play,tap-and-play
+zmdi zmdi-vibration,vibration
+zmdi zmdi-voicemail,voicemail

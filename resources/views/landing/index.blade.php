@@ -20,7 +20,8 @@
     <!-- Iconfont CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/landing/css/icofont.css') }}" media="all" />
     <!-- Metarial font CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/landing/css/material-design-iconic-font.css') }}" media="all" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/landing/css/material-design-iconic-font.css') }}"
+        media="all" />
     <!-- Lightbox CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/landing/css/lightbox.min.css') }}" />
     <!-- Animate CSS -->
@@ -50,15 +51,27 @@
                     <div class="mainmenu">
                         <ul id="primary-menu">
                             <li><a class="nav-link active" href="#home">Home</a></li>
-                            <li><a class="nav-link" href="#{{$optionalContent[0]['target']}}">{{$optionalContent[0]['menu']}}</a></li>
+                            <li><a class="nav-link"
+                                    href="#{{ $optionalContent[0]['target'] }}">{{ $optionalContent[0]['menu'] }}</a>
+                            </li>
                             <li><a class="nav-link" href="#feature">FEATURE</a></li>
                             <li><a class="nav-link" href="#overview">OVERVIEW</a></li>
-                            <li><a class="nav-link" href="#{{$optionalContent[1]['target']}}">{{$optionalContent[1]['menu']}}</a></li>
-                            <li><a class="nav-link" href="#{{$optionalContent[2]['target']}}">{{$optionalContent[2]['menu']}}</a></li>
-                            <li><a class="nav-link" href="#{{$optionalContent[3]['target']}}">{{$optionalContent[3]['menu']}}</a></li>
-                            <li><a class="nav-link" href="#{{$optionalContent[4]['target']}}">{{$optionalContent[4]['menu']}}</a></li>
-                            <li><a class="nav-link" href="#{{$optionalContent[5]['target']}}">{{$optionalContent[5]['menu']}}</a></li>
-                            <li><a class="nav-link" href="{{route('login.index')}}">LOGIN</a></li>
+                            <li><a class="nav-link"
+                                    href="#{{ $optionalContent[1]['target'] }}">{{ $optionalContent[1]['menu'] }}</a>
+                            </li>
+                            <li><a class="nav-link"
+                                    href="#{{ $optionalContent[2]['target'] }}">{{ $optionalContent[2]['menu'] }}</a>
+                            </li>
+                            <li><a class="nav-link"
+                                    href="#{{ $optionalContent[3]['target'] }}">{{ $optionalContent[3]['menu'] }}</a>
+                            </li>
+                            <li><a class="nav-link"
+                                    href="#{{ $optionalContent[4]['target'] }}">{{ $optionalContent[4]['menu'] }}</a>
+                            </li>
+                            <li><a class="nav-link"
+                                    href="#{{ $optionalContent[5]['target'] }}">{{ $optionalContent[5]['menu'] }}</a>
+                            </li>
+                            <li><a class="nav-link" href="{{ route('login.index') }}">LOGIN</a></li>
                         </ul>
                     </div>
                 </div>
@@ -71,13 +84,14 @@
             <div class="row flexbox-center">
                 <div class="col-lg-5">
                     <div class="single-banner text-lg-left text-center">
-                        <img class="img-rounded" style="max-width: 416px;" src="{{ asset($feature->{0}['image']) }}" alt="banner" />
+                        <img class="img-rounded" style="max-width: 416px;" src="{{ asset($feature->{0}['image']) }}"
+                            alt="banner" />
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="single-banner">
-                        <h1>{{$feature->{0}['title']}}</h1>
-                        {!!$feature->{0}['description']!!}
+                        <h1>{{ $feature->{0}['title'] }}</h1>
+                        {!! $feature->{0}['description'] !!}
                         {{-- <a href="#" class="appbox-btn">Download</a>
                         <a href="#" class="appbox-btn appbox-btn2">Learn more</a> --}}
                     </div>
@@ -86,25 +100,25 @@
         </div>
     </section><!-- banner section end -->
     <!-- about section start -->
-    <section class="about-area ptb-80" id="{{$optionalContent[0]['target']}}">
+    <section class="about-area ptb-80" id="{{ $optionalContent[0]['target'] }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sec-title">
-                        <h2>{{$optionalContent[0]['title']}}</h2>
-                        <p>{{$optionalContent[0]['description']}}</p>
+                        <h2>{{ $optionalContent[0]['title'] }}</h2>
+                        <p>{{ $optionalContent[0]['description'] }}</p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 @foreach ($about as $each)
-                <div class="col-lg-4">
-                    <div class="single-about-box">
-                        <i class="icofont {{$each->icon->code}}"></i>
-                        <h4>{{$each->title}}</h4>
-                        <p>{{$each->description}}</p>
+                    <div class="col-lg-4">
+                        <div class="single-about-box">
+                            <i class="icofont {{ $each->icon->code }}"></i>
+                            <h4>{{ $each->title }}</h4>
+                            <p>{{ $each->description }}</p>
+                        </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
@@ -115,8 +129,8 @@
             <div class="row flexbox-center">
                 <div class="col-lg-6">
                     <div class="single-feature-box">
-                        <h2>{{$feature->{1}['title']}}</h2>
-                        {!!$feature->{1}['description']!!}
+                        <h2>{{ $feature->{1}['title'] }}</h2>
+                        {!! $feature->{1}['description'] !!}
                         {{-- <a href="#" class="appbox-btn">Download</a>
                         <a href="#" class="appbox-btn appbox-btn2">Learn more</a> --}}
                     </div>
@@ -140,8 +154,8 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="single-overview-box">
-                        <h2>{{$feature->{2}['title']}}</h2>
-                        {!!$feature->{2}['description']!!}
+                        <h2>{{ $feature->{2}['title'] }}</h2>
+                        {!! $feature->{2}['description'] !!}
                     </div>
                 </div>
             </div>
@@ -153,8 +167,8 @@
             <div class="row flexbox-center">
                 <div class="col-lg-6">
                     <div class="single-feature-box">
-                        <h2>{{$feature->{3}['title']}}</h2>
-                        {!!$feature->{3}['description']!!}
+                        <h2>{{ $feature->{3}['title'] }}</h2>
+                        {!! $feature->{3}['description'] !!}
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -166,37 +180,37 @@
         </div>
     </section><!-- feature section end -->
     <!-- activity section start -->
-    <section class="activity-area ptb-80" id="{{$optionalContent[1]['target']}}">
+    <section class="activity-area ptb-80" id="{{ $optionalContent[1]['target'] }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sec-title">
-                        <h2>{{$optionalContent[1]['title']}}</h2>
-                        <p>{{$optionalContent[1]['description']}}</p>
+                        <h2>{{ $optionalContent[1]['title'] }}</h2>
+                        <p>{{ $optionalContent[1]['description'] }}</p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 @foreach ($activity as $each)
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-activity-box">
-                        <i class="{{$each->icon->code}}"></i>
-                        <h2>{{$each->title}}</h2>
-                        <h5>{{$each->description}}</h5>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-activity-box">
+                            <i class="{{ $each->icon->code }}"></i>
+                            <h2>{{ $each->title }}</h2>
+                            <h5>{{ $each->description }}</h5>
+                        </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
     </section><!-- activity section end -->
     <!-- screenshots section start -->
-    <section class="screenshots-area ptb-80" id="{{$optionalContent[2]['target']}}">
+    <section class="screenshots-area ptb-80" id="{{ $optionalContent[2]['target'] }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sec-title">
-                        <h2>{{$optionalContent[2]['title']}}</h2>
-                        <p>{{$optionalContent[2]['description']}}</p>
+                        <h2>{{ $optionalContent[2]['title'] }}</h2>
+                        <p>{{ $optionalContent[2]['description'] }}</p>
                     </div>
                 </div>
             </div>
@@ -204,14 +218,14 @@
                 <div class="col-lg-12">
                     <div class="screenshot-area-slider">
                         @foreach ($parkingLocation as $each)
-                        <div class="screenshot-single-slide">
-                            <img src="{{ asset($each->image) }}" alt="screenshot" />
-                            <div class="screenshot-overlay">
-                                <a class="icofont icofont-ui-search example-image-link"
-                                    href="{{ asset($each->image) }}"
-                                    data-lightbox="example-set" data-title=""></a>
+                            <div class="screenshot-single-slide">
+                                <img src="{{ asset($each->image) }}" alt="screenshot" />
+                                <div class="screenshot-overlay">
+                                    <a class="icofont icofont-ui-search example-image-link"
+                                        href=" https://www.google.com/maps/search/?api=1&query={{ urlencode($each->latitude . ',' . $each->longitude) }}"
+                                        target="_blank"></a>
+                                </div>
                             </div>
-                        </div>
                         @endforeach
                     </div>
                 </div>
@@ -219,13 +233,13 @@
         </div>
     </section><!-- screenshots section end -->
     <!-- feedback section start -->
-    <section class="feedback-area ptb-80" id="{{$optionalContent[3]['target']}}">
+    <section class="feedback-area ptb-80" id="{{ $optionalContent[3]['target'] }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sec-title">
-                        <h2>{{$optionalContent[3]['title']}}</h2>
-                        <p>{{$optionalContent[3]['description']}}</p>
+                        <h2>{{ $optionalContent[3]['title'] }}</h2>
+                        <p>{{ $optionalContent[3]['description'] }}</p>
                     </div>
                 </div>
             </div>
@@ -233,18 +247,18 @@
                 <div class="col-lg-12">
                     <div class="author-feedback">
                         @foreach ($feedback as $each)
-                        <div class="author-single-slide">
-                            <div class="author-img">
-                                <img src="{{ asset($each->avatar) }}" alt="author" />
+                            <div class="author-single-slide">
+                                <div class="author-img">
+                                    <img src="{{ asset($each->avatar) }}" alt="author" />
+                                </div>
+                                <h4>{{ $each->name }}</h4>
+                                <p>{{ $each->feedback }}</p>
+                                <div class="author-rating">
+                                    @for ($x = 0; $x < $each->star_count; $x++)
+                                        <i class="icofont icofont-star"></i>
+                                    @endfor
+                                </div>
                             </div>
-                            <h4>{{$each->name}}</h4>
-                            <p>{{$each->feedback}}</p>
-                            <div class="author-rating">
-                                @for ($x = 0; $x < $each->star_count; $x++)
-                                <i class="icofont icofont-star"></i>
-                                @endfor
-                            </div>
-                        </div>
                         @endforeach
                     </div>
                 </div>
@@ -252,22 +266,22 @@
         </div>
     </section><!-- feedback section end -->
     <!-- contact section start -->
-    <section class="contact-area ptb-80" id="{{$optionalContent[4]['target']}}">
+    <section class="contact-area ptb-80" id="{{ $optionalContent[4]['target'] }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sec-title">
-                        <h2>{{$optionalContent[4]['title']}}</h2>
-                        <p>{{$optionalContent[4]['description']}}</p>
+                        <h2>{{ $optionalContent[4]['title'] }}</h2>
+                        <p>{{ $optionalContent[4]['description'] }}</p>
                     </div>
                 </div>
             </div>
-            @if(session('status'))
+            @if (session('status'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    {{session('status')}}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                    {{ session('status') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
             @endif
             <div class="row">
@@ -300,13 +314,13 @@
         </div>
     </section><!-- contact section end -->
     <!-- faq section start -->
-    <section class="ptb-80" id="{{$optionalContent[5]['target']}}">
+    <section class="ptb-80" id="{{ $optionalContent[5]['target'] }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sec-title">
-                        <h2>{{$optionalContent[5]['title']}}</h2>
-                        <p>{{$optionalContent[5]['description']}}</p>
+                        <h2>{{ $optionalContent[5]['title'] }}</h2>
+                        <p>{{ $optionalContent[5]['description'] }}</p>
                     </div>
                 </div>
             </div>
@@ -315,20 +329,20 @@
                     <div class="faq-area">
                         <div class="pannel-group" id="general-question">
                             @foreach ($faq as $each)
-                            <div class="card">
-                                <div class="card-header">
-                                    <a href="#question{{$loop->iteration}}" data-toggle="collapse" data-parent="#general-question"
-                                        class="collapsed" aria-expanded="false">
-                                        {{$each->question}}
-                                    </a>
-                                </div>
-                                <div id="question{{$loop->iteration}}" class="panel-collapse collapse" aria-expanded="false" role="banner"
-                                    style="">
-                                    <div class="card-body">
-                                        <p>{{$each->answer}}</p>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a href="#question{{ $loop->iteration }}" data-toggle="collapse"
+                                            data-parent="#general-question" class="collapsed" aria-expanded="false">
+                                            {{ $each->question }}
+                                        </a>
+                                    </div>
+                                    <div id="question{{ $loop->iteration }}" class="panel-collapse collapse"
+                                        aria-expanded="false" role="banner" style="">
+                                        <div class="card-body">
+                                            <p>{{ $each->answer }}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             @endforeach
                         </div>
                     </div>

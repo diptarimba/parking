@@ -20,6 +20,11 @@ class UserRole extends Model
         return $this->belongsToMany(RouteLimiter::class, 'pivot_user_role_menus');
     }
 
+    public function route_limiter_sidebar()
+    {
+        return $this->belongsToMany(RouteLimiter::class, 'pivot_user_role_menus')->wherePivot('is_active', 1);
+    }
+
     public function pivot()
     {
         return $this->hasMany(PivotUserRoleMenu::class);
