@@ -17,16 +17,15 @@ class UserRoleController extends Controller
      */
     public function index(Request $request)
     {
-        if($request->ajax())
-        {
+        if ($request->ajax()) {
             $userRole = UserRole::select();
             return DataTables::of($userRole)
-            ->addIndexColumn()
-            ->addColumn('action', function($query){
-                return $this->getActionColumn($query);
-            })
-            ->rawColumns(['action'])
-            ->make(true);
+                ->addIndexColumn()
+                ->addColumn('action', function ($query) {
+                    return $this->getActionColumn($query);
+                })
+                ->rawColumns(['action'])
+                ->make(true);
         }
         return view('userRoles.index');
     }
@@ -113,23 +112,23 @@ class UserRoleController extends Controller
 
     public function getActionColumn($data)
     {
-        $editBtn = route('admin.edit', $data->id);
+        $editBtn = route('roles.edit', $data->id);
         $deleteBtn = route('admin.destroy', $data->id);
         $roleBtn = route('roles.permission.edit', $data->id);
         $toggleBtn = route('roles.toggle', $data->id);
         $ident = Str::random(10);
         $valueStatus = $data->is_register ? 'Nonaktifkan' : 'Aktifkan';
         return
-        '<a href="'.$roleBtn.'" class="btn mx-1 my-1 btn-sm btn-warning">Role Permission</a>'
-        . '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
-        . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
-        <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
-        <input type="hidden" name="_token" value="'.csrf_token().'" />
+            '<a href="' . $roleBtn . '" class="btn mx-1 my-1 btn-sm btn-warning">Role Permission</a>'
+            . '<a href="' . $editBtn . '" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
+            . '<input form="form' . $ident . '" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
+        <form id="form' . $ident . '" action="' . $deleteBtn . '" method="post">
+        <input type="hidden" name="_token" value="' . csrf_token() . '" />
         <input type="hidden" name="_method" value="DELETE">
         </form>'
-        . '<input form="formToggle'.$ident .'" type="submit" value="'. $valueStatus .' Register" class="mx-1 my-1 btn btn-sm btn-info">
-        <form id="formToggle'.$ident .'" action="'.$toggleBtn.'" method="post">
-        <input type="hidden" name="_token" value="'.csrf_token().'" />
+            . '<input form="formToggle' . $ident . '" type="submit" value="' . $valueStatus . ' Register" class="mx-1 my-1 btn btn-sm btn-info">
+        <form id="formToggle' . $ident . '" action="' . $toggleBtn . '" method="post">
+        <input type="hidden" name="_token" value="' . csrf_token() . '" />
         </form>';
     }
 
@@ -141,7 +140,6 @@ class UserRoleController extends Controller
 
         $msg = $userRole->is_register ? 'Diaktifkan' : 'Dinonaktifkan';
 
-        return redirect()->route('roles.index')->with('status', 'User Role ' . $msg. ' pada laman register.');
-
+        return redirect()->route('roles.index')->with('status', 'User Role ' . $msg . ' pada laman register.');
     }
 }
