@@ -68,7 +68,7 @@ a {
 .toggle-icon {
 	font-size: 22px;
 	cursor: pointer;
-	color: #008cff
+	color: #ffffff
 }
 
 .topbar {
@@ -229,9 +229,10 @@ a {
 
 .menu-label {
 	padding: 20px 15px 5px 5px;
-	color: #bed9f3;
+	color: #cfdfee;
 	text-transform: uppercase;
 	font-size: 12px;
+    font-weight: bold;
 	letter-spacing: .5px
 }
 
