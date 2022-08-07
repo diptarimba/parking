@@ -54,22 +54,22 @@
                             <li><a class="nav-link"
                                     href="#{{ $optionalContent[0]['target'] }}">{{ $optionalContent[0]['menu'] }}</a>
                             </li>
-                            <li><a class="nav-link" href="#feature">FEATURE</a></li>
-                            <li><a class="nav-link" href="#overview">OVERVIEW</a></li>
+                            <li><a class="nav-link" href="#feature">TUTORIAL</a></li>
+                            {{-- <li><a class="nav-link" href="#overview">OVERVIEW</a></li> --}}
                             <li><a class="nav-link"
                                     href="#{{ $optionalContent[1]['target'] }}">{{ $optionalContent[1]['menu'] }}</a>
                             </li>
                             <li><a class="nav-link"
                                     href="#{{ $optionalContent[2]['target'] }}">{{ $optionalContent[2]['menu'] }}</a>
                             </li>
-                            <li><a class="nav-link"
+                            {{-- <li><a class="nav-link"
                                     href="#{{ $optionalContent[3]['target'] }}">{{ $optionalContent[3]['menu'] }}</a>
+                            </li> --}}
+                            <li><a class="nav-link"
+                                    href="#{{ $optionalContent[5]['target'] }}">{{ $optionalContent[5]['menu'] }}</a>
                             </li>
                             <li><a class="nav-link"
                                     href="#{{ $optionalContent[4]['target'] }}">{{ $optionalContent[4]['menu'] }}</a>
-                            </li>
-                            <li><a class="nav-link"
-                                    href="#{{ $optionalContent[5]['target'] }}">{{ $optionalContent[5]['menu'] }}</a>
                             </li>
                             <li><a class="nav-link" href="{{ route('login.index') }}">LOGIN</a></li>
                         </ul>
@@ -84,13 +84,13 @@
             <div class="row flexbox-center">
                 <div class="col-lg-5">
                     <div class="single-banner text-lg-left text-center">
-                        <img class="img-rounded" style="max-width: 416px;" src="{{ asset($feature->{0}['image']) }}"
-                            alt="banner" />
+                        <img class="img-rounded img-thumbnail" style="max-width: 350px;"
+                            src="{{ asset($feature->{0}['image']) }}" alt="banner" />
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="single-banner">
-                        <h1>{{ $feature->{0}['title'] }}</h1>
+                        <h1 style="margin-top:10%;">{{ $feature->{0}['title'] }}</h1>
                         {!! $feature->{0}['description'] !!}
                         {{-- <a href="#" class="appbox-btn">Download</a>
                         <a href="#" class="appbox-btn appbox-btn2">Learn more</a> --}}
@@ -124,15 +124,13 @@
         </div>
     </section><!-- about section end -->
     <!-- feature section start -->
-    <section class="feature-area" id="feature">
+    {{-- <section class="feature-area" id="feature">
         <div class="container">
             <div class="row flexbox-center">
                 <div class="col-lg-6">
                     <div class="single-feature-box">
                         <h2>{{ $feature->{1}['title'] }}</h2>
                         {!! $feature->{1}['description'] !!}
-                        {{-- <a href="#" class="appbox-btn">Download</a>
-                        <a href="#" class="appbox-btn appbox-btn2">Learn more</a> --}}
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -142,9 +140,9 @@
                 </div>
             </div>
         </div>
-    </section><!-- feature section end -->
+    </section><!-- feature section end --> --}}
     <!-- overview section start -->
-    <section class="overview-area ptb-80">
+    {{-- <section class="overview-area ptb-80">
         <div class="container">
             <div class="row flexbox-center">
                 <div class="col-lg-6">
@@ -160,20 +158,20 @@
                 </div>
             </div>
         </div>
-    </section><!-- overview section end -->
+    </section><!-- overview section end --> --}}
     <!-- feature section start -->
-    <section class="feature-area" id="overview">
+    <section class="feature-area" id="feature">
         <div class="container">
             <div class="row flexbox-center">
                 <div class="col-lg-6">
                     <div class="single-feature-box">
-                        <h2>{{ $feature->{3}['title'] }}</h2>
+                        <h2 style="margin-top: 10%">{{ $feature->{3}['title'] }}</h2>
                         {!! $feature->{3}['description'] !!}
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="single-feature-box text-lg-right text-center">
-                        <img style="max-width: 399px;"src="{{ asset($feature->{3}['image']) }}" alt="feature" />
+                        <img style="max-width: 350px;"src="{{ asset($feature->{3}['image']) }}" alt="feature" />
                     </div>
                 </div>
             </div>
@@ -233,7 +231,7 @@
         </div>
     </section><!-- screenshots section end -->
     <!-- feedback section start -->
-    <section class="feedback-area ptb-80" id="{{ $optionalContent[3]['target'] }}">
+    {{-- <section class="feedback-area ptb-80" id="{{ $optionalContent[3]['target'] }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -264,7 +262,44 @@
                 </div>
             </div>
         </div>
-    </section><!-- feedback section end -->
+    </section><!-- feedback section end --> --}}
+    <!-- faq section start -->
+    <section class="ptb-80" id="{{ $optionalContent[5]['target'] }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="sec-title">
+                        <h2>{{ $optionalContent[5]['title'] }}</h2>
+                        <p>{{ $optionalContent[5]['description'] }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="faq-area">
+                        <div class="pannel-group" id="general-question">
+                            @foreach ($faq as $each)
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a href="#question{{ $loop->iteration }}" data-toggle="collapse"
+                                            data-parent="#general-question" class="collapsed" aria-expanded="false">
+                                            {{ $each->question }}
+                                        </a>
+                                    </div>
+                                    <div id="question{{ $loop->iteration }}" class="panel-collapse collapse"
+                                        aria-expanded="false" role="banner" style="">
+                                        <div class="card-body">
+                                            <p>{{ $each->answer }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- faq section end -->
     <!-- contact section start -->
     <section class="contact-area ptb-80" id="{{ $optionalContent[4]['target'] }}">
         <div class="container">
@@ -313,43 +348,6 @@
             </div>
         </div>
     </section><!-- contact section end -->
-    <!-- faq section start -->
-    <section class="ptb-80" id="{{ $optionalContent[5]['target'] }}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="sec-title">
-                        <h2>{{ $optionalContent[5]['title'] }}</h2>
-                        <p>{{ $optionalContent[5]['description'] }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="faq-area">
-                        <div class="pannel-group" id="general-question">
-                            @foreach ($faq as $each)
-                                <div class="card">
-                                    <div class="card-header">
-                                        <a href="#question{{ $loop->iteration }}" data-toggle="collapse"
-                                            data-parent="#general-question" class="collapsed" aria-expanded="false">
-                                            {{ $each->question }}
-                                        </a>
-                                    </div>
-                                    <div id="question{{ $loop->iteration }}" class="panel-collapse collapse"
-                                        aria-expanded="false" role="banner" style="">
-                                        <div class="card-body">
-                                            <p>{{ $each->answer }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- faq section end -->
     <!-- footer section start -->
     <footer class="footer">
         <div class="container">
