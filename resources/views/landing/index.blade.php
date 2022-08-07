@@ -165,7 +165,7 @@
             <div class="row flexbox-center">
                 <div class="col-lg-6">
                     <div class="single-feature-box">
-                        <h2 style="margin-top: 10%">{{ $feature->{3}['title'] }}</h2>
+                        <h2>{{ $feature->{3}['title'] }}</h2>
                         {!! $feature->{3}['description'] !!}
                     </div>
                 </div>
