@@ -42,8 +42,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-2 col-6">
-                    <div class="logo">
-                        <a href="#home"><img src="{{ asset('assets/landing/img/logo.png') }}" alt="logo" /></a>
+                    <div>
+                        <img src="{{ asset('assets/images/logo-depan.png') }}" class="logo-icon" alt="logo icon">
                     </div>
                 </div>
                 <div class="col-md-10 col-6">
