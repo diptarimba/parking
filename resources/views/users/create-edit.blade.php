@@ -7,7 +7,7 @@
 @endsection
 
 @section('page-content')
-    <x-card.layout>
+    <x-card.layout mainTitle="User" subTitle="User Management">
         <x-slot name="header">
             {{ request()->routeIs('user.create') ? 'Create User' : 'Update User' }}
         </x-slot>

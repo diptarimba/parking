@@ -76,7 +76,7 @@
             $permissionAvailable->contains('feature.index') ||
             $permissionAvailable->contains('faq.index') ||
             $permissionAvailable->contains('about.index') ||
-            $permissionAvailable->contains('feedback.index') ||
+            // $permissionAvailable->contains('feedback.index') ||
             $permissionAvailable->contains('activity.index') ||
             $permissionAvailable->contains('optional.content.index'))
             <x-sidebar.menu-label title="Landing Page" />
@@ -93,10 +93,10 @@
             <x-sidebar.single icon="bx bx-message-square-check" route="about.index" link="{{ route('about.index') }}"
                 name="About" />
         @endif
-        @if ($isAdmin || $permissionAvailable->contains('feedback.index'))
+        {{-- @if ($isAdmin || $permissionAvailable->contains('feedback.index'))
             <x-sidebar.single icon="bx bx-sync" route="feedback.index" link="{{ route('feedback.index') }}"
                 name="Feedback" />
-        @endif
+        @endif --}}
         @if ($isAdmin || $permissionAvailable->contains('activity.index'))
             <x-sidebar.single icon="bx bx-repeat" route="activity.index" link="{{ route('activity.index') }}"
                 name="Activity" />
