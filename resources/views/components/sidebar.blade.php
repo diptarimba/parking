@@ -83,7 +83,7 @@
         @endif
         @if ($isAdmin || $permissionAvailable->contains('feature.index'))
             <x-sidebar.single icon="bx bx-package" route="feature.index" link="{{ route('feature.index') }}"
-                name="Home" />
+                name="Feature" />
         @endif
         @if ($isAdmin || $permissionAvailable->contains('faq.index'))
             <x-sidebar.single icon="bx bx-question-mark" route="faq.index" link="{{ route('faq.index') }}"
