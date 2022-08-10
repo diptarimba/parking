@@ -7,7 +7,7 @@
 @endsection
 
 @section('page-content')
-    <x-card.layout mainTitle="Optional Menyu" subTitle="Optional Content Management">
+    <x-card.layout mainTitle="Optional Menu" subTitle="Optional Content Management">
         <x-slot name="header">
             <h3 class="text-900 mb-0" data-anchor>Optional Content Management</h3>
         </x-slot>
