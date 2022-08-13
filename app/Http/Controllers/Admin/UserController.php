@@ -66,7 +66,7 @@ class UserController extends Controller
             'password' => bcrypt($request->password)
         ]));
 
-        $user->user_verify->create(['token' => Str::random(10)]);
+        $user->user_token()->create(['token' => Str::random(10)]);
 
         return redirect()->route('user.index')->with('status', 'Success create user');
     }
@@ -115,7 +115,7 @@ class UserController extends Controller
 
         $user->update(array_merge($request->all(), [
             'password' => $request->password ? bcrypt($request->password) : $user->password,
-            'avatar' => $request->file('avatar') ? 'storage/' . $request->file('avatar')->storePublicly('avatar') : $user->avatar
+            'avatar' => $request->hasFile('avatar') ? 'storage/' . $request->file('avatar')->storePublicly('avatar') : $user->avatar
         ]));
 
         return redirect()->route('user.index')->with('status', 'Success Update User Profile');

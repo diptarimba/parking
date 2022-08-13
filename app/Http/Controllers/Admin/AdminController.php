@@ -38,7 +38,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admins.create');
+        return view('admins.create-edit');
     }
 
     /**
@@ -52,7 +52,7 @@ class AdminController extends Controller
         $this->validate($request, [
             'avatar' => 'required',
             'username' => 'required|min:5',
-            'passowrd' => 'required|min:8',
+            'password' => 'required|min:8',
             'name' => 'required'
         ]);
 
@@ -60,6 +60,8 @@ class AdminController extends Controller
             'avatar' => $request->hasFile('avatar') ? 'storage/'. $request->file('avatar')->storePublicly('avatar') : null,
             'password' => bcrypt($request->password)
         ]));
+
+        return redirect()->route('admin.index')->with('status', 'Success create admin!');
     }
 
     /**

@@ -9,7 +9,7 @@ class Input extends Component
     public $value, $label, $name, $placeholder, $type, $input, $required;
 
     public function __construct($value, $label, $name, $placeholder = '', $type = null, $required = null) {
-        $this->value = $value;
+        $this->value = $value ?? '';
         $this->label = $label;
         $this->name = $name;
         $this->input = $name;

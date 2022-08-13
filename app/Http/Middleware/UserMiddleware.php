@@ -24,7 +24,15 @@ class UserMiddleware
         {
             $routeDestination = $request->route()->getName();
             $permissionAvailable = Auth::guard('web')->user()->user_role->route_limiter->pluck('route');
-            if(in_array($routeDestination, ['admin.logout'])){
+            if(in_array($routeDestination, [
+                'admin.logout',
+                'user.profile.edit',
+                'user.profile.update',
+                'user.password.edit',
+                'user.password.update',
+                'histories.export',
+                'location.slot'
+            ])){
                 return $next($request);
             }
             if(!empty($permissionAvailable->toArray())){

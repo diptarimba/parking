@@ -27,7 +27,7 @@ class UserProfileController extends Controller
         ]);
 
         $user->update(array_merge($request->all(), [
-            'avatar' => $request->file('avatar') ? 'storage/'. $request->file('avatar')->storePublicly('avatar') : $user->avatar
+            'avatar' => $request->hasFile('avatar') ? 'storage/'. $request->file('avatar')->storePublicly('avatar') : $user->avatar
         ]));
 
         return redirect()->route('user.profile.edit')->with('status', 'Success update profile');

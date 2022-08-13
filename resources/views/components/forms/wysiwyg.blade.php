@@ -6,9 +6,27 @@
             selector: '#editor',
             convert_urls: false,
             plugins: [
-            'a11ychecker','advlist','advcode','advtable','autolink','checklist','export',
-            'lists','link','charmap','preview','anchor','searchreplace','visualblocks',
-            'powerpaste','fullscreen','formatpainter','insertdatetime','table','help','wordcount'
+            // 'a11ychecker',
+            'advlist',
+            // 'advcode',
+            // 'advtable',
+            'autolink',
+            // 'checklist',
+            // 'export',
+            'lists',
+            'link',
+            'charmap',
+            'preview',
+            'anchor',
+            'searchreplace',
+            'visualblocks',
+            // 'powerpaste',
+            'fullscreen',
+            // 'formatpainter',
+            'insertdatetime',
+            'table',
+            'help',
+            'wordcount'
             ],
             toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
             'alignleft aligncenter alignright alignjustify | ' +

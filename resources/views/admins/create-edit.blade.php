@@ -1,4 +1,4 @@
-form@extends('layout.master')
+@extends('layout.master')
 
 @section('title', 'Admin Management')
 

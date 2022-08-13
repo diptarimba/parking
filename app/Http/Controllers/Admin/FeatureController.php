@@ -57,7 +57,7 @@ class FeatureController extends Controller
         ]);
 
         $feature = Feature::create(array_merge($request->all(),[
-            'image' => $request->hasFile('image') ? $request->file('image')->storePublicly('feature') : null
+            'image' => $request->hasFile('image') ? 'storage/' . $request->file('image')->storePublicly('feature') : null
         ]));
 
         return redirect()->route('feature.index')->with('status', 'Success Create Feature');
@@ -101,7 +101,7 @@ class FeatureController extends Controller
         ]);
 
         $feature->update(array_merge($request->all(), [
-            'image' => $request->hasFile('image') ? $request->file('image')->storePublicly('feature') : $feature->image
+            'image' => $request->hasFile('image') ? 'storage/' . $request->file('image')->storePublicly('feature') : $feature->image
         ]));
 
         return redirect()->route('feature.index')->with('status', 'Success update feature');

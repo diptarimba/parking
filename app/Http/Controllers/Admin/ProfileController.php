@@ -29,15 +29,15 @@ class ProfileController extends Controller
         ]);
 
         $user->update(array_merge($request->all(), [
-            'avatar' => $request->file('avatar') ? 'storage/'. $request->file('avatar')->storePublicly('avatar') : $user->avatar
+            'avatar' => $request->hasFile('avatar') ? 'storage/'. $request->file('avatar')->storePublicly('avatar') : $user->avatar
         ]));
 
-        return redirect()->route('user.profile.edit')->with('status', 'Success update profile');
+        return redirect()->route('admin.profile.edit')->with('status', 'Success update profile');
     }
 
     public function editPass()
     {
-        return view('users.password.create-edit');
+        return view('admins.password.create-edit');
     }
 
     public function updatePass(Request $request)
@@ -53,6 +53,6 @@ class ProfileController extends Controller
             'password' => bcrypt($request->new_password)
         ]);
 
-        return redirect()->route('user.password.edit')->with('status', 'Success update password');
+        return redirect()->route('admin.password.edit')->with('status', 'Success update password');
     }
 }
