@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('header-content')
-
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/daterangepicker.css') }}" />
 @endsection
 
 @section('page-content')
@@ -18,10 +18,10 @@
                         <div class="card-body">
                             <div class="d-flex align-items-center">
                                 <div>
-                                    <p class="mb-0 text-secondary">Transaksi Hari Ini</p>
+                                    <p class="mb-0 text-secondary">Jumlah Transaksi</p>
                                     <h4 class="my-1 text-info">{{ number_format($parkingHistoryTransaction, 0, ',', '.') }}
                                     </h4>
-                                    <p class="mb-0 font-13">+2.5% from last week</p>
+                                    {{-- <p class="mb-0 font-13">+2.5% from last week</p> --}}
                                 </div>
                                 <div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto"><i
                                         class='bx bxs-cart'></i>
@@ -35,10 +35,10 @@
                         <div class="card-body">
                             <div class="d-flex align-items-center">
                                 <div>
-                                    <p class="mb-0 text-secondary">Revenue (Today)</p>
+                                    <p class="mb-0 text-secondary">Jumlah Pendapatan</p>
                                     <h4 class="my-1 text-danger">Rp.
                                         {{ number_format($parkingHistoryRevenue, 0, ',', '.') }}</h4>
-                                    <p class="mb-0 font-13">+5.4% from last week</p>
+                                    {{-- <p class="mb-0 font-13">+5.4% from last week</p> --}}
                                 </div>
                                 <div class="widgets-icons-2 rounded-circle bg-gradient-bloody text-white ms-auto"><i
                                         class='bx bxs-wallet'></i>
@@ -54,7 +54,7 @@
                                 <div>
                                     <p class="mb-0 text-secondary">Total Lokasi</p>
                                     <h4 class="my-1 text-success">{{ number_format($parkingLocation, 0, ',', '.') }}</h4>
-                                    <p class="mb-0 font-13">-4.5% from last week</p>
+                                    {{-- <p class="mb-0 font-13">-4.5% from last week</p> --}}
                                 </div>
                                 <div class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto"><i
                                         class='bx bxs-bar-chart-alt-2'></i>
@@ -70,7 +70,7 @@
                                 <div>
                                     <p class="mb-0 text-secondary">Total Admin</p>
                                     <h4 class="my-1 text-warning">{{ number_format($admin, 0, ',', '.') }}</h4>
-                                    <p class="mb-0 font-13">+8.4% from last week</p>
+                                    {{-- <p class="mb-0 font-13">+8.4% from last week</p> --}}
                                 </div>
                                 <div class="widgets-icons-2 rounded-circle bg-gradient-blooker text-white ms-auto"><i
                                         class='bx bxs-group'></i>
@@ -83,9 +83,9 @@
             <!--end row-->
 
             <div class="row">
-                @if (Auth::guard('web')->check())
+                {{-- @if (Auth::guard('web')->check()) --}}
                     <div class="col-12">
-                        <div class="card">
+                        <div class="card radius-10">
                             <div class="card-header">
                                 Choose Location
                             </div>
@@ -102,7 +102,18 @@
                             </div>
                         </div>
                     </div>
-                @endif
+                {{-- @endif --}}
+                <div class="col-12">
+                    <div class="card radius-10 border-start border-0 border-3 border-secondary">
+                        <div class="card-header">
+                            Select Date Range
+                        </div>
+                        <div class="card-body">
+                            <input type="text" name="daterange" class="form-control" aria-describedby="daterange"
+                                value="{{$parseDate}}">
+                        </div>
+                    </div>
+                </div>
                 <div class="col-12">
                     <div class="card radius-10">
                         <div class="card-body">
@@ -110,7 +121,7 @@
                                 <div>
                                     <h6 class="mb-0">Sales Overview</h6>
                                 </div>
-                                <div class="dropdown ms-auto">
+                                {{-- <div class="dropdown ms-auto">
                                     <a class="dropdown-toggle dropdown-toggle-nocaret" href="#"
                                         data-bs-toggle="dropdown"><i
                                             class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
@@ -126,7 +137,7 @@
                                         <li><a class="dropdown-item" href="javascript:;">Something else here</a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="d-flex align-items-center ms-auto font-13 gap-2 my-3">
                                 <span class="border px-1 rounded cursor-pointer"><i class="bx bxs-circle me-1"
@@ -152,11 +163,88 @@
                             </div>
                             <div class="col">
                                 <div class="p-3">
-                                    <h5 class="mb-0">Rp. {{ number_format($allTurnOverParking / $allParkingHistory) }}
+                                    <h5 class="mb-0">Rp.
+                                        {{ number_format($allTurnOverParking == 0 ? 0 : $allTurnOverParking / $allParkingHistory) }}
                                     </h5>
                                     <small class="mb-0">Avg. Cost/Visit</small>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card radius-10">
+                        <div class="card-header">
+                            Parking List by Date
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <tbody>
+                                    @foreach ($parkingStatisticCount as $key => $each)
+                                    <tr>
+                                        <td>{{$key}}</td>
+                                        <td>{{$each}}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card radius-10">
+                        <div class="card-header">
+                            Parking List by Vehicle
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <tbody>
+                                    @foreach ($vehicleParking as $key => $each)
+                                    <tr>
+                                        <td>{{$key}}</td>
+                                        <td>{{$each}}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card radius-10">
+                        <div class="card-header">
+                            Parking List by Location
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <tbody>
+                                    @foreach ($locationParking as $key => $each)
+                                    <tr>
+                                        <td>{{$key}}</td>
+                                        <td>{{$each}}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card radius-10">
+                        <div class="card-header">
+                            Parking List by Hour
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <tbody>
+                                    @foreach ($hourParking as $key => $each)
+                                    <tr>
+                                        <td>{{$key}}</td>
+                                        <td>{{$each}}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -169,7 +257,7 @@
                         <div>
                             <h6 class="mb-0">Recent Transaction</h6>
                         </div>
-                        <div class="dropdown ms-auto">
+                        {{-- <div class="dropdown ms-auto">
                             <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown"><i
                                     class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
                             </a>
@@ -184,7 +272,7 @@
                                 <li><a class="dropdown-item" href="javascript:;">Something else here</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="table-responsive">
                         <table class="table align-middle mb-0">
@@ -218,7 +306,7 @@
 @section('footer-content')
     <script>
         var LabelData = @json(array_keys($parkingStatistic->toArray()));
-        var ValueData = @json(array_values($parkingStatistic->toArray()));
+        var ValueDataAmount = @json(array_values($parkingStatistic->toArray()));
     </script>
     <script src="{{ asset('assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
@@ -226,8 +314,24 @@
     <script src="{{ asset('assets/plugins/chartjs/js/Chart.extension.js') }}"></script>
     <script src="{{ asset('assets/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js') }}"></script>
     <script src="{{ asset('assets/js/index.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/moment.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/daterangepicker.min.js') }}"></script>
+
     <script>
         $(document).ready(() => {
+            $(function() {
+                $('input[name="daterange"]').daterangepicker({
+                    opens: 'left'
+                }, function(start, end, label) {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    urlParams.set('from', start.format('YYYY-MM-DD'));
+                    urlParams.set('to', end.format('YYYY-MM-DD'));
+                    var newUrl = updateQueryStringParameter(window.location.href, 'date_from', start.format('YYYY-MM-DD'))
+                    newUrl = updateQueryStringParameter(newUrl, 'date_to', end.format('YYYY-MM-DD'))
+                    window.location.href = newUrl;
+                });
+            });
+
             function updateQueryStringParameter(uri, key, value) {
                 var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
                 var separator = uri.indexOf('?') !== -1 ? "&" : "?";

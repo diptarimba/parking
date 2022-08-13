@@ -27,38 +27,47 @@ class HomeController extends Controller
                 $location_request = $request->location_id;
             }
 
+        } else {
+            // Request data by location oleh admin kalau tidak null
+            if($request->location_id !== null){
+                $location_request = $request->location_id;
+            }
+            // Location Limit untuk Admin, Admin memiliki hak seluruh lokasi
+            $locationLimit = ParkingLocation::pluck('id')->toArray();
         }
-        // dd($user_id, $locationLimit);
-        $parkingLocation = ParkingLocation::when(!empty($locationLimit), function($query) use ($locationLimit){
+
+        // Base builder eloquent laravel, untuk bahan dasar mencari, agar tidak ditulis berulang ulang (reusable)
+        $baseBuilderParkingHistory = ParkingHistory::when(!empty($locationLimit), function($query) use ($locationLimit){
+            $query->whereIn('parking_location_id', $locationLimit);
+            //Apabila terdapat data date_from dan date_to, mencari data pada range waktu tertentu
+        })->when(isset($request->date_from) && isset($request->date_to), function ($query) use ($request){
+            $query->whereBetween('created_at', [Carbon::parse($request->date_from)->format('Y-m-d'), Carbon::parse($request->date_to)->format('Y-m-d')]);
+        });
+
+        // Base builder parking location
+        $builderParkingLocation = ParkingLocation::when(!empty($locationLimit), function($query) use ($locationLimit){
             $query->whereIn('id', $locationLimit);
-        })->count();
-        $parkingLocationList = ParkingLocation::when(!empty($locationLimit), function($query) use ($locationLimit){
-            $query->whereIn('id', $locationLimit);
-        })->get();
+        });
+
+        // Menghitung data lokasi
+        $parkingLocation = $builderParkingLocation->count();
+        // Mendapatkan data lokasi
+        $parkingLocationList = $builderParkingLocation->get();
 
         if(isset($location_request)){
-            $mainParkingHistory = ParkingHistory::when(!empty($locationLimit), function($query) use ($locationLimit){
-                $query->whereIn('parking_location_id', $locationLimit);
-            })->when(isset($location_request), function ($query) use ($location_request){
-                $query->where('parking_location_id', $location_request);
-            })->whereDate('created_at', Carbon::now()->format('Y-m-d'));
-
-            $parkHistory = ParkingHistory::when(!empty($locationLimit), function($query) use ($locationLimit){
-                $query->whereIn('parking_location_id', $locationLimit);
-            })->when(isset($location_request), function ($query) use ($location_request){
+            $builderParkingHistory = $baseBuilderParkingHistory->clone()->when(isset($location_request), function ($query) use ($location_request){
                 $query->where('parking_location_id', $location_request);
             });
-
+            $mainParkingHistory = $builderParkingHistory->clone()->when(!isset($request->date_from) && !isset($request->date_to), function ($query){
+                $query->whereDate('created_at', Carbon::now()->format('Y-m-d'));
+            });
+            $parkHistory = $builderParkingHistory->clone();
             $parkName = ParkingLocation::whereId($location_request)->first()->name;
         }else{
-            $mainParkingHistory = ParkingHistory::when(!empty($locationLimit), function($query) use ($locationLimit){
-                $query->whereIn('parking_location_id', $locationLimit);
-            })->whereDate('created_at', Carbon::now()->format('Y-m-d'));
-
-            $parkHistory = ParkingHistory::when(!empty($locationLimit), function($query) use ($locationLimit){
-                $query->whereIn('parking_location_id', $locationLimit);
+            $mainParkingHistory = $baseBuilderParkingHistory->clone()->when(!isset($request->date_from) && !isset($request->date_to), function ($query){
+                $query->whereDate('created_at', Carbon::now()->format('Y-m-d'));
             });
-
+            $parkHistory = $baseBuilderParkingHistory->clone();
             $parkName = null;
         }
 
@@ -66,21 +75,61 @@ class HomeController extends Controller
         $parkingHistoryVisitor = $mainParkingHistory->get()->countBy('parking_location_id');
         $parkingHistoryRevenue = $mainParkingHistory->sum('amount');
         $parkingHistoryTransaction = $mainParkingHistory->count();
-
+        if(isset($request->date_from) && isset($request->date_to)){
+            $parseDate = Carbon::parse($request->date_from)->format('m/d/Y') . ' - ' . Carbon::parse($request->date_to)->format('m/d/Y');
+        }else{
+            $parseDate = '';
+        }
         $allParkingHistory = $parkHistory->count();
         $allTurnOverParking = $parkHistory->sum('amount');
-        $parkingStatistic = $parkHistory->where('created_at','>=',Carbon::now()->subdays(15))->orderBy('created_at', 'asc')->get()->groupBy(function($d) {
-            return Carbon::parse($d->created_at)->format('d F Y');
+        $parkingStatistic = $parkHistory->when(!isset($request->date_from) && !isset($request->date_to), function ($query){
+            $query->where('created_at','>=',Carbon::now()->subdays(15));
+        })->orderBy('created_at', 'asc')->get()->groupBy(function($query) {
+            return Carbon::parse($query->created_at)->format('d F Y');
         })->map(function ($query){
             return $query->sum('amount');
         });
-
+        $parkingStatisticCount = $parkHistory->when(!isset($request->date_from) && !isset($request->date_to), function ($query){
+            $query->where('created_at','>=',Carbon::now()->subdays(15));
+        })->orderBy('created_at', 'asc')->get()->groupBy(function($query) {
+            return Carbon::parse($query->created_at)->format('d F Y');
+        })->map(function ($query){
+            return $query->count();
+        });
+        $vehicleParking = $parkHistory->get()->groupBy('vehicle')->map(function($query){
+            return $query->count();
+        });
+        $locationParking = $parkHistory->with('parking_location')->get()->groupBy(function($query) {
+            return $query->parking_location->name;
+        })->map(function($query){
+            return $query->count();
+        });
+        $hourParking = $parkHistory->with('parking_location')->get()->groupBy(function($query) {
+            return Carbon::parse($query->created_at)->format('H A');
+        })->map(function($query){
+            return $query->count();
+        })->toArray();
+        asort($hourParking);
+        $hourParking = array_slice(array_reverse($hourParking, true), 0, 5, true);
         $user = User::count();
         $admin = Admin::count();
-        // dd($locationLimit);
-
-        // dd($parkingStatistic->toArray());
-
-        return view('dashboard.index', compact('parkName','parkingLocationList','parkingLocation', 'parkingHistoryRevenue', 'parkingHistoryTransaction','user', 'admin', 'parkingHistory', 'allParkingHistory', 'allTurnOverParking', 'parkingStatistic'));
+        return view('dashboard.index', compact(
+            'parkName',
+            'parkingLocationList',
+            'parkingLocation',
+            'parkingHistoryRevenue',
+            'parkingHistoryTransaction',
+            'user',
+            'admin',
+            'parseDate',
+            'parkingHistory',
+            'allParkingHistory',
+            'allTurnOverParking',
+            'parkingStatistic',
+            'parkingStatisticCount',
+            'vehicleParking',
+            'locationParking',
+            'hourParking',
+        ));
     }
 }

@@ -21,7 +21,7 @@ $(document).ready(() => {
                 labels: LabelData,
                 datasets: [{
                         label: 'Revenue',
-                        data: ValueData,
+                        data: ValueDataAmount,
                         borderColor: gradientStroke1,
                         backgroundColor: gradientStroke1,
                         hoverBackgroundColor: gradientStroke1,
@@ -29,16 +29,6 @@ $(document).ready(() => {
                         fill: false,
                         borderWidth: 0
                     },
-                    // {
-                    //     label: 'Mobiles',
-                    //     data: [28, 48, 40, 19, 28, 48, 40, 19, 40, 19, 28, 48],
-                    //     borderColor: gradientStroke2,
-                    //     backgroundColor: gradientStroke2,
-                    //     hoverBackgroundColor: gradientStroke2,
-                    //     pointRadius: 0,
-                    //     fill: false,
-                    //     borderWidth: 0
-                    // }
                 ]
             },
 
