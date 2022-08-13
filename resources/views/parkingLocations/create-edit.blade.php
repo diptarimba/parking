@@ -23,7 +23,7 @@
 
 @section('page-content')
     <div class="col-md-8 mx-auto">
-        <x-card.layout>
+        <x-card.layout mainTitle="Location" subTitle="Parking Location Management">
             <x-slot name="header">
                 {{ request()->routeIs('location.create') ? 'Create Parking Location' : 'Update Parking Location' }}
             </x-slot>
