@@ -17,9 +17,9 @@
             class="theme-form mega-form" method="post"
             enctype="multipart/form-data">
             @csrf
-            <x-forms.text password label="Current Password" name="current_password" :value="@"/>
-            <x-forms.text password label="New Password" name="new_password" :value="@"/>
-            <x-forms.text password label="New Password Confirmation" name="new_password_confirm" :value="@"/>
+            <x-forms.text password label="Current Password" name="current_password" value=""/>
+            <x-forms.text password label="New Password" name="new_password" value=""/>
+            <x-forms.text password label="New Password Confirmation" name="new_password_confirm" value=""/>
         </form>
         <button form="form" class="btn btn-primary btn-pill">Submit</button>
         <x-action.cancel />

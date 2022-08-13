@@ -9,10 +9,27 @@
         tinymce.init({
             selector: '#mytextarea',
             plugins: [
-                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
-                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
-                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help',
-                'wordcount'
+               // 'a11ychecker',
+            'advlist',
+            // 'advcode',
+            // 'advtable',
+            'autolink',
+            // 'checklist',
+            // 'export',
+            'lists',
+            'link',
+            'charmap',
+            'preview',
+            'anchor',
+            'searchreplace',
+            'visualblocks',
+            // 'powerpaste',
+            'fullscreen',
+            // 'formatpainter',
+            'insertdatetime',
+            'table',
+            'help',
+            'wordcount'
             ],
             toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
                 'alignleft aligncenter alignright alignjustify | ' +
@@ -32,6 +49,11 @@
                     action="{{ request()->routeIs('location.create') ? route('location.store') : route('location.update', @$parkingLocation->id) }}"
                     class="theme-form mega-form" method="post" enctype="multipart/form-data">
                     @csrf
+                    @isset($parkingLocation->image)
+                    <x-forms.view-image label="Image" src="{{ asset($parkingLocation->image) }}" />
+                    @endisset
+                    <x-forms.file label="Pilih Photo Profil" name="image" id="gallery-photo-add" />
+                    <div class="gallery row row-cols-4 justify-content-center" id="isi-gallery"></div>
                     <x-forms.put-method />
                     <x-forms.input label="Name" name="name" :value="@$parkingLocation->name" />
                     <x-forms.wysiwyg label="Description" name="description" :value="@$parkingLocation->description" />

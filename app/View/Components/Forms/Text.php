@@ -17,7 +17,7 @@ class Text extends Component
     public $password;
 
     public function __construct($value, $label, $name, $placeholder = '', $password = false) {
-        $this->value = $value;
+        $this->value = $value ?? '';
         $this->label = $label;
         $this->name = $name;
         $this->placeholder = $placeholder;

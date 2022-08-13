@@ -19,7 +19,7 @@ class RouteLimiterSeeder extends Seeder
         $dataController = [
             1 => [
                 'HomeController',
-                'UserProfileController'
+                // 'UserProfileController'
             ],
             2 => [
                 'ParkingLocationController',
