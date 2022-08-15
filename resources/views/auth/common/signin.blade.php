@@ -77,10 +77,10 @@
                                                         for="flexSwitchCheckChecked">Remember Me</label>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 text-end"> <a
+                                            {{-- <div class="col-md-6 text-end"> <a
                                                     href="{{ url('authentication-forgot-password') }}">Forgot Password
                                                     ?</a>
-                                            </div>
+                                            </div> --}}
                                             <div class="col-12">
                                                 <div class="d-grid">
                                                     <button type="submit" class="btn btn-primary"><i
