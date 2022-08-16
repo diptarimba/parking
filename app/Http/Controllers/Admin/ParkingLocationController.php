@@ -95,12 +95,15 @@ class ParkingLocationController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
+            'image' => 'nullable|mimes:png,jpg,jpeg|max:1024',
             'description' => 'required',
             'latitude' => 'required',
             'longitude' => 'required'
         ]);
 
-        $parkingLocation->update($request->all());
+        $parkingLocation->update(array_merge($request->all(), [
+            'image' => $request->hasFile('image') ? 'storage/' . $request->file('image')->storePublicly('landing_location') : $parkingLocation->image
+        ]));
 
         return redirect()->route('location.index')->with('status', 'Success Update Parking Location');
     }
@@ -139,9 +142,9 @@ class ParkingLocationController extends Controller
         $data = Http::get(config('parkingslot.url'), [
             'location_name' => $parking->name
         ]);
-
+        dd($data->getBody());
         $response = json_decode($data->getBody()->getContents());
-        // dd($response);
+        dd($response);
         return view('parkingLocations.slot', compact('response'));
 
     }

@@ -53,6 +53,7 @@
                     <x-forms.view-image label="Image" src="{{ asset($parkingLocation->image) }}" />
                     @endisset
                     <x-forms.file label="Pilih Photo Profil" name="image" id="gallery-photo-add" />
+                    <span>Rekomendasi Ukuran Foto : 700 (height) x 400 (width) px</span>
                     <div class="gallery row row-cols-4 justify-content-center" id="isi-gallery"></div>
                     <x-forms.put-method />
                     <x-forms.input label="Name" name="name" :value="@$parkingLocation->name" />
