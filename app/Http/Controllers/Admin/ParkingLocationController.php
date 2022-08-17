@@ -145,7 +145,6 @@ class ParkingLocationController extends Controller
         $data = Http::get(config('parkingslot.url'), [
             'location_name' => $parking->name
         ]);
-        dd($data->getBody());
         $response = json_decode($data->getBody()->getContents());
         return view('parkingLocations.slot', compact('response'));
     }
