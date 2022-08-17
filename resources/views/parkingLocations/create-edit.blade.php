@@ -57,6 +57,7 @@
                     <div class="gallery row row-cols-4 justify-content-center" id="isi-gallery"></div>
                     <x-forms.put-method />
                     <x-forms.input label="Name" name="name" :value="@$parkingLocation->name" />
+                    <x-forms.input label="Location Code" name="location_code" :value="@$parkingLocation->location_code" />
                     <x-forms.wysiwyg label="Description" name="description" :value="@$parkingLocation->description" />
                     <x-forms.maps label="Location" latName="latitude" lngName="longitude" :lat="@$parkingLocation->latitude"
                         :lng="@$parkingLocation->longitude" />

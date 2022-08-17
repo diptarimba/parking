@@ -52,7 +52,9 @@ class ParkingLocationController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
+            'image' => 'nullable|mimes:png,jpg,jpeg|max:1024',
             'description' => 'required',
+            'location_code' => 'required',
             'latitude' => 'required',
             'longitude' => 'required'
         ]);
@@ -97,6 +99,7 @@ class ParkingLocationController extends Controller
             'name' => 'required',
             'image' => 'nullable|mimes:png,jpg,jpeg|max:1024',
             'description' => 'required',
+            'location_code' => 'required',
             'latitude' => 'required',
             'longitude' => 'required'
         ]);
@@ -144,8 +147,6 @@ class ParkingLocationController extends Controller
         ]);
         dd($data->getBody());
         $response = json_decode($data->getBody()->getContents());
-        dd($response);
         return view('parkingLocations.slot', compact('response'));
-
     }
 }
