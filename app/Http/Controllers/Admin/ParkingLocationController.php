@@ -120,6 +120,8 @@ class ParkingLocationController extends Controller
     public function destroy(ParkingLocation $parkingLocation)
     {
         $parkingLocation->delete();
+
+        return redirect()->route('location.index')->with('status', 'Success Delete Parking Location');
     }
 
     public function getActionColumn($data)
