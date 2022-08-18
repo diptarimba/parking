@@ -113,7 +113,7 @@ class UserRoleController extends Controller
     public function getActionColumn($data)
     {
         $editBtn = route('roles.edit', $data->id);
-        $deleteBtn = route('admin.destroy', $data->id);
+        $deleteBtn = route('roles.destroy', $data->id);
         $roleBtn = route('roles.permission.edit', $data->id);
         $toggleBtn = route('roles.toggle', $data->id);
         $ident = Str::random(10);

@@ -23,7 +23,8 @@
             @endisset
             <x-forms.file label="Pilih Photo Profil" name="image" id="gallery-photo-add"/>
             <div class="gallery row row-cols-4 justify-content-center" id="isi-gallery"></div>
-            <span>Rekomendasi Ukuran Foto : {{ @$feature->recommendation }} px</span>
+            {{-- <span>Rekomendasi Ukuran Foto : {{ @$feature->recommendation }} px</span> --}}
+            <x-forms.input disabled label="Rekomendasi Ukuran Foto : " name="recommendation" :value="@$feature->recommendation"/>
             <x-forms.input label="Title" name="title" :value="@$feature->title"/>
             <x-forms.wysiwyg label="Description" name="description" :value="@$feature->description"/>
             {{-- <x-forms.input label="Description" name="description" :value="@$feature->description"/> --}}
@@ -35,4 +36,7 @@
 @endsection
 
 @section('footer-content')
+<script>
+    $('input[name="recommendation"]').prop('disabled', true);
+</script>
 @endsection

@@ -27,7 +27,7 @@
             @if (empty($response->slot) || empty($response->parking_location))
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <h5>Parking slot data not found!</h5>
                         </div>
                     </div>

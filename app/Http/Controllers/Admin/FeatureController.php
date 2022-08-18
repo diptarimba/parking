@@ -53,6 +53,7 @@ class FeatureController extends Controller
         $this->validate($request, [
             'image' => 'required|mimes::jpeg,jpg,png|max:1024',
             'title' => 'required',
+            'recommendation' => 'required',
             'description' => 'required'
         ]);
 
@@ -97,6 +98,7 @@ class FeatureController extends Controller
         $this->validate($request, [
             'image' => 'sometimes|mimes::jpeg,jpg,png|max:1024',
             'title' => 'required',
+            'recommendation' => 'required',
             'description' => 'required'
         ]);
 
@@ -121,14 +123,14 @@ class FeatureController extends Controller
     public function getActionColumn($data)
     {
         $editBtn = route('feature.edit', $data->id);
-        $deleteBtn = route('feature.destroy', $data->id);
-        $ident = Str::random(10);
+        // $deleteBtn = route('feature.destroy', $data->id);
+        // $ident = Str::random(10);
         return
-        '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>'
-        . '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
-        <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
-        <input type="hidden" name="_token" value="'.csrf_token().'" />
-        <input type="hidden" name="_method" value="DELETE">
-        </form>';
+        '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">Edit</a>';
+        // '<input form="form'.$ident .'" type="submit" value="Delete" class="mx-1 my-1 btn btn-sm btn-danger">
+        // <form id="form'.$ident .'" action="'.$deleteBtn.'" method="post">
+        // <input type="hidden" name="_token" value="'.csrf_token().'" />
+        // <input type="hidden" name="_method" value="DELETE">
+        // </form>';
     }
 }

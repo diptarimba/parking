@@ -9,7 +9,8 @@
 @section('page-content')
     <x-card.layout mainTitle="Feature" subTitle="Feature Management">
         <x-slot name="header">
-            <x-card.h-buat url="{{ route('feature.create') }}" title="Feature Management" />
+            <h3 class="text-900 mb-0" data-anchor>Feature Management</h3>
+            {{-- <x-card.h-buat url="{{ route('feature.create') }}" title="Feature Management" /> --}}
         </x-slot>
 
         <x-slot name="body">
