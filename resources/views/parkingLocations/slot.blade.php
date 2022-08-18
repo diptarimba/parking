@@ -24,6 +24,15 @@
             </div>
             @include('components.flash')
             <!--end breadcrumb-->
+            @if (empty($response->slot) || empty($response->parking_location))
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Parking slot data, not found!</h5>
+                        </div>
+                    </div>
+                </div>
+            @else
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <div class="card">
@@ -66,6 +75,7 @@
                     </div>
                 </div>
             </div>
+            @endif
         </div>
     </div>
 @endsection
