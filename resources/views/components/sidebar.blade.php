@@ -5,7 +5,7 @@
             <img src="{{ asset('assets/images/logo-icon.png') }}" class="logo-icon" alt="logo icon">
         </div>
         <div>
-            <h5 class="logo-text" style="color: white">Misred Parking</h5>
+            <h5 class="logo-text" style="color: white">Smart Parking</h5>
         </div>
         <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
         </div>
