@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Activity;
 use App\Models\Faq;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
@@ -55,7 +54,7 @@ class FaqController extends Controller
             'answer' => 'required'
         ]);
 
-        $activity = Activity::create($request->all());
+        $activity = Faq::create($request->all());
 
         return redirect()->route('faq.index')->with('status', 'Success Create Faq');
     }

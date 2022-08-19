@@ -52,7 +52,9 @@ class ParkingLocationController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
+            'image' => 'nullable|mimes:png,jpg,jpeg|max:1024',
             'description' => 'required',
+            'location_code' => 'required',
             'latitude' => 'required',
             'longitude' => 'required'
         ]);
@@ -97,6 +99,7 @@ class ParkingLocationController extends Controller
             'name' => 'required',
             'image' => 'nullable|mimes:png,jpg,jpeg|max:1024',
             'description' => 'required',
+            'location_code' => 'required',
             'latitude' => 'required',
             'longitude' => 'required'
         ]);
@@ -117,6 +120,8 @@ class ParkingLocationController extends Controller
     public function destroy(ParkingLocation $parkingLocation)
     {
         $parkingLocation->delete();
+
+        return redirect()->route('location.index')->with('status', 'Success Delete Parking Location');
     }
 
     public function getActionColumn($data)
@@ -142,10 +147,7 @@ class ParkingLocationController extends Controller
         $data = Http::get(config('parkingslot.url'), [
             'location_name' => $parking->name
         ]);
-        dd($data->getBody());
         $response = json_decode($data->getBody()->getContents());
-        dd($response);
         return view('parkingLocations.slot', compact('response'));
-
     }
 }
