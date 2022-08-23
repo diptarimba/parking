@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Yajra\DataTables\Facades\DataTables;
 
 class ContactController extends Controller
 {
@@ -13,9 +14,21 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if($request->ajax())
+        {
+            $contact = Contact::select();
+            return DataTables::of($contact)
+                    ->addIndexColumn()
+                    ->addColumn('action', function($query){
+                        return $this->getActionColumn($query);
+                    })
+                    ->rawColumns(['action'])
+                    ->make(true);
+        }
+
+        return view('contact.index');
     }
 
     /**
@@ -66,7 +79,7 @@ class ContactController extends Controller
      */
     public function edit(Contact $contact)
     {
-        //
+        return view('contact.create-edit', compact('contact'));
     }
 
     /**
@@ -90,5 +103,12 @@ class ContactController extends Controller
     public function destroy(Contact $contact)
     {
         //
+    }
+
+    public function getActionColumn($data)
+    {
+        $editBtn = route('contact.edit', $data->id);
+        return
+        '<a href="'.$editBtn.'" class="btn mx-1 my-1 btn-sm btn-success">View</a>';
     }
 }

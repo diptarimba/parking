@@ -81,6 +81,10 @@
             $permissionAvailable->contains('optional.content.index'))
             <x-sidebar.menu-label title="Landing Page" />
         @endif
+        @if ($isAdmin)
+            <x-sidebar.single icon="bx bxs-envelope" route="contact.index" link="{{ route('contact.index') }}"
+                name="Contact" />
+        @endif
         @if ($isAdmin || $permissionAvailable->contains('feature.index'))
             <x-sidebar.single icon="bx bx-package" route="feature.index" link="{{ route('feature.index') }}"
                 name="Feature" />
