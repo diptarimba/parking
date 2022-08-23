@@ -9,27 +9,27 @@
         tinymce.init({
             selector: '#mytextarea',
             plugins: [
-               // 'a11ychecker',
-            'advlist',
-            // 'advcode',
-            // 'advtable',
-            'autolink',
-            // 'checklist',
-            // 'export',
-            'lists',
-            'link',
-            'charmap',
-            'preview',
-            'anchor',
-            'searchreplace',
-            'visualblocks',
-            // 'powerpaste',
-            'fullscreen',
-            // 'formatpainter',
-            'insertdatetime',
-            'table',
-            'help',
-            'wordcount'
+                // 'a11ychecker',
+                'advlist',
+                // 'advcode',
+                // 'advtable',
+                'autolink',
+                // 'checklist',
+                // 'export',
+                'lists',
+                'link',
+                'charmap',
+                'preview',
+                'anchor',
+                'searchreplace',
+                'visualblocks',
+                // 'powerpaste',
+                'fullscreen',
+                // 'formatpainter',
+                'insertdatetime',
+                'table',
+                'help',
+                'wordcount'
             ],
             toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
                 'alignleft aligncenter alignright alignjustify | ' +
@@ -40,7 +40,7 @@
 
 @section('page-content')
     <div class="col-md-8 mx-auto">
-        <x-card.layout>
+        <x-card.layout mainTitle="Location" subTitle="Parking Location Management">
             <x-slot name="header">
                 {{ request()->routeIs('location.create') ? 'Create Parking Location' : 'Update Parking Location' }}
             </x-slot>
@@ -50,7 +50,7 @@
                     class="theme-form mega-form" method="post" enctype="multipart/form-data">
                     @csrf
                     @isset($parkingLocation->image)
-                    <x-forms.view-image label="Image" src="{{ asset($parkingLocation->image) }}" />
+                        <x-forms.view-image label="Image" src="{{ asset($parkingLocation->image) }}" />
                     @endisset
                     <x-forms.file label="Pilih Photo Profil" name="image" id="gallery-photo-add" />
                     <span>Rekomendasi Ukuran Foto : 700 (height) x 400 (width) px</span>
