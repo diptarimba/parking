@@ -38,6 +38,12 @@ class ParkingHistoryController extends Controller
             });
             return DataTables::of($parkingHistory)
             ->addIndexColumn()
+            ->addColumn('check_in', function($query){
+                return Carbon::parse($query->check_in)->format('d-m-Y H:i:s');
+            })
+            ->addColumn('check_out', function($query){
+                return Carbon::parse($query->check_out)->format('d-m-Y H:i:s');
+            })
             ->addColumn('amount', function($query){
                 return 'Rp. ' . number_format($query->amount, 0, ",", ".");
             })
